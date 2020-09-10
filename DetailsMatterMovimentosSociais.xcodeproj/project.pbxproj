@@ -18,7 +18,26 @@
 		AF784391250A45EE0028FD21 /* Eventos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF784390250A45EE0028FD21 /* Eventos.storyboard */; };
 		AF784393250A460E0028FD21 /* Movimentos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF784392250A460D0028FD21 /* Movimentos.storyboard */; };
 		AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784394250A48D20028FD21 /* MovimentosViewController.swift */; };
+		AF78439D250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78439C250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift */; };
+		AF7843AB250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AF78439F250A60840028FD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF78436A250A45130028FD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF784371250A45140028FD21;
+			remoteInfo = DetailsMatterMovimentosSociais;
+		};
+		AF7843AD250A60980028FD21 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AF78436A250A45130028FD21 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AF784371250A45140028FD21;
+			remoteInfo = DetailsMatterMovimentosSociais;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
@@ -34,10 +53,30 @@
 		AF784390250A45EE0028FD21 /* Eventos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Eventos.storyboard; sourceTree = "<group>"; };
 		AF784392250A460D0028FD21 /* Movimentos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Movimentos.storyboard; sourceTree = "<group>"; };
 		AF784394250A48D20028FD21 /* MovimentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentosViewController.swift; sourceTree = "<group>"; };
+		AF78439A250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetailsMatterMovimentosSociaisUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF78439C250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMatterMovimentosSociaisUITests.swift; sourceTree = "<group>"; };
+		AF78439E250A60840028FD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF7843A8250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetailsMatterMovimentosSociaisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMatterMovimentosSociaisTests.swift; sourceTree = "<group>"; };
+		AF7843AC250A60980028FD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		AF78436F250A45140028FD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF784397250A60840028FD21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7843A5250A60980028FD21 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +90,8 @@
 			isa = PBXGroup;
 			children = (
 				AF784374250A45140028FD21 /* DetailsMatterMovimentosSociais */,
+				AF78439B250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests */,
+				AF7843A9250A60980028FD21 /* DetailsMatterMovimentosSociaisTests */,
 				AF784373250A45140028FD21 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */,
+				AF78439A250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.xctest */,
+				AF7843A8250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -106,6 +149,24 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		AF78439B250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AF78439C250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift */,
+				AF78439E250A60840028FD21 /* Info.plist */,
+			);
+			path = DetailsMatterMovimentosSociaisUITests;
+			sourceTree = "<group>";
+		};
+		AF7843A9250A60980028FD21 /* DetailsMatterMovimentosSociaisTests */ = {
+			isa = PBXGroup;
+			children = (
+				AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */,
+				AF7843AC250A60980028FD21 /* Info.plist */,
+			);
+			path = DetailsMatterMovimentosSociaisTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -127,6 +188,42 @@
 			productReference = AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AF784399250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7843A3250A60840028FD21 /* Build configuration list for PBXNativeTarget "DetailsMatterMovimentosSociaisUITests" */;
+			buildPhases = (
+				AF784396250A60840028FD21 /* Sources */,
+				AF784397250A60840028FD21 /* Frameworks */,
+				AF784398250A60840028FD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF7843A0250A60840028FD21 /* PBXTargetDependency */,
+			);
+			name = DetailsMatterMovimentosSociaisUITests;
+			productName = DetailsMatterMovimentosSociaisUITests;
+			productReference = AF78439A250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AF7843A7250A60980028FD21 /* DetailsMatterMovimentosSociaisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF7843AF250A60980028FD21 /* Build configuration list for PBXNativeTarget "DetailsMatterMovimentosSociaisTests" */;
+			buildPhases = (
+				AF7843A4250A60980028FD21 /* Sources */,
+				AF7843A5250A60980028FD21 /* Frameworks */,
+				AF7843A6250A60980028FD21 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AF7843AE250A60980028FD21 /* PBXTargetDependency */,
+			);
+			name = DetailsMatterMovimentosSociaisTests;
+			productName = DetailsMatterMovimentosSociaisTests;
+			productReference = AF7843A8250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -139,6 +236,14 @@
 				TargetAttributes = {
 					AF784371250A45140028FD21 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					AF784399250A60840028FD21 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = AF784371250A45140028FD21;
+					};
+					AF7843A7250A60980028FD21 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = AF784371250A45140028FD21;
 					};
 				};
 			};
@@ -156,6 +261,8 @@
 			projectRoot = "";
 			targets = (
 				AF784371250A45140028FD21 /* DetailsMatterMovimentosSociais */,
+				AF784399250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests */,
+				AF7843A7250A60980028FD21 /* DetailsMatterMovimentosSociaisTests */,
 			);
 		};
 /* End PBXProject section */
@@ -172,6 +279,20 @@
 				AF784393250A460E0028FD21 /* Movimentos.storyboard in Resources */,
 				AF78438F250A45C00028FD21 /* TabBarController.storyboard in Resources */,
 				AF78437D250A45140028FD21 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF784398250A60840028FD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7843A6250A60980028FD21 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +330,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AF784396250A60840028FD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF78439D250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AF7843A4250A60980028FD21 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF7843AB250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AF7843A0250A60840028FD21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF784371250A45140028FD21 /* DetailsMatterMovimentosSociais */;
+			targetProxy = AF78439F250A60840028FD21 /* PBXContainerItemProxy */;
+		};
+		AF7843AE250A60980028FD21 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AF784371250A45140028FD21 /* DetailsMatterMovimentosSociais */;
+			targetProxy = AF7843AD250A60980028FD21 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		AF78437B250A45140028FD21 /* Main.storyboard */ = {
@@ -381,6 +531,84 @@
 			};
 			name = Release;
 		};
+		AF7843A1250A60840028FD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T373QFGJQA;
+				INFOPLIST_FILE = DetailsMatterMovimentosSociaisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociaisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DetailsMatterMovimentosSociais;
+			};
+			name = Debug;
+		};
+		AF7843A2250A60840028FD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T373QFGJQA;
+				INFOPLIST_FILE = DetailsMatterMovimentosSociaisUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociaisUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DetailsMatterMovimentosSociais;
+			};
+			name = Release;
+		};
+		AF7843B0250A60980028FD21 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T373QFGJQA;
+				INFOPLIST_FILE = DetailsMatterMovimentosSociaisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociaisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DetailsMatterMovimentosSociais.app/DetailsMatterMovimentosSociais";
+			};
+			name = Debug;
+		};
+		AF7843B1250A60980028FD21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T373QFGJQA;
+				INFOPLIST_FILE = DetailsMatterMovimentosSociaisTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociaisTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DetailsMatterMovimentosSociais.app/DetailsMatterMovimentosSociais";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -398,6 +626,24 @@
 			buildConfigurations = (
 				AF784387250A45140028FD21 /* Debug */,
 				AF784388250A45140028FD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7843A3250A60840028FD21 /* Build configuration list for PBXNativeTarget "DetailsMatterMovimentosSociaisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7843A1250A60840028FD21 /* Debug */,
+				AF7843A2250A60840028FD21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF7843AF250A60980028FD21 /* Build configuration list for PBXNativeTarget "DetailsMatterMovimentosSociaisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AF7843B0250A60980028FD21 /* Debug */,
+				AF7843B1250A60980028FD21 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
