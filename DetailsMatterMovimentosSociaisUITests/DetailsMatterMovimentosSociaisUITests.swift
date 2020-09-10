@@ -5,7 +5,7 @@
 //  Created by Lidiane Gomes Barbosa on 10/09/20.
 //  Copyright © 2020 Lidiane Gomes Barbosa. All rights reserved.
 //
-
+// swiftlint:disable line_length
 import XCTest
 
 class DetailsMatterMovimentosSociaisUITests: XCTestCase {
