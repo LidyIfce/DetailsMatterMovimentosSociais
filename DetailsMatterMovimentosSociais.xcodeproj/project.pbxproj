@@ -20,6 +20,11 @@
 		AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784394250A48D20028FD21 /* MovimentosViewController.swift */; };
 		AF78439D250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78439C250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift */; };
 		AF7843AB250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */; };
+		AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED537250B9B5C001F88BD /* Categoria.swift */; };
+		AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED539250B9B6B001F88BD /* Movimento.swift */; };
+		AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53B250B9B77001F88BD /* Evento.swift */; };
+		AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53D250B9D71001F88BD /* MockMulheres.swift */; };
+		AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53F250BA52B001F88BD /* MockCategorias.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		AF7843A8250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetailsMatterMovimentosSociaisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMatterMovimentosSociaisTests.swift; sourceTree = "<group>"; };
 		AF7843AC250A60980028FD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF9ED537250B9B5C001F88BD /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
+		AF9ED539250B9B6B001F88BD /* Movimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimento.swift; sourceTree = "<group>"; };
+		AF9ED53B250B9B77001F88BD /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		AF9ED53D250B9D71001F88BD /* MockMulheres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMulheres.swift; sourceTree = "<group>"; };
+		AF9ED53F250BA52B001F88BD /* MockCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategorias.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +136,11 @@
 		AF784389250A45200028FD21 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AF9ED537250B9B5C001F88BD /* Categoria.swift */,
+				AF9ED539250B9B6B001F88BD /* Movimento.swift */,
+				AF9ED53B250B9B77001F88BD /* Evento.swift */,
+				AF9ED53D250B9D71001F88BD /* MockMulheres.swift */,
+				AF9ED53F250BA52B001F88BD /* MockCategorias.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +342,11 @@
 				AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
 				AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */,
+				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
+				AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */,
+				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
+				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
+				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
