@@ -13,13 +13,13 @@ struct MulheresMock {
 A Associação Movimento Mulher 360, como uma iniciativa empresarial, visa engajar as empresas em ações concretas com seu público interno, em um primeiro momento, e, gradualmente, expandir essa atuação para mulheres nas comunidades e cadeia de suprimentos.
 
 Em longo prazo, esperamos que o conjunto dessas ações possam promover mudanças na sociedade de uma forma mais ampla.
-""", imagem: "mulher360", eventos: EventosMulheresMock.eventosMulher360)
+""", imagem: "mulher360", eventos: EventosMulheresMock.eventosMulher360, urlInstagram: "https://www.instagram.com/movimento.mulher360/", urlWebSite: "https://movimentomulher360.com.br", urlFacebook: "https://www.facebook.com/MovimentoMulher360/")
     
     let pyLadiesBrasil = Movimento(nome: "PyLadies Brasil", descricao: """
 O PyLadies é uma comunidade mundial que foi trazida ao Brasil com o propósito de instigar mais mulheres a entrarem na área tecnológica. Queremos mudar essa realidade de poucas garotas em uma área tão rica e fantástica como a computação. E olhe que temos muita história nesse campo, viu?!
 
 Nós percebemos que não haviam motivos para sermos poucas em salas de cursos universitários e técnicos de informática e tecnologia pelo Brasil, então resolvemos nos organizar para dar um jeitinho nisso. Foi então que encontramos outras ladies pelo mundo, que se reuniam em nome da programação e falavam de abstração de um jeito que só ladies sabem falar.
-""", imagem: "pyladies", eventos: EventosMulheresMock.eventosPyLadies)
+""", imagem: "pyladies", eventos: EventosMulheresMock.eventosPyLadies, urlInstagram: "https://www.instagram.com/pyladiesbrasil/", urlWebSite: "https://brasil.pyladies.com", urlFacebook: "https://www.facebook.com/PyLadiesBrazil/")
     
     let catolicasPeloDireitoDeDecidir = Movimento(nome: "Católicas pelo direito de decidir", descricao: """
 Católicas pelo Direito de Decidir foi fundada no Dia Internacional da Mulher de 1993. A ONG apoia-se na prática e teoria feministas para promover mudanças em nossa sociedade, especialmente nos padrões culturais e religiosos.
@@ -29,7 +29,7 @@ As religiões são profundamente importantes na história, cultura e imaginário
 Consideramos que as religiões devem ajudar as pessoas a terem uma vida digna e saudável, e não dificultar sua autonomia e liberdade, especialmente em relação à sexualidade e reprodução.
 
 Por isso, lutamos pela laicidade do Estado que deve ser livre da interferência religiosa na criação e condução das políticas públicas.
-""", imagem: "catolicas", eventos: EventosMulheresMock.eventosCatolicas)
+""", imagem: "catolicas", eventos: EventosMulheresMock.eventosCatolicas, urlInstagram: nil, urlWebSite: "http://www.catolicasonline.org.br", urlFacebook: "https://www.facebook.com/catolicasdireitodecidir")
     
     let semprevivaOrganizacaoFeminista = Movimento(nome: "Sempreviva Organização Feminista", descricao: """
 A SOF Sempreviva Organização Feminista é uma organização não governamental com sede em São Paulo que faz parte do movimento de mulheres no Brasil e em âmbito internacional.
@@ -37,7 +37,7 @@ A SOF Sempreviva Organização Feminista é uma organização não governamental
 Uma das contribuições centrais da SOF está no campo da formação que tem sido uma forte campo de atuação desde os anos 1980.
 
 Coordenou atividades educativas desde o âmbito local até regional e América Latina, com um público diverso como mulheres rurais e urbanas, negras, indígenas e jovens, lideranças e ativistas de base, técnicas e técnicos de ONG´s e órgãos públicos.
-""", imagem: "sempreviva", eventos: EventosMulheresMock.eventosSempreviva)
+""", imagem: "sempreviva", eventos: EventosMulheresMock.eventosSempreviva, urlInstagram: nil, urlWebSite: "https://www.sof.org.br", urlFacebook: "https://www.facebook.com/sofsempreviva")
     
     static var movimentos: [Movimento] = [MulheresMock().mulher360, MulheresMock().pyLadiesBrasil, MulheresMock().catolicasPeloDireitoDeDecidir]
 }
