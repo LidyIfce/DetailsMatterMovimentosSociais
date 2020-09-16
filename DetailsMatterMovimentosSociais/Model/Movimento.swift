@@ -13,12 +13,25 @@ class Movimento {
     let descricao: String
     let imagem: String
     let eventos: [Evento]
+    let urlInstagram: String?
+    let urlWebSite: String?
+    let urlFacebook: String?
     
-    init(movimentoId: UUID = UUID(), nome: String, descricao: String, imagem: String, eventos: [Evento] ) {
+    init(movimentoId: UUID = UUID(),
+         nome: String,
+         descricao: String,
+         imagem: String,
+         eventos: [Evento],
+         urlInstagram: String?,
+         urlWebSite: String? ,
+         urlFacebook: String?) {
         self.movimentoId = movimentoId
         self.nome = nome
         self.descricao = descricao
         self.imagem = imagem
         self.eventos = eventos
+        self.urlInstagram = urlInstagram
+        self.urlWebSite = urlWebSite
+        self.urlFacebook = urlFacebook
     }
 }
