@@ -16,9 +16,14 @@ Em longo prazo, esperamos que o conjunto dessas ações possam promover mudança
 """, imagem: "mulher360", eventos: EventosMulheresMock.eventosMulher360, urlInstagram: "https://www.instagram.com/movimento.mulher360/", urlWebSite: "https://movimentomulher360.com.br", urlFacebook: "https://www.facebook.com/MovimentoMulher360/")
     
     let pyLadiesBrasil = Movimento(nome: "PyLadies Brasil", descricao: """
-O PyLadies é uma comunidade mundial que foi trazida ao Brasil com o propósito de instigar mais mulheres a entrarem na área tecnológica. Queremos mudar essa realidade de poucas garotas em uma área tão rica e fantástica como a computação. E olhe que temos muita história nesse campo, viu?!
+O PyLadies é uma comunidade mundial que foi trazida ao Brasil com o propósito de instigar mais mulheres a entrarem na área tecnológica.
 
-Nós percebemos que não haviam motivos para sermos poucas em salas de cursos universitários e técnicos de informática e tecnologia pelo Brasil, então resolvemos nos organizar para dar um jeitinho nisso. Foi então que encontramos outras ladies pelo mundo, que se reuniam em nome da programação e falavam de abstração de um jeito que só ladies sabem falar.
+Queremos mudar essa realidade de poucas garotas em uma área tão rica e fantástica como a computação.
+E olhe que temos muita história nesse campo, viu?!
+
+Nós percebemos que não haviam motivos para sermos poucas em salas de cursos universitários e técnicos de informática e tecnologia pelo Brasil, então resolvemos nos organizar para dar um jeitinho nisso.
+
+Foi então que encontramos outras ladies pelo mundo, que se reuniam em nome da programação e falavam de abstração de um jeito que só ladies sabem falar.
 """, imagem: "pyladies", eventos: EventosMulheresMock.eventosPyLadies, urlInstagram: "https://www.instagram.com/pyladiesbrasil/", urlWebSite: "https://brasil.pyladies.com", urlFacebook: "https://www.facebook.com/PyLadiesBrazil/")
     
     let catolicasPeloDireitoDeDecidir = Movimento(nome: "Católicas pelo direito de decidir", descricao: """
