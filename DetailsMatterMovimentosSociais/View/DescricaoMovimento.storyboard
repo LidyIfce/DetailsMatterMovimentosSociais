@@ -130,11 +130,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventos" rowHeight="100" id="OwZ-F5-oHr">
-                                        <rect key="frame" x="0.0" y="465" width="414" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="eventos" rowHeight="408" id="OwZ-F5-oHr">
+                                        <rect key="frame" x="0.0" y="465" width="414" height="408"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OwZ-F5-oHr" id="xKN-Zk-zAA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="408"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Eventos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oq-zb-7Nw">
@@ -148,10 +148,20 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                     <state key="normal" title="Button"/>
                                                 </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZR-Bz-Ee7">
+                                                    <rect key="frame" x="16" y="67" width="382" height="273"/>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="273" id="20O-84-wyL"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="2oq-zb-7Nw" firstAttribute="top" secondItem="xKN-Zk-zAA" secondAttribute="top" constant="24" id="6Ky-X9-N0B"/>
                                                 <constraint firstItem="2oq-zb-7Nw" firstAttribute="leading" secondItem="xKN-Zk-zAA" secondAttribute="leading" constant="16" id="Cwe-9d-B07"/>
+                                                <constraint firstAttribute="trailing" secondItem="NZR-Bz-Ee7" secondAttribute="trailing" constant="16" id="cs5-Mq-3A9"/>
+                                                <constraint firstItem="NZR-Bz-Ee7" firstAttribute="leading" secondItem="xKN-Zk-zAA" secondAttribute="leading" constant="16" id="eqS-SZ-8wx"/>
+                                                <constraint firstItem="NZR-Bz-Ee7" firstAttribute="top" secondItem="2oq-zb-7Nw" secondAttribute="bottom" constant="16" id="gUQ-vs-DhR"/>
                                                 <constraint firstItem="stc-3k-5CJ" firstAttribute="top" secondItem="xKN-Zk-zAA" secondAttribute="top" constant="24" id="gYP-lO-IHC"/>
                                                 <constraint firstAttribute="trailing" secondItem="stc-3k-5CJ" secondAttribute="trailing" constant="16" id="nnF-Sc-uEy"/>
                                             </constraints>
@@ -174,6 +184,7 @@
                         <outlet property="buttonInstagram" destination="ESJ-UY-A8c" id="ECv-Um-QFd"/>
                         <outlet property="buttonSeguir" destination="1Aj-ba-ht7" id="KtZ-um-kcl"/>
                         <outlet property="buttonWeb" destination="BLC-EF-oWg" id="zkM-rl-Rs4"/>
+                        <outlet property="calendarView" destination="NZR-Bz-Ee7" id="F5e-tJ-jcB"/>
                         <outlet property="descricao" destination="scv-n5-ocg" id="0lb-IQ-jKB"/>
                         <outlet property="imageCapa" destination="gbM-HX-drZ" id="4dZ-FC-fAI"/>
                         <outlet property="movimentoTitle" destination="NRj-0M-b31" id="dFo-EK-LgM"/>
@@ -208,6 +219,9 @@
         <image name="internet" width="26" height="26"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

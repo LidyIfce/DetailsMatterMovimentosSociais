@@ -92,7 +92,7 @@ O bate papo é ao vivo, na nossa sede, e será transmitido pela página de Cató
 A justiça reprodutiva é um assunto que aprofunda a discussão sobre a legalização e descriminalização do aborto.
 
 A expressão, derivada dos temas justiça social e direitos reprodutivos, coloca a dimensão racial e étnica como fator fundamental para refletir sobre a saúde reprodutiva das mulheres.
-""", dataHora: "30-09-2020 08:00:00", localizacao: "Sede de Católicas: Rua Martiniano de Carvalho, nº 71, casa 11, Bela Vista, SP"), Evento(nome: "CAFÉministas: Os Corpos Negros na Teologia", descricao: """
+""", dataHora: "30-09-2020 00:00:00", localizacao: "Sede de Católicas: Rua Martiniano de Carvalho, nº 71, casa 11, Bela Vista, SP"), Evento(nome: "CAFÉministas: Os Corpos Negros na Teologia", descricao: """
 Descolonizar a teologia é urgente e, pensando nisso, o próximo bate papo das Café_ministas terá como tema “Os Corpos Negros na Teologia”.
 
 Com a experiência de fé da Pastora Eliad (Igreja Metodista e Evangélicas pela Igualdade de Gênero) , da Daiane Zito (PASTORAL DA JUVENTUDE NACIONAL) e da Isadora Nascimento (Movimento Negro Evangélico do Brasil), queremos pensar contribuições antirracistas para nossas igrejas.
@@ -100,7 +100,7 @@ Com a experiência de fé da Pastora Eliad (Igreja Metodista e Evangélicas pela
 Por acreditarmos que racismo também é pecado porque aniquila o outro, sentimos que é preciso uma nova compreensão teológica para combater esse mal que há tantos anos assombra e assola a vida de diversos pessoas religiosas.
 
 Mobilize sua igreja. Chame seus amigos e  amigas. O convite é aberto, gratuito e indispensável para quem crê ou não.
-""", dataHora: "16-10-2020 19:00:00", localizacao: """
+""", dataHora: "16-09-2020 00:00:00", localizacao: """
 Koinonia Presença Ecumênica
 Rua do Carmo, 56, Sé
 São Paulo – SP
