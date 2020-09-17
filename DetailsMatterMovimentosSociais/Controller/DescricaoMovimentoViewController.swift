@@ -12,6 +12,7 @@ class DescricaoMovimentoViewController: UITableViewController {
     
     let movimento = MulheresMock().catolicasPeloDireitoDeDecidir
     
+    @IBOutlet weak var movimentoTitle: UILabel!
     @IBOutlet weak var buttonSeguir: UIBarButtonItem!
     @IBOutlet weak var imageCapa: UIImageView!
     @IBOutlet weak var descricao: UILabel!
@@ -26,7 +27,9 @@ class DescricaoMovimentoViewController: UITableViewController {
         checkButtonsRedes()
         setupImageCapa()
         setupDescricao()
-        navigationController?.navigationItem.title = movimento.nome
+      
+        movimentoTitle.text = movimento.nome
+        navigationController?.navigationBar.shadowImage = UIImage()
 
     }
     @IBAction func goToInstagram(_ sender: Any) {
@@ -90,7 +93,7 @@ class DescricaoMovimentoViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
         if indexPath.row == 0 {
-            return 145
+            return CGFloat(145 + 32 + movimento.nome.count)
         }
         if indexPath.row == 1 {
             return calcDescricaoHeigth()

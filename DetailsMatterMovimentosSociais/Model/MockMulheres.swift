@@ -36,7 +36,7 @@ Consideramos que as religiões devem ajudar as pessoas a terem uma vida digna e 
 Por isso, lutamos pela laicidade do Estado que deve ser livre da interferência religiosa na criação e condução das políticas públicas.
 """, imagem: "catolicas", eventos: EventosMulheresMock.eventosCatolicas, urlInstagram: nil, urlWebSite: "http://www.catolicasonline.org.br", urlFacebook: "https://www.facebook.com/catolicasdireitodecidir")
     
-    let semprevivaOrganizacaoFeminista = Movimento(nome: "Sempreviva Organização Feminista", descricao: """
+    let semprevivaOrganizacaoFeminista = Movimento(nome: "SOF Sempreviva Organização Feminista", descricao: """
 A SOF Sempreviva Organização Feminista é uma organização não governamental com sede em São Paulo que faz parte do movimento de mulheres no Brasil e em âmbito internacional.
 
 Uma das contribuições centrais da SOF está no campo da formação que tem sido uma forte campo de atuação desde os anos 1980.
