@@ -44,11 +44,11 @@ Uma das contribuições centrais da SOF está no campo da formação que tem sid
 Coordenou atividades educativas desde o âmbito local até regional e América Latina, com um público diverso como mulheres rurais e urbanas, negras, indígenas e jovens, lideranças e ativistas de base, técnicas e técnicos de ONG´s e órgãos públicos.
 """, imagem: "sempreviva", eventos: EventosMulheresMock.eventosSempreviva, urlInstagram: nil, urlWebSite: "https://www.sof.org.br", urlFacebook: "https://www.facebook.com/sofsempreviva")
     
-    static var movimentos: [Movimento] = [MulheresMock().mulher360, MulheresMock().pyLadiesBrasil, MulheresMock().catolicasPeloDireitoDeDecidir]
+    static var movimentos: [Movimento] = [MulheresMock().mulher360, MulheresMock().pyLadiesBrasil, MulheresMock().catolicasPeloDireitoDeDecidir, MulheresMock().semprevivaOrganizacaoFeminista]
 }
 
 struct EventosMulheresMock {
-    static let eventosMulher360: [Evento] = [Evento(nome: "O inconsciente nas tomadas de decisão", descricao: """
+    static let eventosMulher360: [Evento] = [Evento(nome: "O inconsciente nas tomadas de decisão", movimento: "+ Mulher 360", descricao: """
 O Insper, o Movimento Mulher 360, o PwC e a ONU Mulheres são os responsáveis pelo evento “O inconsciente nas tomadas de decisão”.
 
 A oficina tem o objetivo de apresentar o que são esses vieses e inspirar caminhos para que eles sejam trabalhados nas empresas.
@@ -60,7 +60,7 @@ Setor de Embaixadas Norte – SEN, Quadra 802 – Lote 17
 CEP: 70800-400 – Brasília/DF
 """)]
 
-    static let eventosPyLadies: [Evento] = [Evento(nome: "PyLadies Recife & PUG-PE Apresentam: um pedaço de Recife na PyBR 2019", descricao: """
+    static let eventosPyLadies: [Evento] = [Evento(nome: "PyLadies Recife & PUG-PE Apresentam: um pedaço de Recife na PyBR 2019", movimento: "Pyladies", descricao: """
 Sejam bem vind@s ao Pedaço do Recife na PyBr 2019 !!
 
 Esse evento magnífico está sendo organizado pelo PyLadies Recife e pelo PUG-PE, com o intuito de trazer um pouco do que o que foi mostrado na Python Brasil 2019 que ocorreu entre os dias 23 e 28 de Outubro.
@@ -72,7 +72,7 @@ Como ingresso estamos pedindo um alimento não perecível ou uma roupa em bom es
 UNIFG
 Avenida Governador Carlos de Lima Cavalcanti, 155, Boa Vista
 Recife, PE
-"""), Evento(nome: "Gitday - PyLadies Fortaleza (Hacktoberfest 2019)", descricao: """
+"""), Evento(nome: "Gitday - PyLadies Fortaleza (Hacktoberfest 2019)", movimento: "Pyladies", descricao: """
 Quer matar a sua fome de Pull Requests, colaborar em projetos e ainda cumprir o desafio da Hacktoberfest? Vem pra o Git Day que a gente te mostra como!
 
 Com duração de quatro horas, este encontro tem o objetivo de compartilhar conhecimentos de Git, propondo um ambiente colaborativo, onde pessoas mais experientes irão ajudar as iniciantes e todas elas, ao final da manhã, terão cumprido a missão proposta pela Hacktoberfest.
@@ -82,7 +82,7 @@ Rua Castro Monte, 1364, Varjota
 Fortaleza, CE
 """)]
     
-    static let eventosCatolicas: [Evento] = [Evento(nome: "Café com Luta: Justiça Reprodutiva e Fé", descricao: """
+    static let eventosCatolicas: [Evento] = [Evento(nome: "Café com Luta: Justiça Reprodutiva e Fé", movimento: "Católicas pelo direito de decidir", descricao: """
 Dia 31 de Outubro, às 19:00, temos mais uma edição do Café Com Luta.
 
 Desta vez, vamos conversar sobre justiça reprodutiva e fé com Simony Cristina, das Evangélicas pela Igualdade de Gênero, e Letícia Lopes, ativista de Católicas pelo Direito de Decidir.
@@ -92,7 +92,7 @@ O bate papo é ao vivo, na nossa sede, e será transmitido pela página de Cató
 A justiça reprodutiva é um assunto que aprofunda a discussão sobre a legalização e descriminalização do aborto.
 
 A expressão, derivada dos temas justiça social e direitos reprodutivos, coloca a dimensão racial e étnica como fator fundamental para refletir sobre a saúde reprodutiva das mulheres.
-""", data: ["30-09-2020 00:00:00"], hora: ["18:00"], localizacao: "Sede de Católicas: Rua Martiniano de Carvalho, nº 71, casa 11, Bela Vista, SP"), Evento(nome: "CAFÉministas: Os Corpos Negros na Teologia", descricao: """
+""", data: ["30-09-2020 00:00:00"], hora: ["18:00"], localizacao: "Sede de Católicas: Rua Martiniano de Carvalho, nº 71, casa 11, Bela Vista, SP"), Evento(nome: "CAFÉministas: Os Corpos Negros na Teologia", movimento: "Católicas pelo direito de decidir", descricao: """
 Descolonizar a teologia é urgente e, pensando nisso, o próximo bate papo das Café_ministas terá como tema “Os Corpos Negros na Teologia”.
 
 Com a experiência de fé da Pastora Eliad (Igreja Metodista e Evangélicas pela Igualdade de Gênero) , da Daiane Zito (PASTORAL DA JUVENTUDE NACIONAL) e da Isadora Nascimento (Movimento Negro Evangélico do Brasil), queremos pensar contribuições antirracistas para nossas igrejas.
@@ -106,7 +106,7 @@ Rua do Carmo, 56, Sé
 São Paulo – SP
 """)]
     
-    static let eventosSempreviva: [Evento] = [Evento(nome: "Mostra de Economia Feminista e Solidária", descricao: """
+    static let eventosSempreviva: [Evento] = [Evento(nome: "Mostra de Economia Feminista e Solidária", movimento: "Sempreviva Organização Feminista", descricao: """
 Nos próximos dias 4 e 5 de dezembro acontece a Mostra de Economia Solidária e Feminista “Mulheres transformando a economia” na Praça das Artes, centro de São Paulo.
 
 O evento é uma realização da SOF Sempreviva Organização Feminista e da Secretaria Municipal de Políticas para Mulheres de São Paulo (SMPM), em parceria com a Secretaria Municipal de Cultura de São Paulo.

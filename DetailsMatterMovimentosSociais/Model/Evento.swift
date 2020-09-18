@@ -11,6 +11,7 @@ import Foundation
 class Evento {
     let eventoId: UUID
     let nome: String
+    let movimento: String
     let descricao: String
     let data: [String]
     let hora: [String]
@@ -18,12 +19,14 @@ class Evento {
     
     init(eventoId: UUID = UUID(),
          nome: String,
+         movimento: String,
          descricao: String,
          data: [String],
          hora: [String],
          localizacao: String) {
         self.eventoId = eventoId
         self.nome = nome
+        self.movimento = movimento
         self.descricao = descricao
         self.data = data
         self.hora = hora

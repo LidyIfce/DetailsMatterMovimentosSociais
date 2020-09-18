@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */; };
+		88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */; };
+		88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20C2513A28A009B93DE /* MockLgbt.swift */; };
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
 		AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784377250A45140028FD21 /* SceneDelegate.swift */; };
@@ -51,6 +54,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentosCollectionViewCell.swift; sourceTree = "<group>"; };
+		88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardMovimentos_Coletivos.xib; sourceTree = "<group>"; };
+		88DED20C2513A28A009B93DE /* MockLgbt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLgbt.swift; sourceTree = "<group>"; };
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF784375250A45140028FD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 				AF9ED539250B9B6B001F88BD /* Movimento.swift */,
 				AF9ED53B250B9B77001F88BD /* Evento.swift */,
 				AF9ED53D250B9D71001F88BD /* MockMulheres.swift */,
+				88DED20C2513A28A009B93DE /* MockLgbt.swift */,
 				AF9ED53F250BA52B001F88BD /* MockCategorias.swift */,
 				AFECD7F92513996D00B86A45 /* Day.swift */,
 				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
@@ -165,6 +172,7 @@
 				AF78438E250A45C00028FD21 /* TabBarController.storyboard */,
 				AF784390250A45EE0028FD21 /* Eventos.storyboard */,
 				AF784392250A460D0028FD21 /* Movimentos.storyboard */,
+				88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */,
 				AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */,
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 			);
@@ -178,6 +186,7 @@
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
 				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
 				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
+				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +322,7 @@
 				AF78438F250A45C00028FD21 /* TabBarController.storyboard in Resources */,
 				AF78437D250A45140028FD21 /* Main.storyboard in Resources */,
 				AF99F22D251241240083C2D3 /* DescricaoMovimento.storyboard in Resources */,
+				88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,9 +377,11 @@
 				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
 				AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */,
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
+				88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */,
 				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
 				AFECD7FF25139AE100B86A45 /* MonthData.swift in Sources */,
 				AFECD8042513A21100B86A45 /* CalendarDateCollectionViewCell.swift in Sources */,
+				88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */,
 				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
