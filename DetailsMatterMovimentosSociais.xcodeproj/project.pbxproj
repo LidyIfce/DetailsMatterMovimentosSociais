@@ -21,11 +21,16 @@
 		AF78439D250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78439C250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift */; };
 		AF7843AB250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */; };
 		AF99F22D251241240083C2D3 /* DescricaoMovimento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */; };
+		AF99F22F251248E00083C2D3 /* DescricaoMovimentoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */; };
 		AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED537250B9B5C001F88BD /* Categoria.swift */; };
 		AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED539250B9B6B001F88BD /* Movimento.swift */; };
 		AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53B250B9B77001F88BD /* Evento.swift */; };
 		AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53D250B9D71001F88BD /* MockMulheres.swift */; };
 		AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53F250BA52B001F88BD /* MockCategorias.swift */; };
+		AFECD7F52513960C00B86A45 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7F42513960C00B86A45 /* CalendarExtension.swift */; };
+		AFECD7FA2513996D00B86A45 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7F92513996D00B86A45 /* Day.swift */; };
+		AFECD7FF25139AE100B86A45 /* MonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7FE25139AE100B86A45 /* MonthData.swift */; };
+		AFECD8042513A21100B86A45 /* CalendarDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,11 +71,16 @@
 		AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMatterMovimentosSociaisTests.swift; sourceTree = "<group>"; };
 		AF7843AC250A60980028FD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DescricaoMovimento.storyboard; sourceTree = "<group>"; };
+		AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoMovimentoViewController.swift; sourceTree = "<group>"; };
 		AF9ED537250B9B5C001F88BD /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		AF9ED539250B9B6B001F88BD /* Movimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimento.swift; sourceTree = "<group>"; };
 		AF9ED53B250B9B77001F88BD /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		AF9ED53D250B9D71001F88BD /* MockMulheres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMulheres.swift; sourceTree = "<group>"; };
 		AF9ED53F250BA52B001F88BD /* MockCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategorias.swift; sourceTree = "<group>"; };
+		AFECD7F42513960C00B86A45 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		AFECD7F92513996D00B86A45 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
+		AFECD7FE25139AE100B86A45 /* MonthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthData.swift; sourceTree = "<group>"; };
+		AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +153,8 @@
 				AF9ED53B250B9B77001F88BD /* Evento.swift */,
 				AF9ED53D250B9D71001F88BD /* MockMulheres.swift */,
 				AF9ED53F250BA52B001F88BD /* MockCategorias.swift */,
+				AFECD7F92513996D00B86A45 /* Day.swift */,
+				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +166,7 @@
 				AF784390250A45EE0028FD21 /* Eventos.storyboard */,
 				AF784392250A460D0028FD21 /* Movimentos.storyboard */,
 				AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */,
+				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -163,6 +176,8 @@
 			children = (
 				AF784379250A45140028FD21 /* EventosViewController.swift */,
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
+				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
+				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,12 +359,17 @@
 			files = (
 				AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */,
 				AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */,
+				AFECD7FA2513996D00B86A45 /* Day.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
+				AFECD7F52513960C00B86A45 /* CalendarExtension.swift in Sources */,
+				AF99F22F251248E00083C2D3 /* DescricaoMovimentoViewController.swift in Sources */,
 				AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */,
 				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
 				AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */,
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
 				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
+				AFECD7FF25139AE100B86A45 /* MonthData.swift in Sources */,
+				AFECD8042513A21100B86A45 /* CalendarDateCollectionViewCell.swift in Sources */,
 				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
