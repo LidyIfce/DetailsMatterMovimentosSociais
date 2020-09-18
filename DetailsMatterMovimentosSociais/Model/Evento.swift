@@ -11,30 +11,48 @@ import Foundation
 class Evento {
     let eventoId: UUID
     let nome: String
+    let movimento: String
     let descricao: String
-    let dataHora: String
+    let data: [String]
+    let hora: [String]
     let localizacao: String
     
-    init(eventoId: UUID = UUID(), nome: String, descricao: String, dataHora: String, localizacao: String) {
+    init(eventoId: UUID = UUID(),
+         nome: String,
+         movimento: String,
+         descricao: String,
+         data: [String],
+         hora: [String],
+         localizacao: String) {
         self.eventoId = eventoId
         self.nome = nome
+        self.movimento = movimento
         self.descricao = descricao
-        self.dataHora = dataHora
+        self.data = data
+        self.hora = hora
         self.localizacao = localizacao
     }
     
-    func getDataHora() -> Date {
+    func getData() -> [Date] {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
         dateFormatter.dateFormat = "dd-MM-yyyy HH:mm:ss"
-       
-        return dateFormatter.date(from: dataHora) ?? Date()
+        var dates: [Date] = []
+        for date in data {
+            dates.append(dateFormatter.date(from: date) ?? Date())
+        }
+        return dates
     }
     
-    func getDataHoraString() -> String {
+    func getDataHoraString() -> [String] {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
         dateFormatter.setLocalizedDateFormatFromTemplate("E, d MMMM aaaa HH: mm")
-        return dateFormatter.string(from: getDataHora())
+        var dataString: [String] = []
+        let datas = getData()
+        for date in datas {
+            dataString.append(dateFormatter.string(from: date))
+        }
+        return dataString
     }
 }

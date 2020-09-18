@@ -11,11 +11,13 @@ import Foundation
 class Categoria {
     let categoriaId: UUID
     let nome: String
+    let imagem: String
     let movimentos: [Movimento]
     
-    init(categoriaId: UUID = UUID(), nome: String, movimentos: [Movimento]) {
+    init(categoriaId: UUID = UUID(), nome: String, imagem: String, movimentos: [Movimento]) {
         self.categoriaId = categoriaId
         self.nome = nome
+        self.imagem = imagem
         self.movimentos = movimentos
     }
 }
