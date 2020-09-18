@@ -9,5 +9,7 @@
 import Foundation
 
 struct MockCategorias {
-    static var mock: [Categoria] = [Categoria(nome: "Mulheres", imagem: "mulheres", movimentos: MulheresMock.movimentos)]
+    static var mock: [Categoria] = [Categoria(nome: "Mulheres",
+                                              imagem: "mulheres",
+                                              movimentos: MulheresMock.movimentos)]
 }

@@ -17,21 +17,9 @@ class MovimentosViewController: UIViewController {
         configCollectionView()
     }
     
-    
-    func configCollectionView(){
-        collectionView.delegate = self
-        collectionView.dataSource = self
+    func configCollectionView() {
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
     }
-    
 
-}
-
-extension MovimentosViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        <#code#>
-    }
 }

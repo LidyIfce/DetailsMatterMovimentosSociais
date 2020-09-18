@@ -36,7 +36,6 @@ class CalendarDateCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-
         contentView.addSubview(selectionBackgroundView)
         contentView.addSubview(numberLabel)
     }
