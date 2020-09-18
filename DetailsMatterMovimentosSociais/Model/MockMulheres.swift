@@ -54,7 +54,7 @@ O Insper, o Movimento Mulher 360, o PwC e a ONU Mulheres são os responsáveis p
 A oficina tem o objetivo de apresentar o que são esses vieses e inspirar caminhos para que eles sejam trabalhados nas empresas.
 
 A oficina conta com as palestras dos seguintes especialistas: Ana Carolina Querino, ONU Mulheres; Tatiana Trevisan, Movimento Mulher 360; Professor Antonio Pereira, do Instituto do Cérebro da UFRN; Professora Regina Madalozzo, Insper; Ana Paula Malvestio, PwC; Cláudia Cavalcante, Unilever; Silvia Tyrola, Accenture, Regina Chamma, Google; Gilberto Rigolon, Nestlé; e Daniela Sicoli, Microsoft Brasil.
-""", dataHora: "03-10-2020 14:00:00", localizacao: """
+""", data: ["03-10-2020 00:00:00"], hora: ["14:00"], localizacao: """
 Casa da ONU – Complexo Sérgio Vieira de Mello
 Setor de Embaixadas Norte – SEN, Quadra 802 – Lote 17
 CEP: 70800-400 – Brasília/DF
@@ -68,7 +68,7 @@ Esse evento magnífico está sendo organizado pelo PyLadies Recife e pelo PUG-PE
 Serão 10 palestras e 2 tutoriais, durante todo o dia.
 
 Como ingresso estamos pedindo um alimento não perecível ou uma roupa em bom estado (esse item vai validar sua entrada no evento, mas caso não tenha, não tem problema).
-""", dataHora: "30-10-2020 16:00:00", localizacao: """
+""", data: ["30-10-2020 00:00:00"], hora: ["16:00"], localizacao: """
 UNIFG
 Avenida Governador Carlos de Lima Cavalcanti, 155, Boa Vista
 Recife, PE
@@ -76,7 +76,7 @@ Recife, PE
 Quer matar a sua fome de Pull Requests, colaborar em projetos e ainda cumprir o desafio da Hacktoberfest? Vem pra o Git Day que a gente te mostra como!
 
 Com duração de quatro horas, este encontro tem o objetivo de compartilhar conhecimentos de Git, propondo um ambiente colaborativo, onde pessoas mais experientes irão ajudar as iniciantes e todas elas, ao final da manhã, terão cumprido a missão proposta pela Hacktoberfest.
-""", dataHora: "05-11-2020 15:00:00", localizacao: """
+""", data: ["05-11-2020 00:00:00"], hora: ["15:00"], localizacao: """
 Centro Universitário Farias Brito - FB UNI
 Rua Castro Monte, 1364, Varjota
 Fortaleza, CE
@@ -92,7 +92,7 @@ O bate papo é ao vivo, na nossa sede, e será transmitido pela página de Cató
 A justiça reprodutiva é um assunto que aprofunda a discussão sobre a legalização e descriminalização do aborto.
 
 A expressão, derivada dos temas justiça social e direitos reprodutivos, coloca a dimensão racial e étnica como fator fundamental para refletir sobre a saúde reprodutiva das mulheres.
-""", dataHora: "30-09-2020 00:00:00", localizacao: "Sede de Católicas: Rua Martiniano de Carvalho, nº 71, casa 11, Bela Vista, SP"), Evento(nome: "CAFÉministas: Os Corpos Negros na Teologia", descricao: """
+""", data: ["30-09-2020 00:00:00"], hora: ["18:00"], localizacao: "Sede de Católicas: Rua Martiniano de Carvalho, nº 71, casa 11, Bela Vista, SP"), Evento(nome: "CAFÉministas: Os Corpos Negros na Teologia", movimento: "Católicas pelo direito de decidir", descricao: """
 Descolonizar a teologia é urgente e, pensando nisso, o próximo bate papo das Café_ministas terá como tema “Os Corpos Negros na Teologia”.
 
 Com a experiência de fé da Pastora Eliad (Igreja Metodista e Evangélicas pela Igualdade de Gênero) , da Daiane Zito (PASTORAL DA JUVENTUDE NACIONAL) e da Isadora Nascimento (Movimento Negro Evangélico do Brasil), queremos pensar contribuições antirracistas para nossas igrejas.
@@ -100,7 +100,7 @@ Com a experiência de fé da Pastora Eliad (Igreja Metodista e Evangélicas pela
 Por acreditarmos que racismo também é pecado porque aniquila o outro, sentimos que é preciso uma nova compreensão teológica para combater esse mal que há tantos anos assombra e assola a vida de diversos pessoas religiosas.
 
 Mobilize sua igreja. Chame seus amigos e  amigas. O convite é aberto, gratuito e indispensável para quem crê ou não.
-""", dataHora: "16-09-2020 00:00:00", localizacao: """
+""", data: ["16-09-2020 00:00:00"], hora: ["17:00"], localizacao: """
 Koinonia Presença Ecumênica
 Rua do Carmo, 56, Sé
 São Paulo – SP
@@ -114,7 +114,7 @@ O evento é uma realização da SOF Sempreviva Organização Feminista e da Secr
 A Mostra reunirá mulheres urbanas e rurais do Estado de São Paulo para intercâmbio de experiências na economia solidária e feminista.
 
 Mulheres de diversos grupos e cooperativas debaterão sobre os desafios e aprendizados para as alternativas coletivas de geração de renda e garantia de autonomia econômica.
-""", dataHora: "04-12-2020 19:00:00", localizacao: """
+""", data: ["04-12-2020 00:00:00"], hora: ["19:00"], localizacao: """
 Centro Histórico de São Paulo
 Av. São João, 281
 São Paulo - SP, 01035-000
