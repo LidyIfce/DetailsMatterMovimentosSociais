@@ -62,7 +62,10 @@ class DescricaoMovimentoViewController: UITableViewController {
         setupImageCapa()
         setupDescricao()
         for mov in movimento.eventos {
-            datas.append(mov.getDataHora())
+            let date = mov.getData()
+            for date in date {
+                datas.append(date)
+            }
         }
      
         movimentoTitle.text = movimento.nome
