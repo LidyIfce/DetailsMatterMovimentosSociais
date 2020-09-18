@@ -10,7 +10,7 @@ import Foundation
 
 struct MockLgbt {
     
-    let todxs = Movimento(nome: "TODXS", descricao: "A TODXS é uma startup social sem fins lucrativos. Somos mais de cem pessoas que trabalham voluntariamente e de maneira remota com uma única missão: empoderar a comunidade LGBTI+ e fazer do Brasil um país inclusivo, sem discriminação.A TODXS atua através de projetos de tecnologia e inovação. Um desses é o TODXS App, aplicativo que reúne leis voltadas para a população LGBTI+ e que recebe denúncias de caso sobre LGBTIfobia. Além do app, temos outros projetos como o Conecta, dia de palestras e conexão com pessoas LGBTI+; outra iniciativa é o Embaixadorxs, voltado para a capacitação de jovens que buscam transformar a realidade de suas comunidades.", imagem: "todxs", eventos: EventosMockLgbt.eventosTodxs)
+    let todxs = Movimento(nome: "TODXS", descricao: "A TODXS é uma startup social sem fins lucrativos. Somos mais de cem pessoas que trabalham voluntariamente e de maneira remota com uma única missão: empoderar a comunidade LGBTI+ e fazer do Brasil um país inclusivo, sem discriminação.A TODXS atua através de projetos de tecnologia e inovação. Um desses é o TODXS App, aplicativo que reúne leis voltadas para a população LGBTI+ e que recebe denúncias de caso sobre LGBTIfobia. Além do app, temos outros projetos como o Conecta, dia de palestras e conexão com pessoas LGBTI+; outra iniciativa é o Embaixadorxs, voltado para a capacitação de jovens que buscam transformar a realidade de suas comunidades.", imagem: "todxs", eventos: EventosMockLgbt.eventosTodxs, urlInstagram: "https://www.instagram.com/todxsbrasil/", urlWebSite: "https://medium.com/todxs", urlFacebook: "https://www.facebook.com/todxsbrasil")
     
     let maes = Movimento(nome: "Mães Pela Diversidade", descricao: """
 A preocupação e a união de mães de LGBTs do Brasil inteiro resultou no coletivo Mães pela Diversidade, ambiente onde, juntas, as mães lutam contra o avanço da homotransfobia e pelos direitos civis de seus filhos e de toda a população LGBTs.
@@ -24,12 +24,12 @@ A preocupação e a união de mães de LGBTs do Brasil inteiro resultou no colet
     Para que a população LGBTs tenha seus direitos, é preciso que principalmente as famílias os defendam e apoiem. Dentre todas as missões dessas mulheres, uma das que elas mais se orgulham é a de mostrar ao mundo o quanto amam e se orgulham de seus filhos e principalmente, a de mostrar que estão ao lado deles nessa luta!
 
     As Mães pela Diversidade convidam a todos para que se juntem na construção deste espaço de amor e acolhimento. Sejam bem-vindos e vamos à luta!
-""", imagem: "maes", eventos: EventosMockLgbt.eventosMaes)
+""", imagem: "maes", eventos: EventosMockLgbt.eventosMaes, urlInstagram: "https://www.instagram.com/maespeladiversidade/", urlWebSite: "- https://maespeladiversidade.org.br/?fbclid=IwAR1Dk36toDe37LckqC1qupLnT0xNUVFYc3JI0UJkJZfE8r1mU59gCegzPVY", urlFacebook: "https://www.facebook.com/MaespelaDiversidade/")
     
     let abglt = Movimento(nome: "ABGLT", descricao: """
 A criação da ABGLT(Associação Brasileira de Lésbicas, Gays, Bissexuais, Travestis, Transexuais e Intersexos) representa um marco importante na história do movimento LGBT brasileiro, pois possibilitou a criação de uma rede nacional de representação com capacidade e legitimidade para levar as reivindicações do segmento até o Governo Federal e a sociedade como um todos, o que até então havia sido impossível. Além disso, contribuiu para a organização das entidades de base país afora, capilarizando o movimento por todos os estados da federação. A ABLGT é, sem dúvida, a grande responsável pela organização do movimento LGBT no país e também por dar voz a um segmento da sociedade tradicionalmente marginalizado.
 A ABGLT tem como missão: Promover ações que garantam a cidadania e os direitos humanos de lésbicas, gays, bissexuais, travestis e transexuais (LGBT), contribuindo para a construção de uma sociedade democrática, na qual nenhuma pessoa seja submetida a quaisquer formas de discriminação, coerção e violência, em razão de sua orientação sexual e identidade de gênero.
-""", imagem: "abglt", eventos: EventosMockLgbt.eventosAbglt)
+""", imagem: "abglt", eventos: EventosMockLgbt.eventosAbglt, urlInstagram: "https://www.instagram.com/abglt.oficial/", urlWebSite: "- https://www.abglt.org/copia-quem-somos", urlFacebook: "https://www.instagram.com/abglt.oficial/")
     
     
     static var movimentos: [Movimento] = [MockLgbt().todxs, MockLgbt().maes, MockLgbt().abglt]
