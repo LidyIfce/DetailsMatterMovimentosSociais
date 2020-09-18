@@ -11,13 +11,15 @@ import Foundation
 class Evento {
     let eventoId: UUID
     let nome: String
+    let movimento: String
     let descricao: String
     let dataHora: String
     let localizacao: String
     
-    init(eventoId: UUID = UUID(), nome: String, descricao: String, dataHora: String, localizacao: String) {
+    init(eventoId: UUID = UUID(), nome: String, movimento: String, descricao: String, dataHora: String, localizacao: String) {
         self.eventoId = eventoId
         self.nome = nome
+        self.movimento = movimento
         self.descricao = descricao
         self.dataHora = dataHora
         self.localizacao = localizacao
