@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */; };
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
+		A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
 		AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784377250A45140028FD21 /* SceneDelegate.swift */; };
 		AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784379250A45140028FD21 /* EventosViewController.swift */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF784375250A45140028FD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF784377250A45140028FD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 			path = EventsFiles;
 			sourceTree = "<group>";
 		};
+		A78FEBBA2512DBB300E09744 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AF784369250A45130028FD21 = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		AF784374250A45140028FD21 /* DetailsMatterMovimentosSociais */ = {
 			isa = PBXGroup;
 			children = (
+				A78FEBBA2512DBB300E09744 /* Extensions */,
 				AF784389250A45200028FD21 /* Model */,
 				AF78438A250A45340028FD21 /* View */,
 				AF78438B250A454C0028FD21 /* Controller */,
@@ -358,6 +369,7 @@
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
 				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
 				73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */,
+				A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */,
 				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
