@@ -23,6 +23,7 @@
 		AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784394250A48D20028FD21 /* MovimentosViewController.swift */; };
 		AF78439D250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF78439C250A60840028FD21 /* DetailsMatterMovimentosSociaisUITests.swift */; };
 		AF7843AB250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */; };
+		AF99F22D251241240083C2D3 /* DescricaoMovimento.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */; };
 		AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED537250B9B5C001F88BD /* Categoria.swift */; };
 		AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED539250B9B6B001F88BD /* Movimento.swift */; };
 		AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53B250B9B77001F88BD /* Evento.swift */; };
@@ -70,6 +71,7 @@
 		AF7843A8250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DetailsMatterMovimentosSociaisTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7843AA250A60980028FD21 /* DetailsMatterMovimentosSociaisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsMatterMovimentosSociaisTests.swift; sourceTree = "<group>"; };
 		AF7843AC250A60980028FD21 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DescricaoMovimento.storyboard; sourceTree = "<group>"; };
 		AF9ED537250B9B5C001F88BD /* Categoria.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Categoria.swift; sourceTree = "<group>"; };
 		AF9ED539250B9B6B001F88BD /* Movimento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movimento.swift; sourceTree = "<group>"; };
 		AF9ED53B250B9B77001F88BD /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				AF784390250A45EE0028FD21 /* Eventos.storyboard */,
 				AF784392250A460D0028FD21 /* Movimentos.storyboard */,
 				88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */,
+				AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				AF784393250A460E0028FD21 /* Movimentos.storyboard in Resources */,
 				AF78438F250A45C00028FD21 /* TabBarController.storyboard in Resources */,
 				AF78437D250A45140028FD21 /* Main.storyboard in Resources */,
+				AF99F22D251241240083C2D3 /* DescricaoMovimento.storyboard in Resources */,
 				88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
