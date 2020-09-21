@@ -10,7 +10,7 @@ import UIKit
 
 class DescricaoMovimentoViewController: UITableViewController {
     
-    let movimento = MulheresMock().catolicasPeloDireitoDeDecidir
+    let movimento = MulheresMock().pyLadiesBrasil
     var datas: [Date] = []
     
     @IBOutlet weak var movimentoTitle: UILabel!
@@ -27,6 +27,7 @@ class DescricaoMovimentoViewController: UITableViewController {
       didSet {
         days = generateDaysInMonth(for: baseDate)
         collectionView.reloadData()
+        calendarHeaderView.baseDate = baseDate
       }
     }
 
@@ -42,21 +43,46 @@ class DescricaoMovimentoViewController: UITableViewController {
       return dateFormatter
     }()
     
+    private lazy var calendarHeaderView = CalendarHeaderView()
+    private lazy var calendarFooterView = CalendarFooterView(
+      didTapLastMonthCompletionHandler: { [weak self] in
+      guard let self = self else { return }
+
+      self.baseDate = self.calendar.date(
+        byAdding: .month,
+        value: -1,
+        to: self.baseDate
+        ) ?? self.baseDate
+      },
+      didTapNextMonthCompletionHandler: { [weak self] in
+        guard let self = self else { return }
+
+        self.baseDate = self.calendar.date(
+          byAdding: .month,
+          value: 1,
+          to: self.baseDate
+          ) ?? self.baseDate
+      })
+
     private lazy var collectionView: UICollectionView = {
-      let layout = UICollectionViewFlowLayout()
-      layout.minimumLineSpacing = 0
-      layout.minimumInteritemSpacing = 0
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
         
-      let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-      collectionView.isScrollEnabled = false
-      collectionView.translatesAutoresizingMaskIntoConstraints = false
-      return collectionView
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collectionView.isScrollEnabled = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        collectionView.backgroundColor = .white
+        collectionView.layer.borderWidth  = 3
+        collectionView.layer.borderColor = UIColor.white.cgColor
+        return collectionView
     }()
     
     let calendar = Calendar(identifier: .gregorian)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .backGroundColor
         configureTable()
         checkButtonsRedes()
         setupImageCapa()
@@ -72,32 +98,62 @@ class DescricaoMovimentoViewController: UITableViewController {
         navigationController?.navigationBar.shadowImage = UIImage()
         collectionView.backgroundColor = .systemGroupedBackground
         calendarView.addSubview(collectionView)
+        setupCollection()
+        calendarView.addSubview(calendarHeaderView)
+        calendarHeaderView.baseDate = baseDate
+        setupCalendarHeader()
+        calendarView.addSubview(calendarFooterView)
+        setupCalendarFooter()
+        
+    }
     
+    func setupCollection() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CalendarDateCollectionViewCell.self,
+                                forCellWithReuseIdentifier: CalendarDateCollectionViewCell.reuseIdentifier)
+        
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
-          //1
           collectionView.leadingAnchor.constraint(
             equalTo: calendarView.readableContentGuide.leadingAnchor),
           collectionView.trailingAnchor.constraint(
             equalTo: calendarView.readableContentGuide.trailingAnchor),
-          //2
           collectionView.centerYAnchor.constraint(
             equalTo: calendarView.centerYAnchor,
             constant: 10),
-          //3
           collectionView.heightAnchor.constraint(
             equalTo: calendarView.heightAnchor,
             multiplier: 0.5)
         ])
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(
-          CalendarDateCollectionViewCell.self,
-          forCellWithReuseIdentifier: CalendarDateCollectionViewCell.reuseIdentifier
-        )
+       
         NSLayoutConstraint.activate(constraints)
-
     }
+    
+    func setupCalendarHeader() {
+        var constraints: [NSLayoutConstraint] = []
+        constraints.append(contentsOf: [
+            calendarHeaderView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor),
+            calendarHeaderView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
+            calendarHeaderView.bottomAnchor.constraint(equalTo: collectionView.topAnchor),
+            calendarHeaderView.heightAnchor.constraint(equalToConstant: 85)
+        ])
+       
+        NSLayoutConstraint.activate(constraints)
+    }
+    
+    func setupCalendarFooter() {
+        var constraints: [NSLayoutConstraint] = []
+        constraints.append(contentsOf: [
+            calendarFooterView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor),
+            calendarFooterView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
+            calendarFooterView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
+            calendarFooterView.heightAnchor.constraint(equalToConstant: 60)
+        ])
+       
+        NSLayoutConstraint.activate(constraints)
+    }
+    
     @IBAction func goToInstagram(_ sender: Any) {
         if let url = URL(string: movimento.urlInstagram ?? "") {
             UIApplication.shared.open(url)
@@ -197,6 +253,7 @@ extension DescricaoMovimentoViewController: UICollectionViewDataSource, UICollec
       didSelectItemAt indexPath: IndexPath
     ) {
         let day = days[indexPath.row]
+       
         print(day.hasEvent)
     }
 
