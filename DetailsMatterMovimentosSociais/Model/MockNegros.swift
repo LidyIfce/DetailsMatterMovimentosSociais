@@ -7,8 +7,9 @@
 //
 
 import Foundation
+//swiftlint:disable line_length
 
-struct MockNegros{
+struct MockNegros {
     let almaPreta = Movimento(nome: "Alma Preta", descricao: """
 Criado em 2015 por um grupo de jovens comunicadores da UNESP, o Alma Preta é uma agência de jornalismo especializado na temática racial do Brasil. Em nosso conteúdo você encontra reportagens, coberturas, colunas, análises, produções audiovisuais, ilustrações e divulgação de eventos da comunidade afro-brasileira. Nosso objetivo é construir um novo formato de gestão de processos, pessoas e recursos através do jornalismo qualificado e independente.
 
@@ -37,7 +38,6 @@ Os objetivos da CONAQ é lutar pela garantia de uso coletivo do território, pel
     
     let inegra = Movimento(nome: "INEGRA", descricao: "O Instituto Negra do Ceará – INEGRA é uma organização social de mulheres negras que objetiva promover os valores étnicos, políticos, sociais e culturais das populações negras, com prioridade à mulheres negras, atuando em uma perspectiva anti-racista e feminista. Reúne mulheres negras de diferentes áreas de formação e atuação política: militantes dos movimentos negro, feminista e popular; lideranças estudantis; pesquisadoras e profissionais liberais.", imagem: "inegra", eventos: EventosMockNegros.eventosInegra, urlInstagram: nil, urlWebSite: "https://inegrace.wordpress.com/about/", urlFacebook: nil)
     
-    
     static var movimentos: [Movimento] = [MockNegros().almaPreta, MockNegros().afromack, MockNegros().conaq, MockNegros().marielle, MockNegros().inegra]
 }
 
@@ -59,7 +59,7 @@ A Posição do Negro no Mercado de Trabalho
 Gilberto Costa, Vera Honorato e Gustavo de Paula
 29, sexta às 19h
 Sarau Afromack
-""", data: ["26-11-2020 00:00:00", "27-11-2020 00:00:00", "28-11-2020 00:00:00", "29-11-2020 00:00:00"], hora: ["19:00"], localizacao: "Auditório Benedito Novais - Mackenzie, Rua da Consolação, 930 08381 São Paulo, SP"), Evento(nome: "Bate-papo com a Amazon", movimento: "Coletivo Negro Afromack", descricao: "O Coletivo Negro Afromack promove um encontro entre os alunos negros do Mackenzie com a equipe da Amazon Brasil, para falar sobre processos seletivos e ações afirmativas dentro da empresa.", data: ["24-10-2020 00:00:00"], hora: ["18:00","19:00"], localizacao: "Prédio 45, Sala 403 - Mackenzie, Rua da Consolação, 930 08381 São Paulo, SP")]
+""", data: ["26-11-2020 00:00:00", "27-11-2020 00:00:00", "28-11-2020 00:00:00", "29-11-2020 00:00:00"], hora: ["19:00"], localizacao: "Auditório Benedito Novais - Mackenzie, Rua da Consolação, 930 08381 São Paulo, SP"), Evento(nome: "Bate-papo com a Amazon", movimento: "Coletivo Negro Afromack", descricao: "O Coletivo Negro Afromack promove um encontro entre os alunos negros do Mackenzie com a equipe da Amazon Brasil, para falar sobre processos seletivos e ações afirmativas dentro da empresa.", data: ["24-10-2020 00:00:00"], hora: ["18:00", "19:00"], localizacao: "Prédio 45, Sala 403 - Mackenzie, Rua da Consolação, 930 08381 São Paulo, SP")]
     
     static let eventosConaq: [Evento] = [Evento(nome: "DEFESA DE MESTRADO DA QUILOMBOLA APARECIDA MENDES", movimento: "CONAQ", descricao: """
 Convidamos toda a comunidade para estar presente nesta importante data!
@@ -72,7 +72,7 @@ Para preservar a sua memória, multiplicar o seu legado e buscar por justiça, v
 >> CONFIRA A PROGRAMAÇÃO <<
 Por conta da pandemia de Coronavírus tivemos que alterar a programação desse 14 de março. Mas precisamos que esse continue sendo um grande dia de luta por justiça por Marielle! Por isso queremos fazer um grande amanhecer espalhado pelo mundo que irão pendurar faixas amarelas na suas janelas, ruas ou praças!
 ☀️ Por isso, vamos fazer um Amanhecer por Marielle e Anderson como nunca antes visto!
-""", data: ["14-10-2020 00:00:00"], hora: ["07:00","22:00"], localizacao: "Praça Mauá, Centro, Rio de Janeiro - RJ, 20081-240, Brasil"), Evento(nome: "Cineclube na Casa Marielle :: Filmes + debate", movimento: "Instituto Marielle Franco", descricao: """
+""", data: ["14-10-2020 00:00:00"], hora: ["07:00", "22:00"], localizacao: "Praça Mauá, Centro, Rio de Janeiro - RJ, 20081-240, Brasil"), Evento(nome: "Cineclube na Casa Marielle :: Filmes + debate", movimento: "Instituto Marielle Franco", descricao: """
 Vai ter cineclube na Casa Marielle! 🎬 O Instituto Marielle Franco convida todas e todos pra assistir os filmes "Alfazema", de Sabrina Fidalgo, e "Travessia - Ep. Larissa Luz", de Renata Novaes. Depois vamos ter um debate sobre os filmes com as diretoras.
 Atenção, o evento é sujeito a lotação! Chegue cedo pra garantir o lugar.
 🎥 Alfazema, escrito e dirigido por Sabrina Fidalgo, traz a história da mulher que, ao esperar o paquera sair do banheiro, se depara com uma série de representações míticas. O filme ganhou o prêmio de Melhor Filme pelo Juri Popular no Festival Internacional de Curtas do Rio de Janeiro e o Festival de Brasília.

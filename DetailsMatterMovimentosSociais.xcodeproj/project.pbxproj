@@ -209,9 +209,9 @@
 			children = (
 				AF784379250A45140028FD21 /* EventosViewController.swift */,
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
+				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
 				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
 				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
-				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

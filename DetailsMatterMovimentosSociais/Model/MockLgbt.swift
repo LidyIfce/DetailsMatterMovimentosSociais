@@ -4,9 +4,9 @@
 //
 //  Created by Helaine Pontes on 17/09/20.
 //  Copyright © 2020 Lidiane Gomes Barbosa. All rights reserved.
-//swiftlint:disable line_length
 
 import Foundation
+//swiftlint:disable line_length
 
 struct MockLgbt {
     
@@ -42,14 +42,14 @@ struct EventosMockLgbt {
  O Conecta é um evento que une pessoas que se interessam pela causa LGBTI+ e que querem discutir assuntos relevantes para a comunidade. Reunimos estudantes, jovens, artistas, lideranças, acadêmicos, ativistas e aliados em uma tarde para trocar informações sobre algum tema.
  “Resistir é existir. Histórias e vivências da militância LGBTI+ no Brasil”
  Este é o tema dessa edição do Conecta. Por meio de personalidades que estão há muito tempo ou que começaram agora nesta luta, serão abordadas as diferentes formas de resistência dessa comunidade. Seja na internet, na arte ou na política. Discutir o que aconteceu no passado para entender o presente e pensar no futuro.
- """, data: ["22-10-2020 00:00:00"], hora: ["12:00","20:00"], localizacao: "Auditório da Nubank. Rua Capote Valente, 39, na zona oeste de São Paulo. O prédio fica bem próximo da estação de metrô Oscar Freire e do Hospital das Clínicas.")]
+ """, data: ["22-10-2020 00:00:00"], hora: ["12:00", "20:00"], localizacao: "Auditório da Nubank. Rua Capote Valente, 39, na zona oeste de São Paulo. O prédio fica bem próximo da estação de metrô Oscar Freire e do Hospital das Clínicas.")]
     
     static let eventosMaes: [Evento] = [Evento(nome: "We Will Rock You - a Live Solídaria", movimento: "Mães Pela Diversidade", descricao: """
 A Live da Noitada Solidária deste sábado tem a missão de reconstruir o que o vandalismo destruiu do Espaço Acolher (LGBTQIA+) em Recife/PE.
     Grandes artistas se reunirão para levar aos expectadores o melhor do Rock and Roll clássico e abalar as estruturas com uma levada de amor ao próximo.
     85% da arrecadações serão destinadas à ONG Mães pela Diversidade, através do projeto Espaço Acolher. Toda a doação, seja em dim dim e em especial em energia, é mais que bem vinda!
     Artistas confirmados: Rodrigo Viegas, Bernardo Ritto, Diana Castello e mais.
-""", data: ["05-10-2020 00:00:00"], hora: ["19:00","22:00"], localizacao: "Facebook"), Evento(nome: "Prosa e Café com Amor", movimento: "Mães Pela Diversidade", descricao: """
+""", data: ["05-10-2020 00:00:00"], hora: ["19:00", "22:00"], localizacao: "Facebook"), Evento(nome: "Prosa e Café com Amor", movimento: "Mães Pela Diversidade", descricao: """
 Pessoas trans e travesti também têm família e também têm mães incríveis que as apoiam!
 E é nesse clima de amor e apoio que, na nossa 3ª Semana de Visibilidade Trans e Travesti de Belo Horizonte, teremos um lindo evento de Prosa e Café com Amor com as Mães pela Diversidade!
 As Mães pela Diversidade e convidades estarão no Centro de Referência da Juventude - CRJ, no dia 27/01, segunda-feira, às 19h, esperando por vocês.
@@ -58,9 +58,9 @@ A entrada é gratuita, é só vir meu bem!
 """, data: ["25-10-2020 00:00:00"], hora: ["16:00"], localizacao: "Centro de Referencia da Juventude - CRJ - Rua Guaicurus - Centro, Belo Horizonte"), Evento(nome: "Mães contra o preconceito!", movimento: "Mães Pela Diversidade", descricao: """
 Palestra, trocas de experiências, bate-papo e roda de conversa.
 Na mesa: Zilda Vermont, Carlos Vinícius Silva Pinheiro, Mayra Ribeiro, Alexandre Mortagua e Majú Giorgi.
-""", data: ["15-11-2020 00:00:00"], hora: ["13:00","17:00"], localizacao: "")]
+""", data: ["15-11-2020 00:00:00"], hora: ["13:00", "17:00"], localizacao: "")]
     
-    static let eventosAbglt: [Evento] = [Evento(nome: "IV Encontro Nacional de Juventude LGBTI em Belém", movimento: "ABGLT", descricao: "Entre os dias 29 a 31 de outubro, a cidade de Belém (PA) recebe o IV Encontro Nacional de Juventude LGBTI (ENJUV LGBTI). Com o objetivo de reunir jovens de todo país para discutir a política brasileira e a luta pela garantia dos direitos LGBTI, o tema desta edição é “Nada sobre nós sem nós: a importância do protagonismo juvenil LGBTI no cenário político brasileiro”. A edição 2020 do ENJUV terá como tema: “Nada sobre nós sem nós: aimportância do protagonismo juvenil LGBTI no cenário político brasileiro”. O tema traz a política como ponto principal, pois é a partir dela que muitos direitos são conquistados ou negados. Com a onda conservadora que se instalou no país a partir das eleições de 2018 e da ascensão do ‘bolsonarismo’, tornou-se ainda mais necessária a participação ativa da população LGBTI nos processos democráticos, nas escolhas de representações e até mesmo se colocando como uma opção de representação. Afinal, ter um LGBTI como representante dá ainda mais legitimidade as questões que atravessam a realidade dos LGBTI.", data: ["29-10-2020 00:00:00"], hora: ["12:00","22:00"], localizacao: "Bélem")]
+    static let eventosAbglt: [Evento] = [Evento(nome: "IV Encontro Nacional de Juventude LGBTI em Belém", movimento: "ABGLT", descricao: "Entre os dias 29 a 31 de outubro, a cidade de Belém (PA) recebe o IV Encontro Nacional de Juventude LGBTI (ENJUV LGBTI). Com o objetivo de reunir jovens de todo país para discutir a política brasileira e a luta pela garantia dos direitos LGBTI, o tema desta edição é “Nada sobre nós sem nós: a importância do protagonismo juvenil LGBTI no cenário político brasileiro”. A edição 2020 do ENJUV terá como tema: “Nada sobre nós sem nós: aimportância do protagonismo juvenil LGBTI no cenário político brasileiro”. O tema traz a política como ponto principal, pois é a partir dela que muitos direitos são conquistados ou negados. Com a onda conservadora que se instalou no país a partir das eleições de 2018 e da ascensão do ‘bolsonarismo’, tornou-se ainda mais necessária a participação ativa da população LGBTI nos processos democráticos, nas escolhas de representações e até mesmo se colocando como uma opção de representação. Afinal, ter um LGBTI como representante dá ainda mais legitimidade as questões que atravessam a realidade dos LGBTI.", data: ["29-10-2020 00:00:00"], hora: ["12:00", "22:00"], localizacao: "Bélem")]
     
     static let eventosCasaNem: [Evento] = [Evento(nome: "ATO DE (R)EXISTÊNCIA NEM!", movimento: "Casa Nem", descricao: "Mobilização geral contra a reintegração de posse do imóvel da Ocupação Stonewall Inn ocupado desde abril de 2018 ao qual a CasaNem LGBTIA+ se juntou em 2019. Façamos um levante em frente ao portão do nº 27 da Dias da Rocha, levantemos nossas bandeiras, não vamos permitir que se dê essa ordem de despejo, em plena época de pandemia.", data: ["01-10-2020 00:00:00"], hora: ["14:00"], localizacao: "Casa Nem - Rua República do Peru, 104, Rio de Janeiro"), Evento(nome: "ESTIVAL INTERNACIONAL DO ORGULHO LGBTIA+e ENCERRAMENTO DAS COMEMORAÇÕES PELOS 50 ANOS DA REVOLTA DE STONEWALL", movimento: "Casa Nem", descricao: "Grupo Transrevolução, CasaNem, PreparaNem orgulhosamente convidam a todes para o FESTIVAL INTERNACIONAL DO ORGULHO LGBTIA+e ENCERRAMENTO DAS COMEMORAÇÕES PELOS 50 ANOS DA REVOLTA DE STONEWALL | ONLINE", data: ["26-10-2020 00:00:00"], hora: ["19:00", "00:00"], localizacao: "Facebook")]
 }
