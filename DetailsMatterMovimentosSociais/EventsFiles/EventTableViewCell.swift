@@ -10,6 +10,8 @@ import UIKit
 
 class EventTableViewCell: UITableViewCell {
     
+    var participating : Bool = false
+    @IBOutlet weak var participanteButton: UIButton!
     @IBOutlet weak var viewCellToShadow: UIView!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var movimentNameLabel: UILabel!
@@ -26,17 +28,20 @@ class EventTableViewCell: UITableViewCell {
         viewCellToShadow.layer.shadowRadius = 18
         viewCellToShadow.layer.shadowOpacity = 0.3
         
-//        eventNameLabel.text = "GitDay"
-//        movimentNameLabel.text = "Pyladies"
-//        dateEventLabel.text = "20 de Setembro de 2020 - 14h"
-//        placeEventLabel.text = "Centro Universitário Farias Brito - FB Uni - Fortaleza - Ce"
-        
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
+    
+    @IBAction func participandoButton(_ sender: UIButton) {
+        if participating {
+            sender.flash()
+            participanteButton.setTitle("+ Participar", for: .normal)
+            participanteButton.setTitleColor(.actionColor, for: .normal)
+            participating = false
+        } else {
+            sender.flash()
+            participanteButton.setTitle("✓ Participando", for: .normal)
+            participanteButton.setTitleColor(.confirmedColor, for: .normal)
+            participating = true
+        }
+    }
 
 }
