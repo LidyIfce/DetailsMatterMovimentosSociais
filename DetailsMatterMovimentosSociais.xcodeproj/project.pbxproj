@@ -7,13 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */; };
-
 		88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */; };
 		88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */; };
 		88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20C2513A28A009B93DE /* MockLgbt.swift */; };
-
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
 		A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
@@ -35,7 +32,12 @@
 		AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53B250B9B77001F88BD /* Evento.swift */; };
 		AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53D250B9D71001F88BD /* MockMulheres.swift */; };
 		AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF9ED53F250BA52B001F88BD /* MockCategorias.swift */; };
-		AFECD7F52513960C00B86A45 /* CalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7F42513960C00B86A45 /* CalendarExtension.swift */; };
+		AFAEED5C2518D87A00721F5C /* CalendarFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */; };
+		AFAEED612518D8EA00721F5C /* CalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */; };
+		AFAEED7125190A1000721F5C /* DescricaoMovimentoCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAEED7025190A1000721F5C /* DescricaoMovimentoCells.swift */; };
+		AFAEED7625191A3E00721F5C /* CellEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAEED7525191A3E00721F5C /* CellEventos.swift */; };
+		AFAEED8425191EBE00721F5C /* CellEventosDelegateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAEED8325191EBE00721F5C /* CellEventosDelegateExtension.swift */; };
+		AFECD7F52513960C00B86A45 /* CellEventosCalendarExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */; };
 		AFECD7FA2513996D00B86A45 /* Day.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7F92513996D00B86A45 /* Day.swift */; };
 		AFECD7FF25139AE100B86A45 /* MonthData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD7FE25139AE100B86A45 /* MonthData.swift */; };
 		AFECD8042513A21100B86A45 /* CalendarDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */; };
@@ -59,13 +61,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
 		73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
-
 		88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentosCollectionViewCell.swift; sourceTree = "<group>"; };
 		88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardMovimentos_Coletivos.xib; sourceTree = "<group>"; };
 		88DED20C2513A28A009B93DE /* MockLgbt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLgbt.swift; sourceTree = "<group>"; };
-
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +92,12 @@
 		AF9ED53B250B9B77001F88BD /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
 		AF9ED53D250B9D71001F88BD /* MockMulheres.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMulheres.swift; sourceTree = "<group>"; };
 		AF9ED53F250BA52B001F88BD /* MockCategorias.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCategorias.swift; sourceTree = "<group>"; };
-		AFECD7F42513960C00B86A45 /* CalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarExtension.swift; sourceTree = "<group>"; };
+		AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarFooterView.swift; sourceTree = "<group>"; };
+		AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarHeaderView.swift; sourceTree = "<group>"; };
+		AFAEED7025190A1000721F5C /* DescricaoMovimentoCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoMovimentoCells.swift; sourceTree = "<group>"; };
+		AFAEED7525191A3E00721F5C /* CellEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventos.swift; sourceTree = "<group>"; };
+		AFAEED8325191EBE00721F5C /* CellEventosDelegateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventosDelegateExtension.swift; sourceTree = "<group>"; };
+		AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellEventosCalendarExtension.swift; sourceTree = "<group>"; };
 		AFECD7F92513996D00B86A45 /* Day.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day.swift; sourceTree = "<group>"; };
 		AFECD7FE25139AE100B86A45 /* MonthData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthData.swift; sourceTree = "<group>"; };
 		AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDateCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -203,6 +207,8 @@
 				88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */,
 				AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */,
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
+				AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */,
+				AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,7 +219,10 @@
 				AF784379250A45140028FD21 /* EventosViewController.swift */,
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
 				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
-				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
+				AFAEED7025190A1000721F5C /* DescricaoMovimentoCells.swift */,
+				AFAEED7525191A3E00721F5C /* CellEventos.swift */,
+				AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */,
+				AFAEED8325191EBE00721F5C /* CellEventosDelegateExtension.swift */,
 				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
 			);
 			path = Controller;
@@ -395,11 +404,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFAEED7125190A1000721F5C /* DescricaoMovimentoCells.swift in Sources */,
 				AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */,
 				AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */,
+				AFAEED7625191A3E00721F5C /* CellEventos.swift in Sources */,
+				AFAEED5C2518D87A00721F5C /* CalendarFooterView.swift in Sources */,
 				AFECD7FA2513996D00B86A45 /* Day.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
-				AFECD7F52513960C00B86A45 /* CalendarExtension.swift in Sources */,
+				AFECD7F52513960C00B86A45 /* CellEventosCalendarExtension.swift in Sources */,
 				AF99F22F251248E00083C2D3 /* DescricaoMovimentoViewController.swift in Sources */,
 				AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */,
 				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
@@ -407,14 +419,13 @@
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
 				88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */,
 				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
-
+				AFAEED612518D8EA00721F5C /* CalendarHeaderView.swift in Sources */,
+				AFAEED8425191EBE00721F5C /* CellEventosDelegateExtension.swift in Sources */,
 				73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */,
 				A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */,
-
 				AFECD7FF25139AE100B86A45 /* MonthData.swift in Sources */,
 				AFECD8042513A21100B86A45 /* CalendarDateCollectionViewCell.swift in Sources */,
 				88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */,
-
 				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -591,7 +602,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38KM4K4A3R;
+				DEVELOPMENT_TEAM = T373QFGJQA;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -609,7 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 38KM4K4A3R;
+				DEVELOPMENT_TEAM = T373QFGJQA;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

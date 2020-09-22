@@ -1,5 +1,5 @@
 //
-//  CalendarExtension.swift
+//  CellEventosCalendarExtension.swift
 //  DetailsMatterMovimentosSociais
 //
 //  Created by Lidiane Gomes Barbosa on 17/09/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension DescricaoMovimentoViewController {
+extension CellEventos {
     func monthMetadata(for baseDate: Date) throws -> MonthMetadata {
 
         guard
