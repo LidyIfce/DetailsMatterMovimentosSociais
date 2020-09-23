@@ -34,7 +34,7 @@ As religiões são profundamente importantes na história, cultura e imaginário
 Consideramos que as religiões devem ajudar as pessoas a terem uma vida digna e saudável, e não dificultar sua autonomia e liberdade, especialmente em relação à sexualidade e reprodução.
 
 Por isso, lutamos pela laicidade do Estado que deve ser livre da interferência religiosa na criação e condução das políticas públicas.
-""", imagem: "catolicas", eventos: EventosMulheresMock.eventosCatolicas, urlInstagram: nil, urlWebSite: "http://www.catolicasonline.org.br", urlFacebook: "https://www.facebook.com/catolicasdireitodecidir")
+""", imagem: "catolica", eventos: EventosMulheresMock.eventosCatolicas, urlInstagram: nil, urlWebSite: "http://www.catolicasonline.org.br", urlFacebook: "https://www.facebook.com/catolicasdireitodecidir")
     
     let semprevivaOrganizacaoFeminista = Movimento(nome: "SOF Sempreviva Organização Feminista", descricao: """
 A SOF Sempreviva Organização Feminista é uma organização não governamental com sede em São Paulo que faz parte do movimento de mulheres no Brasil e em âmbito internacional.
