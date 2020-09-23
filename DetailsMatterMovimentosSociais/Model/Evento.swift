@@ -47,11 +47,11 @@ class Evento {
     func getDataHoraString() -> [String] {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateFormatter.setLocalizedDateFormatFromTemplate("E, d MMMM aaaa HH: mm")
+        dateFormatter.setLocalizedDateFormatFromTemplate("d MMMM")
         var dataString: [String] = []
         let datas = getData()
-        for date in datas {
-            dataString.append(dateFormatter.string(from: date))
+        for (ind, date) in datas.enumerated() {
+            dataString.append(dateFormatter.string(from: date) + " " + hora[ind] + "h")
         }
         return dataString
     }

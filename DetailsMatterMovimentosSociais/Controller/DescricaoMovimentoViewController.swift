@@ -7,13 +7,17 @@
 //
 
 import UIKit
-
+protocol CellEventosDelegate: class {
+    func updateHeightOfRow()
+}
 class DescricaoMovimentoViewController: UIViewController {
-    
-    let movimento = MulheresMock().semprevivaOrganizacaoFeminista
+    var cellHeight: NSLayoutConstraint?
+    var myContentView: UIView?
+    let movimento = MulheresMock().pyLadiesBrasil
     var datas: [Date] = []
     @IBOutlet weak var tableView: UITableView!
-    
+    let calendar = Calendar(identifier: .gregorian)
+    @IBOutlet weak var separetorView: UIView!
     @IBOutlet weak var movimentoTitle: UILabel!
     @IBOutlet weak var buttonSeguir: UIBarButtonItem!
 
@@ -36,6 +40,8 @@ class DescricaoMovimentoViewController: UIViewController {
     }
   
     func configureTable() {
+        tableView.estimatedRowHeight = UITableView.automaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .none
         tableView.allowsSelection = false
@@ -75,11 +81,20 @@ extension DescricaoMovimentoViewController: UITableViewDelegate, UITableViewData
                     CellEventos else {
                 return UITableViewCell()
             }
-            cell.createCell(datas: datas)
+            cell.delegate = self
+            cell.createCell(datas: datas, eventos: movimento.eventos)
             return cell
         default:
             return UITableViewCell()
         }
     }
-    
+}
+
+extension DescricaoMovimentoViewController: CellEventosDelegate {
+    func updateHeightOfRow() {
+            UIView.setAnimationsEnabled(false)
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            UIView.setAnimationsEnabled(true)
+        }
 }
