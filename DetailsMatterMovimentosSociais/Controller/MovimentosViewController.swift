@@ -13,7 +13,8 @@ class MovimentosViewController: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var cellMarginSize = 16.0
+    weak var delegate: ColetivosDelegate?
+    let categorias = MockCategorias.mock
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,6 @@ class MovimentosViewController: UIViewController {
     }
 
     func configCollectionView() {
-        //setup()
         //Set delegates
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -33,17 +33,6 @@ class MovimentosViewController: UIViewController {
         //Register Cell
         let cellNib = UINib(nibName: MovimentosCollectionViewCell.xibName, bundle: nil)
         collectionView.register(cellNib, forCellWithReuseIdentifier: MovimentosCollectionViewCell.identifier)
-        
-        //Setup GridView
-        setupGridView()
-    }
-    
-    func setupGridView() {
-        guard let flow = collectionView.collectionViewLayout as? UICollectionViewFlowLayout else {
-            fatalError()
-        }
-        flow.minimumLineSpacing = CGFloat(self.cellMarginSize)
-        flow.minimumInteritemSpacing = CGFloat(self.cellMarginSize)
     }
 
 }
@@ -58,10 +47,18 @@ extension MovimentosViewController: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovimentosCollectionViewCell.identifier, for: indexPath) as? MovimentosCollectionViewCell else {
             fatalError()
         }
-        let categoria = MockCategorias.mock[indexPath.row]
         
-        cell.setData(image: categoria.imagem, title: categoria.nome)
+        cell.setData(image: categorias[indexPath.row].imagem, title: categorias[indexPath.row].nome)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let viewC = storyboard?.instantiateViewController(withIdentifier: "ColetivosViewController") as? ColetivosViewController else {
+            fatalError()
+        }
+        self.delegate = viewC
+        delegate?.didSelected(categoria: categorias[indexPath.row])
+        self.navigationController?.pushViewController(viewC, animated: true)
     }
 }
 

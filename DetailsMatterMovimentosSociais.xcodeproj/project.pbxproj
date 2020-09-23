@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */; };
+		883FAB8F251A8D0C0072CC5F /* CardColetivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883FAB8E251A8D0C0072CC5F /* CardColetivos.xib */; };
+		883FAB97251A8FB30072CC5F /* ColetivosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */; };
+		883FAB9C251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883FAB9B251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift */; };
 		88602CBD25153321003FDC7C /* MockNegros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88602CBC25153321003FDC7C /* MockNegros.swift */; };
 		88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */; };
 		88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */; };
@@ -58,6 +61,9 @@
 
 /* Begin PBXFileReference section */
 		73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		883FAB8E251A8D0C0072CC5F /* CardColetivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardColetivos.xib; sourceTree = "<group>"; };
+		883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColetivosViewController.swift; sourceTree = "<group>"; };
+		883FAB9B251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColetivosCollectionViewCell.swift; sourceTree = "<group>"; };
 		88602CBC25153321003FDC7C /* MockNegros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNegros.swift; sourceTree = "<group>"; };
 		88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentosCollectionViewCell.swift; sourceTree = "<group>"; };
 		88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardMovimentos_Coletivos.xib; sourceTree = "<group>"; };
@@ -198,6 +204,7 @@
 				AF784390250A45EE0028FD21 /* Eventos.storyboard */,
 				AF784392250A460D0028FD21 /* Movimentos.storyboard */,
 				88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */,
+				883FAB8E251A8D0C0072CC5F /* CardColetivos.xib */,
 				AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */,
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 			);
@@ -210,6 +217,8 @@
 				AF784379250A45140028FD21 /* EventosViewController.swift */,
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
 				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
+				883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */,
+				883FAB9B251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift */,
 				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
 				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
 			);
@@ -341,6 +350,7 @@
 			files = (
 				AF784382250A45140028FD21 /* LaunchScreen.storyboard in Resources */,
 				AF78437F250A45140028FD21 /* Assets.xcassets in Resources */,
+				883FAB8F251A8D0C0072CC5F /* CardColetivos.xib in Resources */,
 				AF784391250A45EE0028FD21 /* Eventos.storyboard in Resources */,
 				A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */,
 				AF784393250A460E0028FD21 /* Movimentos.storyboard in Resources */,
@@ -394,11 +404,13 @@
 			files = (
 				AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */,
 				AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */,
+				883FAB9C251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift in Sources */,
 				AFECD7FA2513996D00B86A45 /* Day.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
 				AFECD7F52513960C00B86A45 /* CalendarExtension.swift in Sources */,
 				AF99F22F251248E00083C2D3 /* DescricaoMovimentoViewController.swift in Sources */,
 				AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */,
+				883FAB97251A8FB30072CC5F /* ColetivosViewController.swift in Sources */,
 				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
 				AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */,
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
