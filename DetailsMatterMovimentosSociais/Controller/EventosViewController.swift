@@ -94,6 +94,7 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
         cell.eventNameLabel.text = evento.nome
         cell.dateEventLabel.text = evento.getDataHoraString()[0]
         cell.placeEventLabel.text = evento.localizacao
+        cell.movimentNameLabel.text = evento.movimento
         
         return cell
     }
