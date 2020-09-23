@@ -70,11 +70,5 @@ class CalendarDateCollectionViewCell: UICollectionViewCell {
             selectionBackgroundView.layer.cornerRadius = 25 / 2
         }
     }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        
-        layoutSubviews()
-    }
-    
+
 }

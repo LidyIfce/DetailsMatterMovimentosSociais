@@ -13,28 +13,42 @@ class CellEventos: UITableViewCell {
     @IBOutlet weak var buttonAlternarVisualizacao: UIButton!
     
     @IBOutlet weak var labelAlternarVisualizacao: UIButton!
-    var calendarView = UIView()
+    
+    weak var delegate: CellEventosDelegate?
+    var viewAtual: UIView?
+    
     var datas: [Date] = []
-    
-    let keyViewMode = "currentView"
-    
-    var currentMode: String? {
-        didSet {
-            UserDefaults.standard.setValue(currentMode, forKey: keyViewMode)
-        }
-    }
+    var eventos: [Evento] = []
+ 
     private lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
-        
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.isScrollEnabled = false
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         collectionView.backgroundColor = .white
+        collectionView.backgroundColor = .systemGroupedBackground
         collectionView.layer.borderWidth  = 3
         collectionView.layer.borderColor = UIColor.white.cgColor
         return collectionView
+    }()
+    
+    private lazy var tableView: UITableView = {
+        var tableView = UITableView(frame: .zero, style: .grouped)
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .backGroundColor
+        tableView.tableFooterView = UIView()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.alwaysBounceVertical = false
+        tableView.alwaysBounceHorizontal = false
+        tableView.isScrollEnabled = false
+        tableView.tableHeaderView = nil
+        tableView.register(EventosTableViewCell.self,
+                           forCellReuseIdentifier: EventosTableViewCell.reuseIdentifier)
+        return tableView
     }()
     
     let calendar = Calendar(identifier: .gregorian)
@@ -79,78 +93,78 @@ class CellEventos: UITableViewCell {
           ) ?? self.baseDate
       })
 
-    func createCell(datas: [Date]) {
-        setInitialModeView()
-        currentMode = UserDefaults.standard.string(forKey: keyViewMode)
-        toggleInformations()
-        
+    func createCell(datas: [Date], eventos: [Evento]) {
+        viewAtual = tableView
+        self.eventos = eventos
         self.datas = datas
-        contentView.addSubview(calendarView)
-        setupCalendarView()
-        collectionView.backgroundColor = .systemGroupedBackground
-        calendarView.addSubview(collectionView)
-        setupCollection()
-        calendarView.addSubview(calendarHeaderView)
-        calendarHeaderView.baseDate = baseDate
-        setupCalendarHeader()
-        calendarView.addSubview(calendarFooterView)
-        setupCalendarFooter()
+        labelAlternarVisualizacao.setTitle("Ver calendário", for: .normal)
+        buttonAlternarVisualizacao.setBackgroundImage(UIImage(systemName: "calendar"), for: .normal)
+        setupTableView()
     }
-    
-    func setInitialModeView() {
-        if UserDefaults.standard.object(forKey: keyViewMode) == nil {
-            UserDefaults.standard.setValue("list", forKey: keyViewMode)
-        }
-    }
-    
+  
     func toggleInformations() {
-        if currentMode == "list"{
-            currentMode = "calendar"
+        if viewAtual == collectionView {
             labelAlternarVisualizacao.setTitle("Ver calendário", for: .normal)
             buttonAlternarVisualizacao.setBackgroundImage(UIImage(systemName: "calendar"), for: .normal)
+          
+            calendarHeaderView.removeFromSuperview()
+            collectionView.removeFromSuperview()
+            calendarFooterView.removeFromSuperview()
+          
+            setupTableView()
+            viewAtual = tableView
+            
         } else {
-            currentMode = "list"
             labelAlternarVisualizacao.setTitle("Ver lista", for: .normal)
             buttonAlternarVisualizacao.setBackgroundImage(UIImage(systemName: "line.horizontal.3"), for: .normal)
+            
+            tableView.removeFromSuperview()
+            setupCalendarView()
+            viewAtual = collectionView
         }
     }
     
     func setupCalendarView() {
-        calendarView.translatesAutoresizingMaskIntoConstraints = false
-        var constraints: [NSLayoutConstraint] = []
-        constraints.append(contentsOf: [
-            calendarView.topAnchor.constraint(
-                equalTo: buttonAlternarVisualizacao.bottomAnchor, constant: 8),
-          calendarView.leftAnchor.constraint(
-            equalTo: contentView.leftAnchor, constant: 16),
-          calendarView.rightAnchor.constraint(
-            equalTo: contentView.rightAnchor, constant: -16),
-          calendarView.heightAnchor.constraint(
-            equalToConstant: 300),
-            contentView.bottomAnchor.constraint(equalTo: calendarView.bottomAnchor, constant: 32)
-        ])
-       
-        NSLayoutConstraint.activate(constraints)
+        calendarHeaderView.baseDate = baseDate
+        setupCalendarHeader()
+        setupCollection()
+        setupCalendarFooter()
     }
     
+    func setupTableView() {
+        contentView.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        
+        var constraints: [NSLayoutConstraint] = []
+        constraints.append(contentsOf: [
+            tableView.topAnchor.constraint(
+                equalTo: labelAlternarVisualizacao.bottomAnchor, constant: 8),
+            tableView.leftAnchor.constraint(
+                equalTo: contentView.leftAnchor),
+            tableView.rightAnchor.constraint(
+                equalTo: contentView.rightAnchor),
+               tableView.heightAnchor.constraint(
+                greaterThanOrEqualToConstant: CGFloat(eventos.count * 280 + 90)),
+            tableView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32)
+        ])
+        
+        NSLayoutConstraint.activate(constraints)
+    }
     func setupCollection() {
+        contentView.addSubview(collectionView)
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(CalendarDateCollectionViewCell.self,
                                 forCellWithReuseIdentifier: CalendarDateCollectionViewCell.reuseIdentifier)
-        
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
+            collectionView.topAnchor.constraint(equalTo: calendarHeaderView.bottomAnchor),
           collectionView.leftAnchor.constraint(
-            equalTo: calendarView.leftAnchor),
+            equalTo: contentView.leftAnchor, constant: 16),
           collectionView.rightAnchor.constraint(
-            equalTo: calendarView.rightAnchor),
-          collectionView.centerYAnchor.constraint(
-            equalTo: calendarView.centerYAnchor,
-            constant: 10),
-          collectionView.heightAnchor.constraint(
-            equalTo: calendarView.heightAnchor,
-            multiplier: 0.5)
+            equalTo: contentView.rightAnchor, constant: -16),
+            collectionView.heightAnchor.constraint(greaterThanOrEqualToConstant: 155)
         ])
        
         NSLayoutConstraint.activate(constraints)
@@ -158,32 +172,39 @@ class CellEventos: UITableViewCell {
     
     @IBAction func buttonAlternarVisualizacao(_ sender: Any) {
         toggleInformations()
-        layoutIfNeeded()
+        delegate?.updateHeightOfRow()
+      
     }
     
     @IBAction func labelAlternarVisualizacao(_ sender: Any) {
         toggleInformations()
-        layoutIfNeeded()
+        delegate?.updateHeightOfRow()
     }
+    
     func setupCalendarHeader() {
+        contentView.addSubview(calendarHeaderView)
+        calendarHeaderView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
-            calendarHeaderView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor),
-            calendarHeaderView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
-            calendarHeaderView.bottomAnchor.constraint(equalTo: collectionView.topAnchor),
-            calendarHeaderView.heightAnchor.constraint(equalToConstant: 85)
+            calendarHeaderView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+            calendarHeaderView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
+            calendarHeaderView.topAnchor.constraint(equalTo: labelAlternarVisualizacao.bottomAnchor, constant: 8),
+            calendarHeaderView.heightAnchor.constraint(greaterThanOrEqualToConstant: 85)
         ])
        
         NSLayoutConstraint.activate(constraints)
     }
     
     func setupCalendarFooter() {
+        contentView.addSubview(calendarFooterView)
+        calendarFooterView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
-            calendarFooterView.leadingAnchor.constraint(equalTo: collectionView.leadingAnchor),
-            calendarFooterView.trailingAnchor.constraint(equalTo: collectionView.trailingAnchor),
+            calendarFooterView.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+            calendarFooterView.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
             calendarFooterView.topAnchor.constraint(equalTo: collectionView.bottomAnchor),
-            calendarFooterView.heightAnchor.constraint(equalToConstant: 60)
+            calendarFooterView.heightAnchor.constraint(greaterThanOrEqualToConstant: 60),
+            calendarFooterView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -32)
         ])
        
         NSLayoutConstraint.activate(constraints)

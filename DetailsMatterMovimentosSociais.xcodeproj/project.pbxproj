@@ -17,6 +17,7 @@
 		88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20C2513A28A009B93DE /* MockLgbt.swift */; };
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
 		A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */; };
+		AF76FDA4251A279F00F70BE8 /* EventosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
 		AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784377250A45140028FD21 /* SceneDelegate.swift */; };
 		AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784379250A45140028FD21 /* EventosViewController.swift */; };
@@ -75,6 +76,7 @@
 		88DED20C2513A28A009B93DE /* MockLgbt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLgbt.swift; sourceTree = "<group>"; };
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosTableViewCell.swift; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF784375250A45140028FD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF784377250A45140028FD21 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 				AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */,
 				AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */,
+				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -442,6 +445,7 @@
 				73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */,
 				A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */,
 				AFECD7FF25139AE100B86A45 /* MonthData.swift in Sources */,
+				AF76FDA4251A279F00F70BE8 /* EventosTableViewCell.swift in Sources */,
 				AFECD8042513A21100B86A45 /* CalendarDateCollectionViewCell.swift in Sources */,
 				88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */,
 				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
