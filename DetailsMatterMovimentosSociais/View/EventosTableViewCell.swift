@@ -83,6 +83,7 @@ class EventosTableViewCell: UITableViewCell {
         backView.layer.shadowColor = UIColor.black.cgColor
         backView.layer.shadowRadius = 5
         backView.layer.shadowOpacity = 0.3
+        
         backView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [

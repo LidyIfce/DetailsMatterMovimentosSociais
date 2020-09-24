@@ -33,7 +33,7 @@
                                 <rect key="frame" x="14" y="158" width="347" height="460"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="blue" indentationWidth="10" reuseIdentifier="EventCell" id="R4d-Uc-nK7" customClass="EventTableViewCell" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="EventCell" id="R4d-Uc-nK7" customClass="EventTableViewCell" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="347" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="R4d-Uc-nK7" id="F2Z-h6-P7q">
