@@ -11,15 +11,24 @@ import UIKit
 class Persistence {
     static let defaults = UserDefaults.standard
     static let keySeguir = "seguindo"
+    static let keyParticipar = "participando"
     
     static func setInitialValues() {
         if defaults.object(forKey: keySeguir) == nil {
             defaults.set([], forKey: keySeguir)
         }
+        
+        if defaults.object(forKey: keyParticipar) == nil {
+            defaults.set([], forKey: keyParticipar)
+        }
     }
     
     static func getArraySeguindo() -> [String] {
         return defaults.object(forKey: keySeguir) as? [String] ?? []
+    }
+    
+    static func getArrayParticipando() -> [String] {
+        return defaults.object(forKey: keyParticipar) as? [String] ?? []
     }
     
     static func unfollow(movimentoId: String) {
@@ -31,18 +40,42 @@ class Persistence {
         defaults.set(movimentos, forKey: keySeguir)
     }
     
+    static func stopParticipating(eventoId: String) {
+        var eventos = getArrayParticipando()
+        for (indice, evento) in eventos.enumerated() where evento == eventoId {
+            eventos.remove(at: indice)
+        }
+        
+        defaults.set(eventos, forKey: keyParticipar)
+    }
+    
     static func containsMovimento(movimentoId: String) -> Bool {
         let movimentos = getArraySeguindo()
         return movimentos.contains(movimentoId)
+    }
+    
+    static func containsEvento(eventoId: String) -> Bool {
+        let eventos = getArrayParticipando()
+        return eventos.contains(eventoId)
     }
     
     static func removerAllMovimentos() {
         defaults.set([], forKey: keySeguir)
     }
     
-    static func seguir(movimentoId: String) {
+    static func removerAllEventos() {
+        defaults.set([], forKey: keyParticipar)
+    }
+    
+    static func follow(movimentoId: String) {
         var movimentos = getArraySeguindo()
         movimentos.append(movimentoId)
         defaults.set(movimentos, forKey: keySeguir)
+    }
+    
+    static func participate(eventoId: String) {
+        var eventos = getArrayParticipando()
+        eventos.append(eventoId)
+        defaults.set(eventos, forKey: keyParticipar)
     }
 }
