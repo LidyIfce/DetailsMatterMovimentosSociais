@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TestCellTableViewCell: UITableViewCell {
+class TitleTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellText: UILabel!
     override func awakeFromNib() {

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		009EE31625139BE500B8079F /* DescricaoEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009EE31525139BE500B8079F /* DescricaoEventos.swift */; };
+		00C0FADA251243B2005975E9 /* DescricaoEventos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C0FAD9251243B2005975E9 /* DescricaoEventos.storyboard */; };
+		00FCE4C4251B8D8500B0887A /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */; };
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
 		AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784377250A45140028FD21 /* SceneDelegate.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		009EE31525139BE500B8079F /* DescricaoEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoEventos.swift; sourceTree = "<group>"; };
+		00C0FAD9251243B2005975E9 /* DescricaoEventos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DescricaoEventos.storyboard; sourceTree = "<group>"; };
+		00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF784375250A45140028FD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +147,8 @@
 				AF9ED53B250B9B77001F88BD /* Evento.swift */,
 				AF9ED53D250B9D71001F88BD /* MockMulheres.swift */,
 				AF9ED53F250BA52B001F88BD /* MockCategorias.swift */,
+				009EE31525139BE500B8079F /* DescricaoEventos.swift */,
+				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -151,6 +159,7 @@
 				AF78438E250A45C00028FD21 /* TabBarController.storyboard */,
 				AF784390250A45EE0028FD21 /* Eventos.storyboard */,
 				AF784392250A460D0028FD21 /* Movimentos.storyboard */,
+				00C0FAD9251243B2005975E9 /* DescricaoEventos.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -290,6 +299,7 @@
 				AF784382250A45140028FD21 /* LaunchScreen.storyboard in Resources */,
 				AF78437F250A45140028FD21 /* Assets.xcassets in Resources */,
 				AF784391250A45EE0028FD21 /* Eventos.storyboard in Resources */,
+				00C0FADA251243B2005975E9 /* DescricaoEventos.storyboard in Resources */,
 				A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */,
 				AF784393250A460E0028FD21 /* Movimentos.storyboard in Resources */,
 				AF78438F250A45C00028FD21 /* TabBarController.storyboard in Resources */,
@@ -338,12 +348,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00FCE4C4251B8D8500B0887A /* TitleTableViewCell.swift in Sources */,
 				AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */,
 				AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
 				AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */,
 				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
 				AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */,
+				009EE31625139BE500B8079F /* DescricaoEventos.swift in Sources */,
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
 				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
 				AF9ED538250B9B5C001F88BD /* Categoria.swift in Sources */,
@@ -519,8 +531,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T373QFGJQA;
+				DEVELOPMENT_TEAM = NL35JB8G2K;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -528,6 +541,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociais;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -537,8 +551,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T373QFGJQA;
+				DEVELOPMENT_TEAM = NL35JB8G2K;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -546,6 +561,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociais;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
