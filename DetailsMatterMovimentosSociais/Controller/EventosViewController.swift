@@ -89,10 +89,14 @@ class EventosViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if selectedSegmentIndex == 0 {
-            eventos = populateTodosEvents()
-        } else {
-            eventos = populatePartEvents()
+        super.viewWillAppear(true)
+        eventos = populateTodosEvents()
+        if let selectedSegmentIndex = selectedSegmentIndex {
+            if selectedSegmentIndex == 0 {
+                eventos = populateTodosEvents()
+            } else {
+                eventos = populatePartEvents()
+            }
         }
         eventsTableView.reloadData()
     }
@@ -130,11 +134,15 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
 }
 
 extension EventosViewController: EventoTableViewDelegate {
-    func update() {
-        if selectedSegmentIndex == 0 {
-            eventos = populateTodosEvents()
-        } else {
-            eventos = populatePartEvents()
+ 
+    func updateEventosViewController() {
+        eventos = populateTodosEvents()
+        if let selectedSegmentIndex = selectedSegmentIndex {
+            if selectedSegmentIndex == 0 {
+                eventos = populateTodosEvents()
+            } else {
+                eventos = populatePartEvents()
+            }
         }
         eventsTableView.reloadData()
     }

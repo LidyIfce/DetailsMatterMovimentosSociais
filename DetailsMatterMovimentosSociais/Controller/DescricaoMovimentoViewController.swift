@@ -10,7 +10,9 @@ import UIKit
 protocol CellEventosDelegate: class {
     func updateHeightOfRow()
 }
-
+protocol EventosDelegate: class {
+    
+}
 protocol MovimentoDelegate: class {
     func didSelectedMovimento(movimento: Movimento)
 }
@@ -73,12 +75,26 @@ class DescricaoMovimentoViewController: UIViewController {
             }
         }
     }
-  
-    override func viewWillAppear(_ animated: Bool) {
-        view.reloadInputViews()
-        tableView.reloadData()
-    }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let movimento = movimento {
+            if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
+                buttonSeguir.title = "Seguindo"
+                buttonSeguir.tintColor = .confirmedColor
+            } else {
+                buttonSeguir.title = "Seguir"
+                buttonSeguir.tintColor = .actionColor
+            }
+        }
+        tableView.reloadData()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellEventos") as?
+                CellEventos else {
+          fatalError()
+        }
+        cell.reloadInputViews()
+    }
+  
     func configureTable() {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension

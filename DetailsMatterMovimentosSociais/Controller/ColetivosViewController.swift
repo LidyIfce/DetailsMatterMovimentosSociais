@@ -19,6 +19,8 @@ class ColetivosViewController: UIViewController {
     weak var delegate: MovimentoDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        Persistence.setInitialValues()
         configCollectionView()
         guard let nomeColetivo = categoria?.nome else {
             fatalError()

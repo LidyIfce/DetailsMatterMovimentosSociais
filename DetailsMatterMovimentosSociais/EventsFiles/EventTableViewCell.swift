@@ -9,7 +9,7 @@
 import UIKit
 
 protocol EventoTableViewDelegate: class {
-    func update()
+    func updateEventosViewController()
 }
 
 class EventTableViewCell: UITableViewCell {
@@ -22,6 +22,7 @@ class EventTableViewCell: UITableViewCell {
         
     @IBOutlet weak var buttonParticipar: UIButton!
     weak var delegate: EventoTableViewDelegate?
+    
     var evento: Evento?
     
     @IBAction func participar(_ sender: Any) {
@@ -30,7 +31,7 @@ class EventTableViewCell: UITableViewCell {
                 Persistence.stopParticipating(eventoId: evento.eventoId)
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
-                delegate?.update()
+                delegate?.updateEventosViewController()
             } else {
                 Persistence.participate(eventoId: evento.eventoId)
                 buttonParticipar.setTitle("Participando", for: .normal)

@@ -85,8 +85,14 @@ class EventosTableViewCell: UITableViewCell {
 
     func createCell(evento: Evento) {
         self.evento = evento
-        
-        checkValues()
+        Persistence.setInitialValues()
+        if Persistence.containsEvento(eventoId: evento.eventoId) {
+            buttonParticipar.setTitle("Participando", for: .normal)
+            buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+        } else {
+            buttonParticipar.setTitle("Participar", for: .normal)
+            buttonParticipar.setTitleColor(.actionColor, for: .normal)
+        }
         contentView.backgroundColor = .backGroundColor
         contentView.addSubview(backView)
         setupBackGroundView()
