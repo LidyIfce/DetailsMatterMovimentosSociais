@@ -22,7 +22,7 @@ class Persistence {
     
     static func unfollow(movimentoId: String) {
         var movimentos = getArraySeguindo()
-        for (indice, movimentoId) in movimentos.enumerated() where movimentoId == movimentoId {
+        for (indice, movimento) in movimentos.enumerated() where movimento == movimentoId {
             movimentos.remove(at: indice)
         }
         

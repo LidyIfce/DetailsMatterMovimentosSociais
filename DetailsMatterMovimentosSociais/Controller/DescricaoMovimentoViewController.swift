@@ -42,8 +42,6 @@ class DescricaoMovimentoViewController: UIViewController {
                 buttonSeguir.tintColor = .confirmedColor
             }
         }
-        
-        print(Persistence.getArraySeguindo())
     }
      
     override func viewDidLoad() {

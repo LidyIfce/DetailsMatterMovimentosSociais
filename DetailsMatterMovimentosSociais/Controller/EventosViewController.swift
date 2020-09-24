@@ -20,15 +20,18 @@ class EventosViewController: UIViewController {
 
     func populateTodosEvents() -> [Evento] {
         var eventos: [Evento] = []
-    
-        var evento = EventosMulheresMock.eventosCatolicas
-        eventos.append(contentsOf: evento)
-        evento = EventosMulheresMock.eventosMulher360
-        eventos.append(contentsOf: evento)
-        evento = EventosMulheresMock.eventosPyLadies
-        eventos.append(contentsOf: evento)
-        evento = EventosMulheresMock.eventosSempreviva
-        eventos.append(contentsOf: evento)
+        
+        let categorias = MockCategorias.mock
+        var movimentos: [Movimento] = []
+        for categoria in categorias {
+               movimentos += categoria.movimentos
+        }
+
+        let meusMovimentos = Persistence.getArraySeguindo()
+        
+        for movimento in movimentos where meusMovimentos.contains(movimento.movimentoId) {
+            eventos += movimento.eventos
+        }
         
         return eventos
     }
@@ -44,9 +47,7 @@ class EventosViewController: UIViewController {
         return eventos
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
+    func showEventos() {
         DispatchQueue.main.async {
             self.todosEventos = self.populateTodosEvents()
             self.partEventos = self.populatePartEvents()
@@ -55,6 +56,12 @@ class EventosViewController: UIViewController {
             self.eventos = self.todosEventos
             self.eventsTableView.reloadData()
         }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        showEventos()
         
         view.backgroundColor = UIColor.backGroundColor
         eventsTableView.backgroundColor = UIColor.backGroundColor
@@ -70,11 +77,13 @@ class EventosViewController: UIViewController {
         eventsTableView.dataSource = self
         // Do any additional setup after loading the view.
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        showEventos()
+    }
 
     @IBAction func segmentedChangedValue(_ sender: UISegmentedControl) {
-        print(sender.selectedSegmentIndex)
         eventos = tableSegmentedControl[sender.selectedSegmentIndex]
-        print(eventos[0].nome)
         eventsTableView.reloadData()
     }
     
@@ -94,6 +103,7 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
         cell.eventNameLabel.text = evento.nome
         cell.dateEventLabel.text = evento.getDataHoraString()[0]
         cell.placeEventLabel.text = evento.localizacao
+        cell.movimentNameLabel.text = evento.movimento
         
         return cell
     }
