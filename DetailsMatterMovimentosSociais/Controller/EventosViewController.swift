@@ -33,7 +33,9 @@ class EventosViewController: UIViewController {
             eventos += movimento.eventos
         }
         
-        return eventos
+        eventos.sort(by: { $0.getData()[0] < $1.getData()[0] })
+        return eventos.filter({ $0.getData()[0] >= Date() })
+     
     }
     
     func populatePartEvents() -> [Evento] {
