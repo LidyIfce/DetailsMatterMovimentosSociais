@@ -16,7 +16,7 @@ class EventosTableViewCell: UITableViewCell {
     
     lazy var buttonParticipar: UIButton = {
         var button = UIButton()
-        button.setTitle("✓ Participando", for: .normal)
+        button.setTitle("Participando", for: .normal)
         button.setTitleColor(.textColor, for: .normal)
         button.contentVerticalAlignment = .center
         button.contentHorizontalAlignment = .right

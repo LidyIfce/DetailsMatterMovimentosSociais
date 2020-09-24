@@ -37,7 +37,7 @@ class DescricaoMovimentoViewController: UIViewController {
                 buttonSeguir.title = "Seguir"
                 buttonSeguir.tintColor = .actionColor
             } else {
-                Persistence.seguir(movimentoId: movimento.movimentoId)
+                Persistence.follow(movimentoId: movimento.movimentoId)
                 buttonSeguir.title = "Seguindo"
                 buttonSeguir.tintColor = .confirmedColor
             }
@@ -61,6 +61,9 @@ class DescricaoMovimentoViewController: UIViewController {
             if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
                 buttonSeguir.title = "Seguindo"
                 buttonSeguir.tintColor = .confirmedColor
+            } else {
+                buttonSeguir.title = "Seguir"
+                buttonSeguir.tintColor = .actionColor
             }
         }
         for mov in eventos {

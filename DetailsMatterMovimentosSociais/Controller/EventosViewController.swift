@@ -13,14 +13,22 @@ class EventosViewController: UIViewController {
     @IBOutlet weak var eventsTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    var allEventos: [Evento] = [] {
+        didSet {
+            eventsTableView.reloadData()
+        }
+    }
+    
+    var partEventos: [Evento] = [] {
+        didSet {
+            eventsTableView.reloadData()
+        }
+    }
+    
     var eventos: [Evento] = []
-    var todosEventos: [Evento] = []
-    var partEventos: [Evento] = []
-    var tableSegmentedControl: [[Evento]] = []
-
-    func populateTodosEvents() -> [Evento] {
+    
+    func getEventosFromMeusMovimentos() -> [Evento] {
         var eventos: [Evento] = []
-        
         let categorias = MockCategorias.mock
         var movimentos: [Movimento] = []
         for categoria in categorias {
@@ -32,8 +40,26 @@ class EventosViewController: UIViewController {
         for movimento in movimentos where meusMovimentos.contains(movimento.movimentoId) {
             eventos += movimento.eventos
         }
+        return eventos
+    }
+
+    func getAllEventos() -> [Evento] {
+        var eventos: [Evento] = []
+        let categorias = MockCategorias.mock
+        var movimentos: [Movimento] = []
+        for categoria in categorias {
+               movimentos += categoria.movimentos
+        }
         
-        eventos.sort(by: { $0.getData()[0] < $1.getData()[0] })
+        for movimento in movimentos {
+            eventos += movimento.eventos
+        }
+        return eventos
+    }
+    
+    func populateTodosEvents() -> [Evento] {
+        var eventos = getEventosFromMeusMovimentos()
+        eventos.sort(by: { $0.getData()[0] <= $1.getData()[0] })
         return eventos.filter({ $0.getData()[0] >= Date() })
      
     }
@@ -41,29 +67,21 @@ class EventosViewController: UIViewController {
     func populatePartEvents() -> [Evento] {
         var eventos: [Evento] = []
     
-        var evento = EventosMulheresMock.eventosPyLadies
-        eventos.append(contentsOf: evento)
-        evento = EventosMulheresMock.eventosSempreviva
-        eventos.append(contentsOf: evento)
+        let allEventos = getAllEventos()
+        let participando = Persistence.getArrayParticipando()
         
-        return eventos
-    }
-    
-    func showEventos() {
-        DispatchQueue.main.async {
-            self.todosEventos = self.populateTodosEvents()
-            self.partEventos = self.populatePartEvents()
-            self.tableSegmentedControl.append(self.todosEventos)
-            self.tableSegmentedControl.append(self.partEventos)
-            self.eventos = self.todosEventos
-            self.eventsTableView.reloadData()
+        for evento in allEventos where participando.contains(evento.eventoId) {
+            eventos.append(evento)
         }
+      
+        eventos.sort(by: { $0.getData()[0] <= $1.getData()[0] })
+        return eventos.filter({ $0.getData()[0] >= Date() })
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        showEventos()
+        eventos = populateTodosEvents()
         
         view.backgroundColor = UIColor.backGroundColor
         eventsTableView.backgroundColor = UIColor.backGroundColor
@@ -81,11 +99,17 @@ class EventosViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        showEventos()
+        eventos = populateTodosEvents()
+        eventsTableView.reloadData()
     }
 
     @IBAction func segmentedChangedValue(_ sender: UISegmentedControl) {
-        eventos = tableSegmentedControl[sender.selectedSegmentIndex]
+        if sender.selectedSegmentIndex == 0 {
+            eventos = populateTodosEvents()
+        } else {
+            eventos = populatePartEvents()
+        }
+        
         eventsTableView.reloadData()
     }
     
@@ -101,13 +125,17 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
         
         guard let cell = eventsTableView.dequeueReusableCell(withIdentifier: "EventCell") as? EventTableViewCell
             else { return UITableViewCell() }
-        
-        cell.eventNameLabel.text = evento.nome
-        cell.dateEventLabel.text = evento.getDataHoraString()[0]
-        cell.placeEventLabel.text = evento.localizacao
-        cell.movimentNameLabel.text = evento.movimento
-        
+        cell.delegate = self
+        cell.createCell(evento: evento)
+    
         return cell
     }
     
+}
+
+extension EventosViewController: EventoTableViewDelegate {
+    func update() {
+        eventos = populatePartEvents()
+        eventsTableView.reloadData()
+    }
 }
