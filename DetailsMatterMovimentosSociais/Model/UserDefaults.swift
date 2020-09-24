@@ -9,15 +9,17 @@
 import Foundation
 import UIKit
 class Persistence {
-
+    static let defaults = UserDefaults.standard
+    static let keySeguir = "seguindo"
+    
     static func setInitialValues() {
-        if UserDefaults.standard.object(forKey: "seguindo") == nil {
-            UserDefaults.standard.set([], forKey: "seguindo")
+        if defaults.object(forKey: keySeguir) == nil {
+            defaults.set([], forKey: keySeguir)
         }
     }
     
     static func getArraySeguindo() -> [String] {
-        return UserDefaults.standard.object(forKey: "seguindo") as? [String] ?? []
+        return defaults.object(forKey: keySeguir) as? [String] ?? []
     }
     
     static func unfollow(movimentoId: String) {
@@ -26,7 +28,7 @@ class Persistence {
             movimentos.remove(at: indice)
         }
         
-        UserDefaults.standard.set(movimentos, forKey: "seguindo")
+        defaults.set(movimentos, forKey: keySeguir)
     }
     
     static func containsMovimento(movimentoId: String) -> Bool {
@@ -35,12 +37,12 @@ class Persistence {
     }
     
     static func removerAllMovimentos() {
-        UserDefaults.standard.set([], forKey: "seguindo")
+        defaults.set([], forKey: keySeguir)
     }
     
     static func seguir(movimentoId: String) {
         var movimentos = getArraySeguindo()
         movimentos.append(movimentoId)
-        UserDefaults.standard.set(movimentos, forKey: "seguindo")
+        defaults.set(movimentos, forKey: keySeguir)
     }
 }
