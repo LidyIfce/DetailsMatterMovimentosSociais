@@ -74,6 +74,11 @@ class DescricaoMovimentoViewController: UIViewController {
         }
     }
   
+    override func viewWillAppear(_ animated: Bool) {
+        view.reloadInputViews()
+        tableView.reloadData()
+    }
+    
     func configureTable() {
         tableView.estimatedRowHeight = UITableView.automaticDimension
         tableView.rowHeight = UITableView.automaticDimension

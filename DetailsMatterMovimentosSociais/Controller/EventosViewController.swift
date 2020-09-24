@@ -13,17 +13,7 @@ class EventosViewController: UIViewController {
     @IBOutlet weak var eventsTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
-    var allEventos: [Evento] = [] {
-        didSet {
-            eventsTableView.reloadData()
-        }
-    }
-    
-    var partEventos: [Evento] = [] {
-        didSet {
-            eventsTableView.reloadData()
-        }
-    }
+    var selectedSegmentIndex: Int?
     
     var eventos: [Evento] = []
     
@@ -99,14 +89,20 @@ class EventosViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        eventos = populateTodosEvents()
+        if selectedSegmentIndex == 0 {
+            eventos = populateTodosEvents()
+        } else {
+            eventos = populatePartEvents()
+        }
         eventsTableView.reloadData()
     }
 
     @IBAction func segmentedChangedValue(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
+            selectedSegmentIndex = sender.selectedSegmentIndex
             eventos = populateTodosEvents()
         } else {
+            selectedSegmentIndex = sender.selectedSegmentIndex
             eventos = populatePartEvents()
         }
         
@@ -135,7 +131,11 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
 
 extension EventosViewController: EventoTableViewDelegate {
     func update() {
-        eventos = populatePartEvents()
+        if selectedSegmentIndex == 0 {
+            eventos = populateTodosEvents()
+        } else {
+            eventos = populatePartEvents()
+        }
         eventsTableView.reloadData()
     }
 }
