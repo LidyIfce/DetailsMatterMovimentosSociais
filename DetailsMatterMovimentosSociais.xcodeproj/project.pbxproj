@@ -17,6 +17,7 @@
 		88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20C2513A28A009B93DE /* MockLgbt.swift */; };
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
 		A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */; };
+		AF057516251CD656006A2505 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF057515251CD656006A2505 /* UserDefaults.swift */; };
 		AF76FDA4251A279F00F70BE8 /* EventosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
 		AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784377250A45140028FD21 /* SceneDelegate.swift */; };
@@ -76,6 +77,7 @@
 		88DED20C2513A28A009B93DE /* MockLgbt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLgbt.swift; sourceTree = "<group>"; };
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		AF057515251CD656006A2505 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosTableViewCell.swift; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF784375250A45140028FD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				AF9ED53F250BA52B001F88BD /* MockCategorias.swift */,
 				AFECD7F92513996D00B86A45 /* Day.swift */,
 				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
+				AF057515251CD656006A2505 /* UserDefaults.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,16 +234,14 @@
 			children = (
 				AF784379250A45140028FD21 /* EventosViewController.swift */,
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
-				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
 				883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */,
 				883FAB9B251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift */,
 				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
 				AFAEED7025190A1000721F5C /* DescricaoMovimentoCells.swift */,
 				AFAEED7525191A3E00721F5C /* CellEventos.swift */,
-				AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */,
 				AFAEED8325191EBE00721F5C /* CellEventosDelegateExtension.swift */,
 				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
-				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
+				AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -434,6 +435,7 @@
 				AF99F22F251248E00083C2D3 /* DescricaoMovimentoViewController.swift in Sources */,
 				AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */,
 				883FAB97251A8FB30072CC5F /* ColetivosViewController.swift in Sources */,
+				AF057516251CD656006A2505 /* UserDefaults.swift in Sources */,
 				AF9ED53E250B9D71001F88BD /* MockMulheres.swift in Sources */,
 				AF9ED53A250B9B6B001F88BD /* Movimento.swift in Sources */,
 				AF9ED53C250B9B77001F88BD /* Evento.swift in Sources */,
