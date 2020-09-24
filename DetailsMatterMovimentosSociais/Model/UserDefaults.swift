@@ -9,34 +9,38 @@
 import Foundation
 import UIKit
 class Persistence {
-    let defaults = UserDefaults.standard
 
-    func setInitialValues() {
-        if defaults.object(forKey: "seguindo") == nil {
-            defaults.setValue([], forKey: "seguindo")
+    static func setInitialValues() {
+        if UserDefaults.standard.object(forKey: "seguindo") == nil {
+            UserDefaults.standard.set([], forKey: "seguindo")
         }
     }
     
-    func getArraySeguindo() -> [UUID] {
-        defaults.array(forKey: "seguindo") as? [UUID] ?? []
+    static func getArraySeguindo() -> [String] {
+        return UserDefaults.standard.object(forKey: "seguindo") as? [String] ?? []
     }
     
-    func deixarDeSeguir(movimentoId: UUID) {
+    static func unfollow(movimentoId: String) {
         var movimentos = getArraySeguindo()
         for (indice, movimentoId) in movimentos.enumerated() where movimentoId == movimentoId {
             movimentos.remove(at: indice)
         }
         
-        defaults.setValue(movimentos, forKey: "seguindo")
+        UserDefaults.standard.set(movimentos, forKey: "seguindo")
     }
     
-    func removerAllMovimentos() {
-        defaults.setValue([], forKey: "seguindo")
+    static func containsMovimento(movimentoId: String) -> Bool {
+        let movimentos = getArraySeguindo()
+        return movimentos.contains(movimentoId)
     }
     
-    func seguir(movimentoId: UUID) {
+    static func removerAllMovimentos() {
+        UserDefaults.standard.set([], forKey: "seguindo")
+    }
+    
+    static func seguir(movimentoId: String) {
         var movimentos = getArraySeguindo()
         movimentos.append(movimentoId)
-        defaults.setValue(movimentos, forKey: "seguindo")
+        UserDefaults.standard.set(movimentos, forKey: "seguindo")
     }
 }

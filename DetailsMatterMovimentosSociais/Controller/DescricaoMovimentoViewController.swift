@@ -29,9 +29,27 @@ class DescricaoMovimentoViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-
+    
+    @IBAction func seguirMovimento(_ sender: Any) {
+        if let movimento = movimento {
+            if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
+                Persistence.unfollow(movimentoId: movimento.movimentoId)
+                buttonSeguir.title = "Seguir"
+                buttonSeguir.tintColor = .actionColor
+            } else {
+                Persistence.seguir(movimentoId: movimento.movimentoId)
+                buttonSeguir.title = "Seguindo"
+                buttonSeguir.tintColor = .confirmedColor
+            }
+        }
+        
+        print(Persistence.getArraySeguindo())
+    }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        Persistence.setInitialValues()
         view.backgroundColor = .backGroundColor
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.backgroundColor = .backGroundColor
@@ -41,6 +59,11 @@ class DescricaoMovimentoViewController: UIViewController {
 
         if let movimento = movimento {
             eventos = movimento.eventos
+            
+            if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
+                buttonSeguir.title = "Seguindo"
+                buttonSeguir.tintColor = .confirmedColor
+            }
         }
         for mov in eventos {
             let date = mov.getData()
