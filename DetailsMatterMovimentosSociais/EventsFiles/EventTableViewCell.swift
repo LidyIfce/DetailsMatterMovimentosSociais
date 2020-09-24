@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol EventoTableViewDelegate: class {
+    func updateEventosViewController()
+}
+
 class EventTableViewCell: UITableViewCell {
     
     @IBOutlet weak var viewCellToShadow: UIView!
@@ -16,6 +20,44 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var dateEventLabel: UILabel!
     @IBOutlet weak var placeEventLabel: UILabel!
         
+    @IBOutlet weak var buttonParticipar: UIButton!
+    weak var delegate: EventoTableViewDelegate?
+    
+    var evento: Evento?
+    
+    @IBAction func participar(_ sender: Any) {
+        if let evento = evento {
+            if Persistence.containsEvento(eventoId: evento.eventoId) {
+                Persistence.stopParticipating(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participar", for: .normal)
+                buttonParticipar.setTitleColor(.actionColor, for: .normal)
+                delegate?.updateEventosViewController()
+            } else {
+                Persistence.participate(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participando", for: .normal)
+                buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+            }
+        }
+    }
+    
+    func createCell(evento: Evento) {
+        Persistence.setInitialValues()
+        
+        if Persistence.containsEvento(eventoId: evento.eventoId) {
+            buttonParticipar.setTitle("Participando", for: .normal)
+            buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+        } else {
+            buttonParticipar.setTitle("Participar", for: .normal)
+            buttonParticipar.setTitleColor(.actionColor, for: .normal)
+        }
+        
+        self.evento = evento
+        self.eventNameLabel.text = evento.nome
+        self.dateEventLabel.text = evento.getDataHoraString()[0]
+        self.placeEventLabel.text = evento.localizacao
+        self.movimentNameLabel.text = evento.movimento
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,18 +67,6 @@ class EventTableViewCell: UITableViewCell {
         viewCellToShadow.layer.shadowColor = UIColor.black.cgColor
         viewCellToShadow.layer.shadowRadius = 18
         viewCellToShadow.layer.shadowOpacity = 0.3
-        
-//        eventNameLabel.text = "GitDay"
-//        movimentNameLabel.text = "Pyladies"
-//        dateEventLabel.text = "20 de Setembro de 2020 - 14h"
-//        placeEventLabel.text = "Centro Universitário Farias Brito - FB Uni - Fortaleza - Ce"
-        
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
 
 }

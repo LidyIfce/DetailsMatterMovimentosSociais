@@ -237,6 +237,9 @@
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="ggI-Nx-ycO">
                         <barButtonItem key="rightBarButtonItem" title="Seguir" id="JuC-x8-aZW">
                             <color key="tintColor" name="ActionColor"/>
+                            <connections>
+                                <action selector="seguirMovimento:" destination="egA-Is-TQf" id="Ooo-dY-nBk"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
