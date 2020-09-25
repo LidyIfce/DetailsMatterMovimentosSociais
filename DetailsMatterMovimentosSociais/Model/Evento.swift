@@ -9,7 +9,7 @@
 import Foundation
 
 class Evento {
-    let eventoId: UUID
+    let eventoId: String
     let nome: String
     let movimento: String
     let descricao: String
@@ -17,14 +17,13 @@ class Evento {
     let hora: [String]
     let localizacao: String
     
-    init(eventoId: UUID = UUID(),
-         nome: String,
+    init(nome: String,
          movimento: String,
          descricao: String,
          data: [String],
          hora: [String],
          localizacao: String) {
-        self.eventoId = eventoId
+        self.eventoId = nome + "\(nome.count)" + "\(descricao.count)"
         self.nome = nome
         self.movimento = movimento
         self.descricao = descricao
@@ -47,11 +46,11 @@ class Evento {
     func getDataHoraString() -> [String] {
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
-        dateFormatter.setLocalizedDateFormatFromTemplate("E, d MMMM aaaa HH: mm")
+        dateFormatter.setLocalizedDateFormatFromTemplate("d MMMM")
         var dataString: [String] = []
         let datas = getData()
-        for date in datas {
-            dataString.append(dateFormatter.string(from: date))
+        for (ind, date) in datas.enumerated() {
+            dataString.append(dateFormatter.string(from: date) + " " + hora[ind] + "h")
         }
         return dataString
     }

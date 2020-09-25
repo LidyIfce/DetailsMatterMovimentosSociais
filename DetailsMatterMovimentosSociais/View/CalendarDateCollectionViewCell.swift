@@ -12,7 +12,7 @@ class CalendarDateCollectionViewCell: UICollectionViewCell {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.clipsToBounds = true
-        view.backgroundColor = .yellow
+        view.backgroundColor = .actionColor
         return view
     }()
     
@@ -25,12 +25,13 @@ class CalendarDateCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    static let reuseIdentifier = String(describing: CalendarDateCollectionViewCell.self)
+    static let reuseIdentifier = "CalendarDateCollectionViewCell"
     
     var day: Day? {
         didSet {
             guard let day = day else { return }
             numberLabel.text = day.number
+            numberLabel.textColor = day.isWithinDisplayedMonth ? .textColor : .secondaryLabel
         }
     }
     
@@ -43,7 +44,7 @@ class CalendarDateCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+        
     override func layoutSubviews() {
         super.layoutSubviews()
         
@@ -69,10 +70,5 @@ class CalendarDateCollectionViewCell: UICollectionViewCell {
             selectionBackgroundView.layer.cornerRadius = 25 / 2
         }
     }
-    
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        
-        layoutSubviews()
-    }
+
 }
