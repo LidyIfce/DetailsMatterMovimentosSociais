@@ -14,6 +14,8 @@ protocol EventoTableViewDelegate: class {
 
 class EventTableViewCell: UITableViewCell {
     
+    var participating : Bool = false
+    @IBOutlet weak var participanteButton: UIButton!
     @IBOutlet weak var viewCellToShadow: UIView!
     @IBOutlet weak var eventNameLabel: UILabel!
     @IBOutlet weak var movimentNameLabel: UILabel!
@@ -67,6 +69,6 @@ class EventTableViewCell: UITableViewCell {
         viewCellToShadow.layer.shadowColor = UIColor.black.cgColor
         viewCellToShadow.layer.shadowRadius = 18
         viewCellToShadow.layer.shadowOpacity = 0.3
-    }
 
+    }
 }
