@@ -125,6 +125,7 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
         
         guard let cell = eventsTableView.dequeueReusableCell(withIdentifier: "EventCell") as? EventTableViewCell
             else { return UITableViewCell() }
+
         cell.delegate = self
         cell.createCell(evento: evento)
     
