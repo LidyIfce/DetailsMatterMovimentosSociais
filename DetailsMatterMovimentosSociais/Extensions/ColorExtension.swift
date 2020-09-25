@@ -10,9 +10,9 @@ import Foundation
 import UIKit
 
 extension UIColor {
-    static let backGroundColor: UIColor = UIColor(named: "backGroundColor")!
-    static let actionColor: UIColor = UIColor(named: "actionColor")!
-    static let textColor: UIColor = UIColor(named: "textColor")!
-    static let confirmedColor: UIColor = UIColor(named: "confirmedColor")!
+    static let backGroundColor: UIColor = UIColor(named: "BackGroundColor")!
+    static let actionColor: UIColor = UIColor(named: "ActionColor")!
+    static let textColor: UIColor = UIColor(named: "TextColor")!
+    static let confirmedColor: UIColor = UIColor(named: "ConfirmedColor")!
     
 }
