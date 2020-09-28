@@ -43,9 +43,7 @@ extension DescricaoEventos: UITableViewDataSource {
             let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
             //cell.textLabel?.text = dataSource[0]
             return cell
-        }
-        
-        else {
+        } else {
             let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
             return cell
         }
