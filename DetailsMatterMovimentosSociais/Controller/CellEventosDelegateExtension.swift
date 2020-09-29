@@ -90,4 +90,13 @@ extension CellEventos: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         44
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "DescricaoEventos", bundle: nil)
+        guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoEventos")
+                as? DescricaoEventos else {
+            fatalError() }
+        viewC.evento = eventos[indexPath.row]
+        delegate?.present(viewC: viewC)
+    }
 }
