@@ -17,6 +17,8 @@ class ColetivosViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var categoria: Categoria?
     weak var delegate: MovimentoDelegate?
+    var selectedIndexPath: IndexPath!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
       
@@ -72,6 +74,7 @@ extension ColetivosViewController: ColetivosDelegate, UICollectionViewDelegate, 
         guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoMovimentoViewController") as? DescricaoMovimentoViewController else {
             fatalError()
         }
+        self.selectedIndexPath = indexPath
         self.delegate = viewC
         if let categoria = categoria {
             delegate?.didSelectedMovimento(movimento: categoria.movimentos[indexPath.row])
@@ -94,5 +97,25 @@ extension ColetivosViewController: UICollectionViewDelegateFlowLayout {
         let width = cellCount - 24
         
         return width
+    }
+}
+
+extension ColetivosViewController: ZoomingViewController {
+   
+    func getCell() -> ColetivosCollectionViewCell? {
+        if let indexPath = selectedIndexPath {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? ColetivosCollectionViewCell else {
+                fatalError()
+            }
+            return cell
+        }
+        return nil
+    }
+    func zoomingImageView(for transition: ZoomTransitioningDelegate) -> UIImageView? {
+        getCell()?.coletivoImage
+    }
+    
+    func zoomingBackgroundView(for transition: ZoomTransitioningDelegate) -> UIView? {
+        nil
     }
 }

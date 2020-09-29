@@ -23,10 +23,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
+                        <outlet property="delegate" destination="k4Q-F8-m1y" id="oDt-lT-iXg"/>
                         <segue destination="lo9-SZ-erb" kind="relationship" relationship="rootViewController" id="I5T-hu-Fh0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BM7-4F-iCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <customObject id="k4Q-F8-m1y" customClass="ZoomTransitioningDelegate" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target"/>
             </objects>
             <point key="canvasLocation" x="-35" y="136"/>
         </scene>

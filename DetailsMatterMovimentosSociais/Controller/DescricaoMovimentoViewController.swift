@@ -10,9 +10,7 @@ import UIKit
 protocol CellEventosDelegate: class {
     func updateHeightOfRow()
 }
-protocol EventosDelegate: class {
-    
-}
+
 protocol MovimentoDelegate: class {
     func didSelectedMovimento(movimento: Movimento)
 }
@@ -170,5 +168,21 @@ extension DescricaoMovimentoViewController: CellEventosDelegate {
 extension DescricaoMovimentoViewController: MovimentoDelegate {
     func didSelectedMovimento(movimento: Movimento) {
         self.movimento = movimento
+    }
+}
+
+extension DescricaoMovimentoViewController: ZoomingViewController {
+    func zoomingImageView(for transition: ZoomTransitioningDelegate) -> UIImageView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellImageCapa") as? CellImageCapa else {
+            fatalError()
+        }
+        return cell.imageCapa
+    }
+    
+    func zoomingBackgroundView(for transition: ZoomTransitioningDelegate) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellImageCapa") as? CellImageCapa else {
+            fatalError()
+        }
+        return cell.contentView
     }
 }
