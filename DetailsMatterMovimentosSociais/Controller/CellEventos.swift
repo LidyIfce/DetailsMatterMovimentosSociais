@@ -96,6 +96,7 @@ class CellEventos: UITableViewCell {
     func createCell(datas: [Date], eventos: [Evento]) {
         viewAtual = tableView
         self.eventos = eventos
+        self.eventos.sort(by: { $0.getData()[0] < $1.getData()[0] })
         self.datas = datas
         labelAlternarVisualizacao.setTitle("Ver calendário", for: .normal)
         buttonAlternarVisualizacao.setBackgroundImage(UIImage(systemName: "calendar"), for: .normal)

@@ -9,12 +9,14 @@
 import UIKit
 
 class CellImageCapa: UITableViewCell {
+    @IBOutlet weak var movimentName: UILabel!
     @IBOutlet weak var imageCapa: UIImageView!
 
     func setupImageCapa(movimento: Movimento) {
         imageCapa.image = UIImage(named: movimento.imagem)
         imageCapa.contentMode = .scaleAspectFit
         imageCapa.backgroundColor = .white
+        movimentName.text = movimento.nome
     }
     
 }

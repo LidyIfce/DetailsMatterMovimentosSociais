@@ -8,7 +8,7 @@
 
 import Foundation
 class Movimento {
-    let movimentoId: UUID
+    let movimentoId: String
     let nome: String
     let descricao: String
     let imagem: String
@@ -17,15 +17,13 @@ class Movimento {
     let urlWebSite: String?
     let urlFacebook: String?
     
-    init(movimentoId: UUID = UUID(),
-         nome: String,
+    init(nome: String,
          descricao: String,
          imagem: String,
          eventos: [Evento],
          urlInstagram: String?,
          urlWebSite: String? ,
          urlFacebook: String?) {
-        self.movimentoId = movimentoId
         self.nome = nome
         self.descricao = descricao
         self.imagem = imagem
@@ -33,5 +31,6 @@ class Movimento {
         self.urlInstagram = urlInstagram
         self.urlWebSite = urlWebSite
         self.urlFacebook = urlFacebook
+        self.movimentoId = self.nome + "\(nome.count)" + "\(descricao.count)"
     }
 }

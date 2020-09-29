@@ -16,12 +16,31 @@ class EventosTableViewCell: UITableViewCell {
     
     lazy var buttonParticipar: UIButton = {
         var button = UIButton()
-        button.setTitle("✓ Participando", for: .normal)
+        button.setTitle("Participar", for: .normal)
         button.setTitleColor(.textColor, for: .normal)
         button.contentVerticalAlignment = .center
         button.contentHorizontalAlignment = .right
+        button.addTarget(self, action: #selector(participarEvento), for: .touchUpInside)
         return button
     }()
+    
+    @objc func participarEvento() {
+        checkValues()
+    }
+    
+    func checkValues() {
+        if let evento = evento {
+            if Persistence.containsEvento(eventoId: evento.eventoId) {
+                Persistence.stopParticipating(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participar", for: .normal)
+                buttonParticipar.setTitleColor(.actionColor, for: .normal)
+            } else {
+                Persistence.participate(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participando", for: .normal)
+                buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+            }
+        }
+    }
     
     lazy var eventTitle: UILabel = {
         var label = UILabel()
@@ -66,6 +85,14 @@ class EventosTableViewCell: UITableViewCell {
 
     func createCell(evento: Evento) {
         self.evento = evento
+        Persistence.setInitialValues()
+        if Persistence.containsEvento(eventoId: evento.eventoId) {
+            buttonParticipar.setTitle("Participando", for: .normal)
+            buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+        } else {
+            buttonParticipar.setTitle("Participar", for: .normal)
+            buttonParticipar.setTitleColor(.actionColor, for: .normal)
+        }
         contentView.backgroundColor = .backGroundColor
         contentView.addSubview(backView)
         setupBackGroundView()
@@ -83,6 +110,7 @@ class EventosTableViewCell: UITableViewCell {
         backView.layer.shadowColor = UIColor.black.cgColor
         backView.layer.shadowRadius = 5
         backView.layer.shadowOpacity = 0.3
+        
         backView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [

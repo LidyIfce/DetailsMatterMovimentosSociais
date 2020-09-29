@@ -8,14 +8,19 @@
 
 import UIKit
 //swiftlint:disable line_length
+protocol ColetivosDelegate: class {
+    func didSelected(categoria: Categoria)
+}
 
 class ColetivosViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     var categoria: Categoria?
-
+    weak var delegate: MovimentoDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        Persistence.setInitialValues()
         configCollectionView()
         guard let nomeColetivo = categoria?.nome else {
             fatalError()
@@ -35,10 +40,6 @@ class ColetivosViewController: UIViewController {
         let nib = UINib(nibName: ColetivosCollectionViewCell.xibName, bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: ColetivosCollectionViewCell.identifier)
     }
-}
-
-protocol ColetivosDelegate: class {
-    func didSelected(categoria: Categoria)
 }
 
 extension ColetivosViewController: ColetivosDelegate, UICollectionViewDelegate, UICollectionViewDataSource {
@@ -64,6 +65,18 @@ extension ColetivosViewController: ColetivosDelegate, UICollectionViewDelegate, 
         }
         cell.setData(nome: coletivo[indexPath.row].nome, image: coletivo[indexPath.row].imagem)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "DescricaoMovimento", bundle: nil)
+        guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoMovimentoViewController") as? DescricaoMovimentoViewController else {
+            fatalError()
+        }
+        self.delegate = viewC
+        if let categoria = categoria {
+            delegate?.didSelectedMovimento(movimento: categoria.movimentos[indexPath.row])
+        }
+        self.navigationController?.pushViewController(viewC, animated: true)
     }
 }
 
