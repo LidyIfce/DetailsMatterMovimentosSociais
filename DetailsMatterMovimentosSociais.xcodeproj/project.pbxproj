@@ -469,9 +469,7 @@
 				883FAB9C251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift in Sources */,
 				AFAEED7625191A3E00721F5C /* CellEventos.swift in Sources */,
 				AFAEED5C2518D87A00721F5C /* CalendarFooterView.swift in Sources */,
-
 				AF5234B0252210510088F6AD /* ZoomTransitioningDelegate.swift in Sources */,
-
 				AFECD7FA2513996D00B86A45 /* Day.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
 				AFECD7F52513960C00B86A45 /* CellEventosCalendarExtension.swift in Sources */,
@@ -697,7 +695,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BYHH9YALN2;
+				DEVELOPMENT_TEAM = T373QFGJQA;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
