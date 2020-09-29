@@ -52,9 +52,7 @@ extension DescricaoEventos: UITableViewDataSource {
         if indexPath.row == 2 {
             let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
             return cell
-        }
-    
-        else{
+        } else {
             let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath)
             return cell
         }

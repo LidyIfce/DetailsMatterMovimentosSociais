@@ -17,9 +17,15 @@ class ColetivosCollectionViewCell: UICollectionViewCell {
     static let identifier = "identifier"
     static let xibName = "CardColetivos"
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        coletivoTitle.textColor = .textColor
+    }
+    
     func setData(nome: String, image: String) {
         self.coletivoImage.image = UIImage(named: image)
         self.coletivoTitle.text = nome
         self.view.layer.cornerRadius = 8
     }
+    
 }
