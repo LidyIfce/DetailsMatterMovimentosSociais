@@ -73,5 +73,4 @@ class EventTableViewCell: UITableViewCell {
         eventNameLabel.adjustsFontSizeToFitWidth = true
         eventNameLabel.minimumScaleFactor = 0.5
     }
-
 }

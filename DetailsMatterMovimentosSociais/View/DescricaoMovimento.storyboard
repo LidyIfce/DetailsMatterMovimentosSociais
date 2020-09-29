@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tSa-jW-stQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="egA-Is-TQf">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -19,19 +19,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bly-SL-szS">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" name="BackGroundColor"/>
                                 <color key="sectionIndexBackgroundColor" name="BackGroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellImageCapa" id="CWK-3f-l6B" customClass="CellImageCapa" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="179.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellImageCapa" rowHeight="168" id="CWK-3f-l6B" customClass="CellImageCapa" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="168"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CWK-3f-l6B" id="dzg-yy-sgX">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="168"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kcg-EU-fOC">
-                                                    <rect key="frame" x="0.0" y="34.5" width="414" height="145"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="145"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rSs-dK-5rO">
                                                             <rect key="frame" x="16" y="8" width="382" height="129"/>
@@ -39,15 +39,15 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="rSs-dK-5rO" secondAttribute="bottom" constant="8" id="CIC-ab-4O5"/>
+                                                        <constraint firstItem="rSs-dK-5rO" firstAttribute="top" secondItem="kcg-EU-fOC" secondAttribute="top" constant="8" id="1Gq-IA-NcP"/>
+                                                        <constraint firstAttribute="bottom" secondItem="rSs-dK-5rO" secondAttribute="bottom" constant="8" id="6b8-rA-Mxi"/>
+                                                        <constraint firstAttribute="trailing" secondItem="rSs-dK-5rO" secondAttribute="trailing" constant="16" id="77G-jE-Kv7"/>
                                                         <constraint firstAttribute="height" constant="145" id="hU5-gS-6hP"/>
-                                                        <constraint firstItem="rSs-dK-5rO" firstAttribute="top" secondItem="kcg-EU-fOC" secondAttribute="top" constant="8" id="mkZ-LE-ta4"/>
-                                                        <constraint firstAttribute="trailing" secondItem="rSs-dK-5rO" secondAttribute="trailing" constant="16" id="sU5-TU-bjA"/>
-                                                        <constraint firstItem="rSs-dK-5rO" firstAttribute="leading" secondItem="kcg-EU-fOC" secondAttribute="leading" constant="16" id="vGi-uW-Pog"/>
+                                                        <constraint firstItem="rSs-dK-5rO" firstAttribute="leading" secondItem="kcg-EU-fOC" secondAttribute="leading" constant="16" id="sZG-wU-joP"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8v4-Ho-Hoc">
-                                                    <rect key="frame" x="16" y="0.0" width="382" height="26.5"/>
+                                                    <rect key="frame" x="16" y="153" width="382" height="7"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                     <color key="textColor" name="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -55,13 +55,13 @@
                                             </subviews>
                                             <color key="backgroundColor" name="BackGroundColor"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="kcg-EU-fOC" secondAttribute="bottom" id="3bf-Ki-EwF"/>
-                                                <constraint firstItem="kcg-EU-fOC" firstAttribute="top" secondItem="8v4-Ho-Hoc" secondAttribute="bottom" constant="8" id="4gF-93-mNs"/>
+                                                <constraint firstItem="8v4-Ho-Hoc" firstAttribute="top" secondItem="kcg-EU-fOC" secondAttribute="bottom" constant="8" id="0Lm-jF-FvE"/>
                                                 <constraint firstAttribute="trailing" secondItem="kcg-EU-fOC" secondAttribute="trailing" id="EnP-eG-8vT"/>
                                                 <constraint firstItem="8v4-Ho-Hoc" firstAttribute="leading" secondItem="dzg-yy-sgX" secondAttribute="leading" constant="16" id="Wm2-1w-Td3"/>
-                                                <constraint firstItem="8v4-Ho-Hoc" firstAttribute="top" secondItem="dzg-yy-sgX" secondAttribute="top" id="nuD-JS-ATL"/>
+                                                <constraint firstAttribute="bottom" secondItem="8v4-Ho-Hoc" secondAttribute="bottom" constant="8" id="apX-YO-M0k"/>
                                                 <constraint firstAttribute="trailing" secondItem="8v4-Ho-Hoc" secondAttribute="trailing" constant="16" id="r2I-JH-SrM"/>
                                                 <constraint firstItem="kcg-EU-fOC" firstAttribute="leading" secondItem="dzg-yy-sgX" secondAttribute="leading" id="sxH-OG-dbk"/>
+                                                <constraint firstItem="kcg-EU-fOC" firstAttribute="top" secondItem="dzg-yy-sgX" secondAttribute="top" id="zd2-7a-EbT"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -70,7 +70,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellSobre" id="ePe-Sc-dZs" customClass="CellSobre" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="207.5" width="414" height="114"/>
+                                        <rect key="frame" x="0.0" y="196" width="414" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ePe-Sc-dZs" id="hhl-5a-rxR">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="114"/>
@@ -104,7 +104,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellRedesSociais" id="Lz7-JC-K51" customClass="CellRedesSociais" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="321.5" width="414" height="26"/>
+                                        <rect key="frame" x="0.0" y="310" width="414" height="26"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lz7-JC-K51" id="QC2-iX-JmU">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="26"/>
@@ -163,7 +163,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellEventos" id="AXW-OO-nZd" customClass="CellEventos" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="347.5" width="414" height="44"/>
+                                        <rect key="frame" x="0.0" y="336" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AXW-OO-nZd" id="IP1-qg-J9e">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -251,26 +251,6 @@
             </objects>
             <point key="canvasLocation" x="8078.2608695652179" y="140.625"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7H1-dz-Ur7">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tSa-jW-stQ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nc5-ie-WZA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" name="backGroundColor"/>
-                        <color key="barTintColor" name="backGroundColor"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="egA-Is-TQf" kind="relationship" relationship="rootViewController" id="jbo-bQ-Lij"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r9e-wp-R60" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7168.115942028986" y="140.625"/>
-        </scene>
     </scenes>
     <color key="tintColor" name="ActionColor"/>
     <resources>
@@ -286,9 +266,6 @@
         </namedColor>
         <namedColor name="TextColor">
             <color red="0.0" green="0.23137254901960785" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="backGroundColor">
-            <color red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="textColor">
             <color red="0.0" green="0.23137254901960785" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
