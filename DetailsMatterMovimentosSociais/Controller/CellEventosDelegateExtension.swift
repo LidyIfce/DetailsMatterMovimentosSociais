@@ -39,8 +39,21 @@ extension CellEventos: UICollectionViewDelegateFlowLayout {
         didSelectItemAt indexPath: IndexPath
     ) {
         let day = days[indexPath.row]
-        
-        print(day.hasEvent)
+        if day.hasEvent {
+            var myEvento: Evento?
+            for evento in eventos where day.date == evento.getData()[0] {
+                myEvento = evento
+            }
+         
+            let storyboard = UIStoryboard(name: "DescricaoEventos", bundle: nil)
+            guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoEventos")
+                    as? DescricaoEventos else {
+                fatalError() }
+            if let evento = myEvento {
+                viewC.evento = evento
+                delegate?.present(viewC: viewC)
+            }
+        }
     }
     
     func collectionView(
@@ -76,5 +89,14 @@ extension CellEventos: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         44
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "DescricaoEventos", bundle: nil)
+        guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoEventos")
+                as? DescricaoEventos else {
+            fatalError() }
+        viewC.evento = eventos[indexPath.row]
+        delegate?.present(viewC: viewC)
     }
 }
