@@ -9,14 +9,11 @@
 import UIKit
 
 class DescricaoEventos: UIViewController {
-
-    let one = "Git Day Fortaleza Hacktoberfest 2019"
-    var dataSource: [String] = []
+    var evento: Evento?
     @IBOutlet weak var descricaoEventosTableView: UITableView!
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        dataSource.append(one)
         descricaoEventosTableView.delegate = self
         descricaoEventosTableView.dataSource = self
 
@@ -40,20 +37,31 @@ extension DescricaoEventos: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
-            let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath)
-            //cell.textLabel?.text = dataSource[0]
+            guard let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell1",
+                                                                           for: indexPath) as?
+                    CellOne else {return UITableViewCell()}
+            cell.createCell(evento: evento)
             return cell
         }
         
         if indexPath.row == 1 {
-            let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+            guard let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell2",
+                                                                           for: indexPath) as?
+                    CellTwo else {return UITableViewCell()}
+            cell.createCell(evento: evento)
             return cell
         }
         if indexPath.row == 2 {
-            let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
+            guard let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell3",
+                                                                           for: indexPath) as?
+                    CellThree else {return UITableViewCell()}
+            cell.createCell(evento: evento)
             return cell
         } else {
-            let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath)
+            guard let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell4",
+                                                                           for: indexPath) as?
+                    CellFour else {return UITableViewCell()}
+            cell.createCell(evento: evento)
             return cell
         }
         

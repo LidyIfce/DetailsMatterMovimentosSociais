@@ -162,6 +162,15 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "DescricaoEventos", bundle: nil)
+        guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoEventos")
+                as? DescricaoEventos else {
+            fatalError() }
+        viewC.evento = eventos[indexPath.row]
+        self.present(viewC, animated: true, completion: nil)
+    }
+    
 }
 
 extension EventosViewController: EventoTableViewDelegate {
