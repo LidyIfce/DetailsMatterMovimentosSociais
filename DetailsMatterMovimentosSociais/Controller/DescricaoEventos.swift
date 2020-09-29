@@ -24,13 +24,8 @@ class DescricaoEventos: UIViewController {
     }
 
 }
-extension DescricaoEventos: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("aaaaaA")
-    }
-}
 
-extension DescricaoEventos: UITableViewDataSource {
+extension DescricaoEventos: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
     }

@@ -9,6 +9,7 @@
 import UIKit
 protocol CellEventosDelegate: class {
     func updateHeightOfRow()
+    func present(viewC: UIViewController)
 }
 
 protocol MovimentoDelegate: class {
@@ -157,6 +158,10 @@ extension DescricaoMovimentoViewController: UITableViewDelegate, UITableViewData
 }
 
 extension DescricaoMovimentoViewController: CellEventosDelegate {
+    func present(viewC: UIViewController) {
+        self.present(viewC, animated: true, completion: nil)
+    }
+    
     func updateHeightOfRow() {
             UIView.setAnimationsEnabled(false)
             tableView.beginUpdates()
