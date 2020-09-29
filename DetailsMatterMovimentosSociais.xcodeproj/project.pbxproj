@@ -247,6 +247,7 @@
 				009EE31525139BE500B8079F /* DescricaoEventos.swift */,
 				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 				AFECD7F92513996D00B86A45 /* Day.swift */,
+				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
 				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
 				AF057515251CD656006A2505 /* UserDefaults.swift */,
 			);
@@ -266,6 +267,7 @@
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 				AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */,
 				AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */,
+				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
 			);
 			path = View;
