@@ -219,14 +219,14 @@ extension CellEventos: CalendarFooterViewDelegate {
         switch direction {
         case .previous:
             UIView.transition(with: collectionView,
-                              duration: 1.0,
+                              duration: 0.8,
                               options: [.transitionCurlDown],
                               animations: nil,
                               completion: nil
             )
         case .next:
             UIView.transition(with: collectionView,
-                              duration: 1.0,
+                              duration: 0.8,
                               options: [.transitionCurlUp],
                               animations: nil,
                               completion: nil
