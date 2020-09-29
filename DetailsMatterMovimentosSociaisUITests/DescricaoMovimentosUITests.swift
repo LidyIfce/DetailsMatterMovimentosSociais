@@ -19,7 +19,7 @@ class DescricaoMovimentosUITests: XCTestCase {
         app.launch()
 
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier: "PyLadies Brasil").element.tap()
         
         let navigationBarDescricaoEvento = app.navigationBars["DetailsMatterMovimentosSociais.DescricaoMovimentoView"]
@@ -42,7 +42,7 @@ class DescricaoMovimentosUITests: XCTestCase {
         app.launch()
         
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier: "PyLadies Brasil").element.tap()
         
         app.swipeUp()
@@ -60,7 +60,7 @@ class DescricaoMovimentosUITests: XCTestCase {
         app.launch()
     
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier: "PyLadies Brasil").element.tap()
         
         let tablesQuery = app.tables
@@ -77,7 +77,7 @@ class DescricaoMovimentosUITests: XCTestCase {
         app.launch()
         
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier: "PyLadies Brasil").element.tap()
         
         let tablesQuery = app.tables
@@ -94,7 +94,7 @@ class DescricaoMovimentosUITests: XCTestCase {
         app.launch()
 
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier: "PyLadies Brasil").element.tap()
         
         let tablesQuery = app.tables
@@ -115,7 +115,7 @@ class DescricaoMovimentosUITests: XCTestCase {
         app.launch()
         
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         collectionViewsQuery.cells.otherElements.containing(.staticText, identifier: "PyLadies Brasil").element.tap()
         
         app.swipeUp()

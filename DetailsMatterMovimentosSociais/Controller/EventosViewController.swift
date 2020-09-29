@@ -105,12 +105,42 @@ class EventosViewController: UIViewController {
         if sender.selectedSegmentIndex == 0 {
             selectedSegmentIndex = sender.selectedSegmentIndex
             eventos = populateTodosEvents()
+           
         } else {
             selectedSegmentIndex = sender.selectedSegmentIndex
             eventos = populatePartEvents()
+          
+        }
+
+        animateTable()
+    }
+    
+    func animateTable() {
+        self.eventsTableView.reloadData()
+        self.eventsTableView.isHidden = true
+        let cells = eventsTableView.visibleCells
+        let tableHeigth: CGFloat = eventsTableView.bounds.size.width
+        
+        for cell in cells {
+            let cell: UITableViewCell = cell as? EventTableViewCell ?? UITableViewCell()
+            cell.transform = CGAffineTransform(translationX:0, y: tableHeigth)
         }
         
-        eventsTableView.reloadData()
+        var index = 0
+        for cell in cells {
+            self.eventsTableView.isHidden = false
+            let cell: UITableViewCell = cell as? EventTableViewCell ?? UITableViewCell()
+            UIView.animate(withDuration: 1.5,
+                           delay: 0.05 * Double(index),
+                           usingSpringWithDamping: 0.8,
+                           initialSpringVelocity: 0,
+                           options: .transitionFlipFromTop,
+                           animations: {
+                cell.transform = CGAffineTransform(translationX: 0, y: 0)
+            }, completion: nil)
+            
+            index += 1
+        }
     }
     
 }

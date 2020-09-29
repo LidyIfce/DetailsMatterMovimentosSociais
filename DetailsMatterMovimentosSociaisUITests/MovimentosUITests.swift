@@ -20,42 +20,42 @@ class MovimentosUITests: XCTestCase {
         let collectionViewsQuery = app.collectionViews
         XCTAssertNotNil(collectionViewsQuery)
         
-        let mulheresCell = collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1)
+        let mulheresCell = collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element
         XCTAssertTrue(mulheresCell.isHittable)
         mulheresCell.tap()
         var backToMovimentos = app.navigationBars["Mulheres"].buttons["Movimentos"]
         XCTAssertTrue(backToMovimentos.isHittable)
         backToMovimentos.tap()
         
-        let lgbtqiaCell = collectionViewsQuery.children(matching: .cell).element(boundBy: 1).children(matching: .other).element.children(matching: .other).element(boundBy: 1)
+        let lgbtqiaCell = collectionViewsQuery.otherElements.containing(.staticText, identifier: "LGBTQIA+").children(matching: .other).element.children(matching: .other).element
         XCTAssertTrue(lgbtqiaCell.isHittable)
         lgbtqiaCell.tap()
         backToMovimentos = app.navigationBars["LGBTQIA+"].buttons["Movimentos"]
         XCTAssertTrue(backToMovimentos.isHittable)
         backToMovimentos.tap()
-        
-        let movimentoNegroCell = collectionViewsQuery.children(matching: .cell).element(boundBy: 2).children(matching: .other).element.children(matching: .other).element(boundBy: 1)
+ 
+        let movimentoNegroCell = collectionViewsQuery.otherElements.containing(.staticText, identifier: "Movimento Negro").children(matching: .other).element.children(matching: .other).element
         XCTAssertTrue(movimentoNegroCell.isHittable)
         movimentoNegroCell.tap()
         backToMovimentos = app.navigationBars["Movimento Negro"].buttons["Movimentos"]
         XCTAssertTrue(backToMovimentos.isHittable)
         backToMovimentos.tap()
         
-        let meioAmbienteCell = collectionViewsQuery.children(matching: .cell).element(boundBy: 3).children(matching: .other).element.children(matching: .other).element(boundBy: 1)
+        let meioAmbienteCell = collectionViewsQuery.otherElements.containing(.staticText, identifier: "Meio Ambiente").children(matching: .other).element.children(matching: .other).element
         XCTAssertTrue(meioAmbienteCell.isHittable)
         meioAmbienteCell.tap()
         backToMovimentos = app.navigationBars["Meio Ambiente"].buttons["Movimentos"]
         XCTAssertTrue(backToMovimentos.isHittable)
         backToMovimentos.tap()
         
-        let educacaoCell = collectionViewsQuery.children(matching: .cell).element(boundBy: 4).children(matching: .other).element.children(matching: .other).element(boundBy: 1)
+        let educacaoCell = collectionViewsQuery.otherElements.containing(.staticText, identifier: "Educação").children(matching: .other).element.children(matching: .other).element
         XCTAssertTrue(educacaoCell.isHittable)
         educacaoCell.tap()
         backToMovimentos = app.navigationBars["Educação"].buttons["Movimentos"]
         XCTAssertTrue(backToMovimentos.isHittable)
         backToMovimentos.tap()
         
-       let infanciaCell = collectionViewsQuery.children(matching: .cell).element(boundBy: 5).children(matching: .other).element.children(matching: .other).element(boundBy: 1)
+       let infanciaCell = collectionViewsQuery.otherElements.containing(.staticText, identifier: "Infância").children(matching: .other).element.children(matching: .other).element
         XCTAssertTrue(infanciaCell.isHittable)
         infanciaCell.tap()
         backToMovimentos = app.navigationBars["Infância"].buttons["Movimentos"]
@@ -69,7 +69,7 @@ class MovimentosUITests: XCTestCase {
         app.launch()
         
         let collectionViewsQuery = app.collectionViews
-        collectionViewsQuery.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.children(matching: .other).element(boundBy: 1).tap()
+        collectionViewsQuery.otherElements.containing(.staticText, identifier: "Mulheres").children(matching: .other).element.children(matching: .other).element.tap()
         
         let cellsQuery = collectionViewsQuery.cells
         XCTAssertNotNil(cellsQuery)

@@ -31,6 +31,7 @@
 		A79DEA0F2518E1E500BFF7FA /* MockMeioAmbiente.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DEA0E2518E1E500BFF7FA /* MockMeioAmbiente.swift */; };
 		A79DEA142518F54B00BFF7FA /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A79DEA132518F54B00BFF7FA /* ButtonExtension.swift */; };
 		AF057516251CD656006A2505 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF057515251CD656006A2505 /* UserDefaults.swift */; };
+		AF5234B0252210510088F6AD /* ZoomTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5234AF252210510088F6AD /* ZoomTransitioningDelegate.swift */; };
 		AF76FDA4251A279F00F70BE8 /* EventosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */; };
 		AF784376250A45140028FD21 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784375250A45140028FD21 /* AppDelegate.swift */; };
 		AF784378250A45140028FD21 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF784377250A45140028FD21 /* SceneDelegate.swift */; };
@@ -102,6 +103,7 @@
 		A79DEA0E2518E1E500BFF7FA /* MockMeioAmbiente.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMeioAmbiente.swift; sourceTree = "<group>"; };
 		A79DEA132518F54B00BFF7FA /* ButtonExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		AF057515251CD656006A2505 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		AF5234AF252210510088F6AD /* ZoomTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomTransitioningDelegate.swift; sourceTree = "<group>"; };
 		AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosTableViewCell.swift; sourceTree = "<group>"; };
 		AF784372250A45140028FD21 /* DetailsMatterMovimentosSociais.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DetailsMatterMovimentosSociais.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF784375250A45140028FD21 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +183,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AF6BF882251E30DB001C7A49 /* ProtocolTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				AF5234AF252210510088F6AD /* ZoomTransitioningDelegate.swift */,
+			);
+			path = ProtocolTransitions;
+			sourceTree = "<group>";
+		};
 		AF784369250A45130028FD21 = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +214,7 @@
 		AF784374250A45140028FD21 /* DetailsMatterMovimentosSociais */ = {
 			isa = PBXGroup;
 			children = (
+				AF6BF882251E30DB001C7A49 /* ProtocolTransitions */,
 				A78FEBBA2512DBB300E09744 /* Extensions */,
 				AF784389250A45200028FD21 /* Model */,
 				AF78438A250A45340028FD21 /* View */,
@@ -236,6 +247,7 @@
 				009EE31525139BE500B8079F /* DescricaoEventos.swift */,
 				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 				AFECD7F92513996D00B86A45 /* Day.swift */,
+				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
 				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
 				AF057515251CD656006A2505 /* UserDefaults.swift */,
 			);
@@ -255,6 +267,7 @@
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 				AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */,
 				AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */,
+				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
 			);
 			path = View;
@@ -368,6 +381,7 @@
 				TargetAttributes = {
 					AF784371250A45140028FD21 = {
 						CreatedOnToolsVersion = 11.7;
+						LastSwiftMigration = 1200;
 					};
 					AF784399250A60840028FD21 = {
 						CreatedOnToolsVersion = 11.7;
@@ -469,6 +483,7 @@
 				883FAB9C251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift in Sources */,
 				AFAEED7625191A3E00721F5C /* CellEventos.swift in Sources */,
 				AFAEED5C2518D87A00721F5C /* CalendarFooterView.swift in Sources */,
+				AF5234B0252210510088F6AD /* ZoomTransitioningDelegate.swift in Sources */,
 				AFECD7FA2513996D00B86A45 /* Day.swift in Sources */,
 				AF784376250A45140028FD21 /* AppDelegate.swift in Sources */,
 				AFECD7F52513960C00B86A45 /* CellEventosCalendarExtension.swift in Sources */,
@@ -673,6 +688,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BYHH9YALN2;
@@ -684,8 +700,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lidiane.DetailsMatterMovimentosSociais;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -693,9 +710,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BYHH9YALN2;
+				DEVELOPMENT_TEAM = T373QFGJQA;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -705,7 +723,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

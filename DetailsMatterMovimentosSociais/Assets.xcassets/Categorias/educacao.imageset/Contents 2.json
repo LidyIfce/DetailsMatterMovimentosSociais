@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "catolicas.png",
+      "filename" : "educacao.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "catolicas@2x.png",
+      "filename" : "educacao@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "catolicas@3x.png",
+      "filename" : "educacao@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

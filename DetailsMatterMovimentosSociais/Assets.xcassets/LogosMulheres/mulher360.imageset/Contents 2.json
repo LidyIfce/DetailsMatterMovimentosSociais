@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "pyladies.jpg",
+      "filename" : "mulher360.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "mulher360@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "mulher360@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
