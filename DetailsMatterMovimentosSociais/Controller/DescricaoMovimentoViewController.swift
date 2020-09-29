@@ -29,9 +29,25 @@ class DescricaoMovimentoViewController: UIViewController {
         label.textAlignment = .center
         return label
     }()
-
+    
+    @IBAction func seguirMovimento(_ sender: Any) {
+        if let movimento = movimento {
+            if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
+                Persistence.unfollow(movimentoId: movimento.movimentoId)
+                buttonSeguir.title = "Seguir"
+                buttonSeguir.tintColor = .actionColor
+            } else {
+                Persistence.follow(movimentoId: movimento.movimentoId)
+                buttonSeguir.title = "Seguindo"
+                buttonSeguir.tintColor = .confirmedColor
+            }
+        }
+    }
+     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        Persistence.setInitialValues()
         view.backgroundColor = .backGroundColor
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.backgroundColor = .backGroundColor
@@ -41,6 +57,14 @@ class DescricaoMovimentoViewController: UIViewController {
 
         if let movimento = movimento {
             eventos = movimento.eventos
+            
+            if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
+                buttonSeguir.title = "Seguindo"
+                buttonSeguir.tintColor = .confirmedColor
+            } else {
+                buttonSeguir.title = "Seguir"
+                buttonSeguir.tintColor = .actionColor
+            }
         }
         for mov in eventos {
             let date = mov.getData()
@@ -48,6 +72,25 @@ class DescricaoMovimentoViewController: UIViewController {
                 datas.append(date)
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        if let movimento = movimento {
+            if Persistence.containsMovimento(movimentoId: movimento.movimentoId) {
+                buttonSeguir.title = "Seguindo"
+                buttonSeguir.tintColor = .confirmedColor
+            } else {
+                buttonSeguir.title = "Seguir"
+                buttonSeguir.tintColor = .actionColor
+            }
+        }
+        tableView.reloadData()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellEventos") as?
+                CellEventos else {
+          fatalError()
+        }
+        cell.reloadInputViews()
     }
   
     func configureTable() {
@@ -125,5 +168,21 @@ extension DescricaoMovimentoViewController: CellEventosDelegate {
 extension DescricaoMovimentoViewController: MovimentoDelegate {
     func didSelectedMovimento(movimento: Movimento) {
         self.movimento = movimento
+    }
+}
+
+extension DescricaoMovimentoViewController: ZoomingViewController {
+    func zoomingImageView(for transition: ZoomTransitioningDelegate) -> UIImageView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellImageCapa") as? CellImageCapa else {
+            fatalError()
+        }
+        return cell.imageCapa
+    }
+    
+    func zoomingBackgroundView(for transition: ZoomTransitioningDelegate) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cellImageCapa") as? CellImageCapa else {
+            fatalError()
+        }
+        return cell.contentView
     }
 }

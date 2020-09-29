@@ -16,12 +16,31 @@ class EventosTableViewCell: UITableViewCell {
     
     lazy var buttonParticipar: UIButton = {
         var button = UIButton()
-        button.setTitle("✓ Participando", for: .normal)
+        button.setTitle("Participar", for: .normal)
         button.setTitleColor(.textColor, for: .normal)
         button.contentVerticalAlignment = .center
         button.contentHorizontalAlignment = .right
+        button.addTarget(self, action: #selector(participarEvento), for: .touchUpInside)
         return button
     }()
+    
+    @objc func participarEvento() {
+        checkValues()
+    }
+    
+    func checkValues() {
+        if let evento = evento {
+            if Persistence.containsEvento(eventoId: evento.eventoId) {
+                Persistence.stopParticipating(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participar", for: .normal)
+                buttonParticipar.setTitleColor(.actionColor, for: .normal)
+            } else {
+                Persistence.participate(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participando", for: .normal)
+                buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+            }
+        }
+    }
     
     lazy var eventTitle: UILabel = {
         var label = UILabel()
@@ -35,7 +54,7 @@ class EventosTableViewCell: UITableViewCell {
     lazy var movimentoName: UILabel = {
         var label = UILabel()
         label.textColor = .textColor
-        label.font = .systemFont(ofSize: 15, weight: .medium)
+        label.font = .systemFont(ofSize: 17, weight: .light)
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -44,7 +63,7 @@ class EventosTableViewCell: UITableViewCell {
     lazy var eventDate: UILabel = {
         var label = UILabel()
         label.textColor = .textColor
-        label.font = .systemFont(ofSize: 17)
+        label.font = .systemFont(ofSize: 15)
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -53,7 +72,7 @@ class EventosTableViewCell: UITableViewCell {
     lazy var eventAddress: UILabel = {
         var label = UILabel()
         label.textColor = .textColor
-        label.font = .systemFont(ofSize: 17)
+        label.font = .systemFont(ofSize: 15)
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -66,13 +85,21 @@ class EventosTableViewCell: UITableViewCell {
 
     func createCell(evento: Evento) {
         self.evento = evento
+        Persistence.setInitialValues()
+        if Persistence.containsEvento(eventoId: evento.eventoId) {
+            buttonParticipar.setTitle("Participando", for: .normal)
+            buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+        } else {
+            buttonParticipar.setTitle("Participar", for: .normal)
+            buttonParticipar.setTitleColor(.actionColor, for: .normal)
+        }
         contentView.backgroundColor = .backGroundColor
         contentView.addSubview(backView)
         setupBackGroundView()
         setupButtonParticipar()
+        setupEventDate()
         setupTitle()
         setupMovimentoName()
-        setupEventDate()
         setupEventAddress()
     }
     
@@ -109,7 +136,7 @@ class EventosTableViewCell: UITableViewCell {
             buttonParticipar.topAnchor.constraint(
                 equalTo: backView.topAnchor, constant: 8),
             buttonParticipar.rightAnchor.constraint(
-                equalTo: backView.rightAnchor, constant: -16)
+                equalTo: backView.rightAnchor, constant: -12)
         ])
         
         NSLayoutConstraint.activate(constraints)
@@ -122,11 +149,11 @@ class EventosTableViewCell: UITableViewCell {
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
             eventTitle.topAnchor.constraint(
-                equalTo: buttonParticipar.bottomAnchor, constant: 8),
+                equalTo: eventDate.bottomAnchor, constant: 16),
             eventTitle.leftAnchor.constraint(
-                equalTo: backView.leftAnchor, constant: 16),
+                equalTo: backView.leftAnchor, constant: 12),
             eventTitle.rightAnchor.constraint(
-                equalTo: backView.rightAnchor, constant: -16)
+                equalTo: backView.rightAnchor, constant: -12)
         ])
         
         NSLayoutConstraint.activate(constraints)
@@ -140,9 +167,9 @@ class EventosTableViewCell: UITableViewCell {
             movimentoName.topAnchor.constraint(
                 equalTo: eventTitle.bottomAnchor, constant: 4),
             movimentoName.leftAnchor.constraint(
-                equalTo: backView.leftAnchor, constant: 16),
+                equalTo: backView.leftAnchor, constant: 12),
             eventTitle.rightAnchor.constraint(
-                equalTo: backView.rightAnchor, constant: -16)
+                equalTo: backView.rightAnchor, constant: -12)
         ])
         
         NSLayoutConstraint.activate(constraints)
@@ -155,11 +182,11 @@ class EventosTableViewCell: UITableViewCell {
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
             eventDate.topAnchor.constraint(
-                equalTo: movimentoName.bottomAnchor, constant: 16),
+                equalTo: backView.topAnchor, constant: 8),
             eventDate.leftAnchor.constraint(
-                equalTo: backView.leftAnchor, constant: 16),
+                equalTo: backView.leftAnchor, constant: 12),
             eventDate.rightAnchor.constraint(
-                equalTo: backView.rightAnchor, constant: -16)
+                equalTo: backView.rightAnchor, constant: -12)
         ])
         
         NSLayoutConstraint.activate(constraints)
@@ -172,12 +199,12 @@ class EventosTableViewCell: UITableViewCell {
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
             eventAddress.topAnchor.constraint(
-                equalTo: eventDate.bottomAnchor, constant: 8),
+                equalTo: movimentoName.bottomAnchor, constant: 12),
             eventAddress.leftAnchor.constraint(
-                equalTo: backView.leftAnchor, constant: 16),
+                equalTo: backView.leftAnchor, constant: 12),
             eventAddress.rightAnchor.constraint(
-                equalTo: backView.rightAnchor, constant: -16),
-            contentView.bottomAnchor.constraint(equalTo: eventAddress.bottomAnchor, constant: 16)
+                equalTo: backView.rightAnchor, constant: -12),
+            contentView.bottomAnchor.constraint(equalTo: eventAddress.bottomAnchor, constant: 12)
            
         ])
         

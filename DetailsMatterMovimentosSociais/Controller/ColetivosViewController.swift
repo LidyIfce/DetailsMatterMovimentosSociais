@@ -17,8 +17,12 @@ class ColetivosViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var categoria: Categoria?
     weak var delegate: MovimentoDelegate?
+    var selectedIndexPath: IndexPath!
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
+      
+        Persistence.setInitialValues()
         configCollectionView()
         guard let nomeColetivo = categoria?.nome else {
             fatalError()
@@ -70,6 +74,7 @@ extension ColetivosViewController: ColetivosDelegate, UICollectionViewDelegate, 
         guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoMovimentoViewController") as? DescricaoMovimentoViewController else {
             fatalError()
         }
+        self.selectedIndexPath = indexPath
         self.delegate = viewC
         if let categoria = categoria {
             delegate?.didSelectedMovimento(movimento: categoria.movimentos[indexPath.row])
@@ -80,17 +85,29 @@ extension ColetivosViewController: ColetivosDelegate, UICollectionViewDelegate, 
 
 extension ColetivosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let witdth = self.calculateWidth()
+        let cell = CellSize()
+        let witdth = cell.calculateWidth(view: UIScreen.main.bounds.width)
         return CGSize(width: witdth, height: witdth)
     }
     
-    func calculateWidth() -> CGFloat {
-        let viewWidth = UIScreen.main.bounds.width
-        let cellCount = floor(viewWidth/2)
-        
-        let width = cellCount - 24
-        
-        return width
+}
+
+extension ColetivosViewController: ZoomingViewController {
+   
+    func getCell() -> ColetivosCollectionViewCell? {
+        if let indexPath = selectedIndexPath {
+            guard let cell = collectionView.cellForItem(at: indexPath) as? ColetivosCollectionViewCell else {
+                fatalError()
+            }
+            return cell
+        }
+        return nil
+    }
+    func zoomingImageView(for transition: ZoomTransitioningDelegate) -> UIImageView? {
+        getCell()?.coletivoImage
+    }
+    
+    func zoomingBackgroundView(for transition: ZoomTransitioningDelegate) -> UIView? {
+        nil
     }
 }
