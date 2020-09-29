@@ -85,19 +85,11 @@ extension ColetivosViewController: ColetivosDelegate, UICollectionViewDelegate, 
 
 extension ColetivosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let witdth = self.calculateWidth()
+        let cell = CellSize()
+        let witdth = cell.calculateWidth(view: UIScreen.main.bounds.width)
         return CGSize(width: witdth, height: witdth)
     }
     
-    func calculateWidth() -> CGFloat {
-        let viewWidth = UIScreen.main.bounds.width
-        let cellCount = floor(viewWidth/2)
-        
-        let width = cellCount - 24
-        
-        return width
-    }
 }
 
 extension ColetivosViewController: ZoomingViewController {
