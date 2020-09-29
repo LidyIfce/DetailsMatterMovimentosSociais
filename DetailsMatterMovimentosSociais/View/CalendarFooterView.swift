@@ -7,6 +7,12 @@
 //
 
 import UIKit
+enum Direction {
+    case next, previous
+}
+protocol CalendarFooterViewDelegate: class {
+    func didTap(direction: Direction)
+}
 
 class CalendarFooterView: UIView {
   lazy var separatorView: UIView = {
@@ -15,6 +21,8 @@ class CalendarFooterView: UIView {
     view.backgroundColor = UIColor.label.withAlphaComponent(0.2)
     return view
   }()
+    
+    weak var delegate: CalendarFooterViewDelegate?
 
   lazy var previousMonthButton: UIButton = {
     let button = UIButton()
@@ -128,10 +136,12 @@ class CalendarFooterView: UIView {
   }
 
   @objc func didTapPreviousMonthButton() {
+    delegate?.didTap(direction: .previous)
     didTapLastMonthCompletionHandler()
   }
 
   @objc func didTapNextMonthButton() {
+    delegate?.didTap(direction: .next)
     didTapNextMonthCompletionHandler()
   }
 }

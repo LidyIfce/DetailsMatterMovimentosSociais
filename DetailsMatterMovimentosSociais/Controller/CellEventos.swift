@@ -105,17 +105,18 @@ class CellEventos: UITableViewCell {
   
     func toggleInformations() {
         if viewAtual == collectionView {
+            
             labelAlternarVisualizacao.setTitle("Ver calendário", for: .normal)
             buttonAlternarVisualizacao.setBackgroundImage(UIImage(systemName: "calendar"), for: .normal)
-          
-            calendarHeaderView.removeFromSuperview()
-            collectionView.removeFromSuperview()
-            calendarFooterView.removeFromSuperview()
-          
+            
+            self.calendarHeaderView.removeFromSuperview()
+            self.collectionView.removeFromSuperview()
+            self.calendarFooterView.removeFromSuperview()
             setupTableView()
             viewAtual = tableView
             
         } else {
+         
             labelAlternarVisualizacao.setTitle("Ver lista", for: .normal)
             buttonAlternarVisualizacao.setBackgroundImage(UIImage(systemName: "line.horizontal.3"), for: .normal)
             
@@ -181,7 +182,7 @@ class CellEventos: UITableViewCell {
         toggleInformations()
         delegate?.updateHeightOfRow()
     }
-    
+
     func setupCalendarHeader() {
         contentView.addSubview(calendarHeaderView)
         calendarHeaderView.translatesAutoresizingMaskIntoConstraints = false
@@ -197,6 +198,7 @@ class CellEventos: UITableViewCell {
     }
     
     func setupCalendarFooter() {
+        calendarFooterView.delegate = self
         contentView.addSubview(calendarFooterView)
         calendarFooterView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
@@ -211,4 +213,26 @@ class CellEventos: UITableViewCell {
         NSLayoutConstraint.activate(constraints)
     }
        
+}
+extension CellEventos: CalendarFooterViewDelegate {
+    func didTap(direction: Direction) {
+        switch direction {
+        case .previous:
+            UIView.transition(with: collectionView,
+                              duration: 1.0,
+                              options: [.transitionCurlDown],
+                              animations: nil,
+                              completion: nil
+            )
+        case .next:
+            UIView.transition(with: collectionView,
+                              duration: 1.0,
+                              options: [.transitionCurlUp],
+                              animations: nil,
+                              completion: nil
+            )
+        }
+       
+    }
+
 }
