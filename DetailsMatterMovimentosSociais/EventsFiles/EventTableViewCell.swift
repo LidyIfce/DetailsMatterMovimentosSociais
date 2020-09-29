@@ -69,6 +69,8 @@ class EventTableViewCell: UITableViewCell {
         viewCellToShadow.layer.shadowColor = UIColor.black.cgColor
         viewCellToShadow.layer.shadowRadius = 18
         viewCellToShadow.layer.shadowOpacity = 0.3
-
+        
+        eventNameLabel.adjustsFontSizeToFitWidth = true
+        eventNameLabel.minimumScaleFactor = 0.5
     }
 }
