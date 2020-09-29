@@ -7,11 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		009EE31625139BE500B8079F /* DescricaoEventos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 009EE31525139BE500B8079F /* DescricaoEventos.swift */; };
 		00C0FADA251243B2005975E9 /* DescricaoEventos.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00C0FAD9251243B2005975E9 /* DescricaoEventos.storyboard */; };
 		00FCE4C4251B8D8500B0887A /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */; };
-
 		73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */; };
 		883FAB8F251A8D0C0072CC5F /* CardColetivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 883FAB8E251A8D0C0072CC5F /* CardColetivos.xib */; };
 		883FAB97251A8FB30072CC5F /* ColetivosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */; };
@@ -20,7 +18,6 @@
 		88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */; };
 		88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */; };
 		88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20C2513A28A009B93DE /* MockLgbt.swift */; };
-
 		A724B698250A58B300BC8762 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A724B697250A58B300BC8762 /* .swiftlint.yml */; };
 		A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */; };
 		AF76FDA4251A279F00F70BE8 /* EventosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */; };
@@ -72,11 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
 		009EE31525139BE500B8079F /* DescricaoEventos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoEventos.swift; sourceTree = "<group>"; };
 		00C0FAD9251243B2005975E9 /* DescricaoEventos.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DescricaoEventos.storyboard; sourceTree = "<group>"; };
 		00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
-
 		73DF2C702512487300E2C1C3 /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		883FAB8E251A8D0C0072CC5F /* CardColetivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardColetivos.xib; sourceTree = "<group>"; };
 		883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColetivosViewController.swift; sourceTree = "<group>"; };
@@ -85,7 +80,6 @@
 		88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentosCollectionViewCell.swift; sourceTree = "<group>"; };
 		88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardMovimentos_Coletivos.xib; sourceTree = "<group>"; };
 		88DED20C2513A28A009B93DE /* MockLgbt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLgbt.swift; sourceTree = "<group>"; };
-
 		A724B697250A58B300BC8762 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A78FEBBB2512DBCA00E09744 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventosTableViewCell.swift; sourceTree = "<group>"; };
@@ -215,13 +209,10 @@
 				88DED20C2513A28A009B93DE /* MockLgbt.swift */,
 				88602CBC25153321003FDC7C /* MockNegros.swift */,
 				AF9ED53F250BA52B001F88BD /* MockCategorias.swift */,
-
-				009EE31525139BE500B8079F /* DescricaoEventos.swift */,
-				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
-
 				AFECD7F92513996D00B86A45 /* Day.swift */,
+				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
+				009EE31525139BE500B8079F /* DescricaoEventos.swift */,
 				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
-
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,17 +223,14 @@
 				AF78438E250A45C00028FD21 /* TabBarController.storyboard */,
 				AF784390250A45EE0028FD21 /* Eventos.storyboard */,
 				AF784392250A460D0028FD21 /* Movimentos.storyboard */,
-
 				00C0FAD9251243B2005975E9 /* DescricaoEventos.storyboard */,
-
 				88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */,
 				883FAB8E251A8D0C0072CC5F /* CardColetivos.xib */,
 				AF99F22C251241240083C2D3 /* DescricaoMovimento.storyboard */,
 				AFECD8032513A21100B86A45 /* CalendarDateCollectionViewCell.swift */,
 				AFAEED5B2518D87A00721F5C /* CalendarFooterView.swift */,
 				AFAEED602518D8EA00721F5C /* CalendarHeaderView.swift */,
-				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
-
+				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -252,16 +240,14 @@
 			children = (
 				AF784379250A45140028FD21 /* EventosViewController.swift */,
 				AF784394250A48D20028FD21 /* MovimentosViewController.swift */,
-				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
 				883FAB96251A8FB30072CC5F /* ColetivosViewController.swift */,
 				883FAB9B251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift */,
 				AF99F22E251248E00083C2D3 /* DescricaoMovimentoViewController.swift */,
 				AFAEED7025190A1000721F5C /* DescricaoMovimentoCells.swift */,
 				AFAEED7525191A3E00721F5C /* CellEventos.swift */,
-				AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */,
 				AFAEED8325191EBE00721F5C /* CellEventosDelegateExtension.swift */,
 				88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */,
-				AFECD7F42513960C00B86A45 /* CalendarExtension.swift */,
+				AFECD7F42513960C00B86A45 /* CellEventosCalendarExtension.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -444,11 +430,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				00FCE4C4251B8D8500B0887A /* TitleTableViewCell.swift in Sources */,
-
 				AFAEED7125190A1000721F5C /* DescricaoMovimentoCells.swift in Sources */,
-
 				AF78437A250A45140028FD21 /* EventosViewController.swift in Sources */,
 				AF784395250A48D20028FD21 /* MovimentosViewController.swift in Sources */,
 				883FAB9C251A8FDB0072CC5F /* ColetivosCollectionViewCell.swift in Sources */,
@@ -652,11 +635,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-
-			
-
 				DEVELOPMENT_TEAM = BYHH9YALN2;
-
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -676,9 +655,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-
 				DEVELOPMENT_TEAM = BYHH9YALN2;
-
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -35,7 +35,7 @@ extension DescricaoEventos: UITableViewDelegate {
 
 extension DescricaoEventos: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -45,8 +45,17 @@ extension DescricaoEventos: UITableViewDataSource {
             return cell
         }
         
-        else {
+        if indexPath.row == 1 {
             let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath)
+            return cell
+        }
+        if indexPath.row == 2 {
+            let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath)
+            return cell
+        }
+    
+        else{
+            let cell = descricaoEventosTableView.dequeueReusableCell(withIdentifier: "cell4", for: indexPath)
             return cell
         }
         
