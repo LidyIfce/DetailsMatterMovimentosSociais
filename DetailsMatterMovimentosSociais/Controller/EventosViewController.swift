@@ -173,6 +173,7 @@ extension EventosViewController: UITableViewDataSource, UITableViewDelegate {
         guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoEventos")
                 as? DescricaoEventos else {
             fatalError() }
+        viewC.delegate = self
         viewC.evento = eventos[indexPath.row]
         self.present(viewC, animated: true, completion: nil)
     }

@@ -8,14 +8,46 @@
 
 import UIKit
 class CellOne: UITableViewCell {
+    
+    var myEvento: Evento?
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var movimentTitle: UILabel!
     
     @IBOutlet weak var buttonParticipar: UIButton!
     
+    @IBAction func participar(_ sender: Any) {
+        if let evento = myEvento {
+        
+            if Persistence.containsEvento(eventoId: evento.eventoId) {
+                Persistence.stopParticipating(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participar", for: .normal)
+                buttonParticipar.setTitleColor(.actionColor, for: .normal)
+            } else {
+                Persistence.participate(eventoId: evento.eventoId)
+                buttonParticipar.setTitle("Participando", for: .normal)
+                buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+            }
+        }
+    }
+    
     func createCell(evento: Evento?) {
-        eventTitle.text = evento?.nome
-        movimentTitle.text = evento?.movimento
+        self.myEvento = evento
+      
+        if let evento = myEvento {
+            eventTitle.text = evento.nome
+            movimentTitle.text = evento.movimento
+            
+            Persistence.setInitialValues()
+            if Persistence.containsEvento(eventoId: evento.eventoId) {
+                buttonParticipar.setTitle("Participando", for: .normal)
+                buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
+            } else {
+                buttonParticipar.setTitle("Participar", for: .normal)
+                buttonParticipar.setTitleColor(.actionColor, for: .normal)
+            }
+            
+        }
+        
     }
 }
 

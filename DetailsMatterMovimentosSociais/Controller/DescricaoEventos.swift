@@ -7,11 +7,15 @@
 //
 
 import UIKit
-
+protocol DescricaoEventosDelegate: class {
+    func updateValues(tableView: UITableView?)
+}
 class DescricaoEventos: UIViewController {
     var evento: Evento?
+    var tableView: UITableView?
     @IBOutlet weak var descricaoEventosTableView: UITableView!
-        
+    weak var delegate: EventoTableViewDelegate?
+    weak var descricaoEventosDelegate: DescricaoEventosDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         descricaoEventosTableView.delegate = self
@@ -21,6 +25,8 @@ class DescricaoEventos: UIViewController {
 
     @IBAction func dismissModal(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
+        delegate?.updateEventosViewController()
+        descricaoEventosDelegate?.updateValues(tableView: tableView)
     }
 
 }
