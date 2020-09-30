@@ -76,6 +76,7 @@ extension CellEventos: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: EventosTableViewCell.reuseIdentifier,
                                                        for: indexPath) as? EventosTableViewCell
         else { return UITableViewCell() }
+
         cell.createCell(evento: eventos[indexPath.row])
         return cell
     }
@@ -96,7 +97,15 @@ extension CellEventos: UITableViewDelegate, UITableViewDataSource {
         guard let viewC =  storyboard.instantiateViewController(identifier: "DescricaoEventos")
                 as? DescricaoEventos else {
             fatalError() }
+    
+        viewC.tableView = tableView
+        viewC.descricaoEventosDelegate = self
         viewC.evento = eventos[indexPath.row]
         delegate?.present(viewC: viewC)
+    }
+}
+extension CellEventos: DescricaoEventosDelegate {
+    func updateValues(tableView: UITableView?) {
+        tableView?.reloadData()
     }
 }
