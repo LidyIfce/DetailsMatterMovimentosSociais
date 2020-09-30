@@ -23,32 +23,56 @@ class EventTableViewCell: UITableViewCell {
     @IBOutlet weak var placeEventLabel: UILabel!
         
     @IBOutlet weak var buttonParticipar: UIButton!
+    
+    @IBOutlet weak var checkButton: AnimationCheckButton!
     weak var delegate: EventoTableViewDelegate?
     
     var evento: Evento?
     
-    @IBAction func participar(_ sender: Any) {
+    @IBAction func chckParticpar(_ sender: AnimationCheckButton) {
+//        if sender.isSelected {
+//            // deselect
+//            sender.deselect()
+//        } else {
+//            // select with animation
+//            sender.select()
+//        }
         if let evento = evento {
             if Persistence.containsEvento(eventoId: evento.eventoId) {
                 Persistence.stopParticipating(eventoId: evento.eventoId)
+                checkButton.deselect()
+                checkButton.imageColorOn = .confirmedColor
+                checkButton.imageColorOff = .actionColor
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
                 delegate?.updateEventosViewController()
             } else {
                 Persistence.participate(eventoId: evento.eventoId)
+               
+                checkButton.select()
+                checkButton.imageColorOff = .actionColor
+                checkButton.imageColorOn = .confirmedColor
                 buttonParticipar.setTitle("Participando", for: .normal)
                 buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
             }
         }
     }
     
+    @IBAction func participar() {
+        chckParticpar(checkButton)
+    }
+    
     func createCell(evento: Evento) {
         Persistence.setInitialValues()
         
         if Persistence.containsEvento(eventoId: evento.eventoId) {
+            checkButton.imageColorOff = .confirmedColor
+            checkButton.imageColorOn = .confirmedColor
             buttonParticipar.setTitle("Participando", for: .normal)
             buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
         } else {
+            checkButton.imageColorOff = .actionColor
+            checkButton.imageColorOn = .actionColor
             buttonParticipar.setTitle("Participar", for: .normal)
             buttonParticipar.setTitleColor(.actionColor, for: .normal)
         }

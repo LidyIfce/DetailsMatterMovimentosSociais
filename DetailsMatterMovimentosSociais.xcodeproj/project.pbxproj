@@ -18,6 +18,7 @@
 		884B56E225236624002B2AA8 /* CellSizeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884B56E025236624002B2AA8 /* CellSizeTest.swift */; };
 		884B56E325236624002B2AA8 /* EventosTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 884B56E125236624002B2AA8 /* EventosTest.swift */; };
 		88602CBD25153321003FDC7C /* MockNegros.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88602CBC25153321003FDC7C /* MockNegros.swift */; };
+		889A31F22523D7A500FDF684 /* AnimationCheckButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889A31F12523D7A500FDF684 /* AnimationCheckButton.swift */; };
 		88DED20925138CF9009B93DE /* MovimentosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */; };
 		88DED20B25138E17009B93DE /* CardMovimentos_Coletivos.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */; };
 		88DED20D2513A28A009B93DE /* MockLgbt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DED20C2513A28A009B93DE /* MockLgbt.swift */; };
@@ -92,6 +93,7 @@
 		884B56E025236624002B2AA8 /* CellSizeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellSizeTest.swift; sourceTree = "<group>"; };
 		884B56E125236624002B2AA8 /* EventosTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventosTest.swift; sourceTree = "<group>"; };
 		88602CBC25153321003FDC7C /* MockNegros.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNegros.swift; sourceTree = "<group>"; };
+		889A31F12523D7A500FDF684 /* AnimationCheckButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationCheckButton.swift; sourceTree = "<group>"; };
 		88DED20825138CF9009B93DE /* MovimentosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovimentosCollectionViewCell.swift; sourceTree = "<group>"; };
 		88DED20A25138E17009B93DE /* CardMovimentos_Coletivos.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardMovimentos_Coletivos.xib; sourceTree = "<group>"; };
 		88DED20C2513A28A009B93DE /* MockLgbt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockLgbt.swift; sourceTree = "<group>"; };
@@ -245,11 +247,10 @@
 				A79DEA062518DBA500BFF7FA /* MockEducacao.swift */,
 				A79DEA0E2518E1E500BFF7FA /* MockMeioAmbiente.swift */,
 				009EE31525139BE500B8079F /* DescricaoEventos.swift */,
-				00FCE4C3251B8D8500B0887A /* TitleTableViewCell.swift */,
 				AFECD7F92513996D00B86A45 /* Day.swift */,
-				AF76FDA3251A279F00F70BE8 /* EventosTableViewCell.swift */,
 				AFECD7FE25139AE100B86A45 /* MonthData.swift */,
 				AF057515251CD656006A2505 /* UserDefaults.swift */,
+				889A31F12523D7A500FDF684 /* AnimationCheckButton.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -500,6 +501,7 @@
 				88602CBD25153321003FDC7C /* MockNegros.swift in Sources */,
 				AF9ED540250BA52B001F88BD /* MockCategorias.swift in Sources */,
 				AFAEED612518D8EA00721F5C /* CalendarHeaderView.swift in Sources */,
+				889A31F22523D7A500FDF684 /* AnimationCheckButton.swift in Sources */,
 				AFAEED8425191EBE00721F5C /* CellEventosDelegateExtension.swift in Sources */,
 				73DF2C712512487300E2C1C3 /* EventTableViewCell.swift in Sources */,
 				A78FEBBC2512DBCA00E09744 /* ColorExtension.swift in Sources */,
@@ -713,7 +715,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = T373QFGJQA;
+				DEVELOPMENT_TEAM = BYHH9YALN2;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
