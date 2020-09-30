@@ -105,25 +105,31 @@ class EventosViewController: UIViewController {
         if sender.selectedSegmentIndex == 0 {
             selectedSegmentIndex = sender.selectedSegmentIndex
             eventos = populateTodosEvents()
+            animateTable(segment: 0)
            
         } else {
             selectedSegmentIndex = sender.selectedSegmentIndex
             eventos = populatePartEvents()
-          
+            animateTable(segment: 1)
         }
-
-        animateTable()
     }
     
-    func animateTable() {
+    func animateTable(segment: Int) {
         self.eventsTableView.reloadData()
         self.eventsTableView.isHidden = true
         let cells = eventsTableView.visibleCells
-        let tableHeigth: CGFloat = eventsTableView.bounds.size.width
+        let tableWidth: CGFloat = eventsTableView.bounds.size.width
         
-        for cell in cells {
-            let cell: UITableViewCell = cell as? EventTableViewCell ?? UITableViewCell()
-            cell.transform = CGAffineTransform(translationX:0, y: tableHeigth)
+        if segment == 0 {
+            for cell in cells {
+                let cell: UITableViewCell = cell as? EventTableViewCell ?? UITableViewCell()
+                cell.transform = CGAffineTransform(translationX:tableWidth / 2, y: 0.0)
+            }
+        } else {
+            for cell in cells {
+                let cell: UITableViewCell = cell as? EventTableViewCell ?? UITableViewCell()
+                cell.transform = CGAffineTransform(translationX: -tableWidth / 2, y: 0.0)
+            }
         }
         
         var index = 0
@@ -134,7 +140,7 @@ class EventosViewController: UIViewController {
                            delay: 0.05 * Double(index),
                            usingSpringWithDamping: 0.8,
                            initialSpringVelocity: 0,
-                           options: .transitionFlipFromTop,
+                           options: [.transitionFlipFromLeft],
                            animations: {
                 cell.transform = CGAffineTransform(translationX: 0, y: 0)
             }, completion: nil)
