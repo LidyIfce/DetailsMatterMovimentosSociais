@@ -13,6 +13,7 @@ class CellOne: UITableViewCell {
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var movimentTitle: UILabel!
     
+    @IBOutlet weak var checkButton: AnimationCheckButton!
     @IBOutlet weak var buttonParticipar: UIButton!
     
     @IBAction func participar(_ sender: Any) {
@@ -20,10 +21,16 @@ class CellOne: UITableViewCell {
         
             if Persistence.containsEvento(eventoId: evento.eventoId) {
                 Persistence.stopParticipating(eventoId: evento.eventoId)
+                checkButton.deselect()
+                checkButton.imageColorOn = .confirmedColor
+                checkButton.imageColorOff = .actionColor
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
             } else {
                 Persistence.participate(eventoId: evento.eventoId)
+                checkButton.select()
+                checkButton.imageColorOff = .actionColor
+                checkButton.imageColorOn = .confirmedColor
                 buttonParticipar.setTitle("Participando", for: .normal)
                 buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
             }
@@ -39,9 +46,13 @@ class CellOne: UITableViewCell {
             
             Persistence.setInitialValues()
             if Persistence.containsEvento(eventoId: evento.eventoId) {
+                checkButton.imageColorOff = .confirmedColor
+                checkButton.imageColorOn = .confirmedColor
                 buttonParticipar.setTitle("Participando", for: .normal)
                 buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
             } else {
+                checkButton.imageColorOff = .actionColor
+                checkButton.imageColorOn = .actionColor
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
             }

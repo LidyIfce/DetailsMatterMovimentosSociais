@@ -20,7 +20,6 @@ class DescricaoEventos: UIViewController {
         super.viewDidLoad()
         descricaoEventosTableView.delegate = self
         descricaoEventosTableView.dataSource = self
-
     }
 
     @IBAction func dismissModal(_ sender: UIButton) {
