@@ -30,13 +30,6 @@ class EventTableViewCell: UITableViewCell {
     var evento: Evento?
     
     @IBAction func chckParticpar(_ sender: AnimationCheckButton) {
-//        if sender.isSelected {
-//            // deselect
-//            sender.deselect()
-//        } else {
-//            // select with animation
-//            sender.select()
-//        }
         if let evento = evento {
             if Persistence.containsEvento(eventoId: evento.eventoId) {
                 Persistence.stopParticipating(eventoId: evento.eventoId)
