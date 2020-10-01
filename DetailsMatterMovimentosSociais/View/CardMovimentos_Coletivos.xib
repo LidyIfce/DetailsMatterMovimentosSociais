@@ -30,12 +30,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="HvI-I0-59W" firstAttribute="bottom" secondItem="Dlt-j7-j9M" secondAttribute="bottom" id="HXo-UL-ILh"/>
-                            <constraint firstItem="HvI-I0-59W" firstAttribute="leading" secondItem="Dlt-j7-j9M" secondAttribute="leading" id="I3a-9c-oII"/>
-                            <constraint firstItem="HvI-I0-59W" firstAttribute="top" secondItem="Dlt-j7-j9M" secondAttribute="top" id="Je3-LH-dw2"/>
+                            <constraint firstItem="HvI-I0-59W" firstAttribute="bottom" secondItem="zR2-w6-TUG" secondAttribute="bottom" id="HXo-UL-ILh"/>
+                            <constraint firstItem="HvI-I0-59W" firstAttribute="leading" secondItem="zR2-w6-TUG" secondAttribute="leading" id="I3a-9c-oII"/>
+                            <constraint firstItem="HvI-I0-59W" firstAttribute="top" secondItem="zR2-w6-TUG" secondAttribute="top" id="Je3-LH-dw2"/>
                             <constraint firstItem="Dlt-j7-j9M" firstAttribute="top" secondItem="zR2-w6-TUG" secondAttribute="top" id="bgY-iG-N3h"/>
                             <constraint firstAttribute="bottom" secondItem="Dlt-j7-j9M" secondAttribute="bottom" id="cnT-8S-iWj"/>
-                            <constraint firstItem="HvI-I0-59W" firstAttribute="trailing" secondItem="Dlt-j7-j9M" secondAttribute="trailing" id="hZp-WK-Eot"/>
+                            <constraint firstItem="HvI-I0-59W" firstAttribute="trailing" secondItem="zR2-w6-TUG" secondAttribute="trailing" id="hZp-WK-Eot"/>
                             <constraint firstItem="Dlt-j7-j9M" firstAttribute="leading" secondItem="zR2-w6-TUG" secondAttribute="leading" id="jdi-eR-KUW"/>
                             <constraint firstAttribute="trailing" secondItem="Dlt-j7-j9M" secondAttribute="trailing" id="jrs-4V-J2A"/>
                         </constraints>
@@ -51,12 +51,10 @@
                     <constraint firstAttribute="trailing" secondItem="AVl-fQ-msb" secondAttribute="trailing" constant="2" id="79b-uN-Rta"/>
                     <constraint firstItem="zR2-w6-TUG" firstAttribute="top" secondItem="WaY-11-hKt" secondAttribute="top" id="JVI-Cm-qnd"/>
                     <constraint firstItem="zR2-w6-TUG" firstAttribute="leading" secondItem="WaY-11-hKt" secondAttribute="leading" id="PCR-nZ-l46"/>
-                    <constraint firstItem="AVl-fQ-msb" firstAttribute="top" secondItem="WaY-11-hKt" secondAttribute="top" constant="135" id="UB4-J2-lZy"/>
                     <constraint firstAttribute="bottom" secondItem="AVl-fQ-msb" secondAttribute="bottom" constant="8" id="UGy-ls-g0D"/>
                     <constraint firstItem="AVl-fQ-msb" firstAttribute="leading" secondItem="WaY-11-hKt" secondAttribute="leading" constant="2" id="ZaT-lg-dbk"/>
                     <constraint firstAttribute="bottom" secondItem="zR2-w6-TUG" secondAttribute="bottom" id="bBa-iF-oNK"/>
                     <constraint firstAttribute="trailing" secondItem="zR2-w6-TUG" secondAttribute="trailing" id="fOU-3n-kA1"/>
-                    <constraint firstItem="AVl-fQ-msb" firstAttribute="centerX" secondItem="WaY-11-hKt" secondAttribute="centerX" id="nge-OZ-ZOr"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="50" height="52"/>
