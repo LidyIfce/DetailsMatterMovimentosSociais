@@ -17,7 +17,7 @@ class MovimentosCollectionViewCell: UICollectionViewCell {
     
     static let identifier = "identifier"
     static let xibName = "CardMovimentos_Coletivos"
-    
+    var addedGradient = false
     override func awakeFromNib() {
         super.awakeFromNib()
         cardTitle.textColor = .white
@@ -25,14 +25,25 @@ class MovimentosCollectionViewCell: UICollectionViewCell {
         cardImage.contentMode = .scaleAspectFill
         cardImage.layer.cornerRadius = 8
         view.layer.cornerRadius = 8
-        let gradient = CAGradientLayer()
-        gradient.colors = [UIColor.clear.cgColor,
-                           UIColor(red: 0/255, green: 0/255, blue: 0/255, alpha: 0.6).cgColor]
-        gradient.frame = cardGradientView.bounds
-        cardGradientView.layer.addSublayer(gradient)
         cardGradientView.layer.cornerRadius = 8
-        cardGradientView.clipsToBounds = true
-
+        cardGradientView.clipsToBounds = true 
+    }
+    
+    public func configuraGradient(size: CGSize) {
+        
+        if !self.addedGradient {
+        
+            let secondColor = CGColor.init(srgbRed: 0, green: 0, blue: 0, alpha: 0.5)
+                        
+            let gradientLayer = CAGradientLayer()
+            gradientLayer.colors = [UIColor.clear.cgColor, secondColor]
+            gradientLayer.locations = [0.0, 1.0]
+            
+            gradientLayer.frame = CGRect(origin: .zero, size: size)
+            
+            cardGradientView.layer.insertSublayer(gradientLayer, at: 0)
+            self.addedGradient = true
+        }
     }
     
     func setData(image: String, title: String) {

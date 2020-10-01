@@ -47,7 +47,9 @@ extension MovimentosViewController: UICollectionViewDelegate, UICollectionViewDa
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MovimentosCollectionViewCell.identifier, for: indexPath) as? MovimentosCollectionViewCell else {
             fatalError()
         }
-        
+        let cellWidth = calculateCellSize().width
+        let cellHeight = calculateCellSize().height
+        cell.configuraGradient(size: CGSize(width: cellWidth, height: cellHeight))
         cell.setData(image: categorias[indexPath.row].imagem, title: categorias[indexPath.row].nome)
         return cell
     }
@@ -65,8 +67,12 @@ extension MovimentosViewController: UICollectionViewDelegate, UICollectionViewDa
 extension MovimentosViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let cell = CellSize()
-        let witdth = cell.calculateWidth(view: UIScreen.main.bounds.width)
-        return CGSize(width: witdth, height: witdth)
+        calculateCellSize()
     }
+}
+
+func calculateCellSize() -> CGSize {
+    let cell = CellSize()
+    let witdth = cell.calculateWidth(view: UIScreen.main.bounds.width)
+    return CGSize(width: witdth, height: witdth)
 }
