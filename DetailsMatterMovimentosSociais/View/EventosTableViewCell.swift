@@ -13,35 +13,44 @@ class EventosTableViewCell: UITableViewCell {
     var backView = UIView()
     static let reuseIdentifier = "EventosTableViewCell"
     var evento: Evento?
-    
+    var stackView: UIStackView!
     lazy var buttonParticipar: UIButton = {
         var button = UIButton()
         button.setTitle("Participar", for: .normal)
         button.setTitleColor(.textColor, for: .normal)
-        button.contentVerticalAlignment = .center
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        button.contentVerticalAlignment = .top
         button.contentHorizontalAlignment = .right
         button.addTarget(self, action: #selector(participarEvento), for: .touchUpInside)
         return button
     }()
     
-    @objc func participarEvento() {
-        checkValues()
-    }
+    let checkButton = AnimationCheckButton(frame: CGRect(x: 50, y: 50, width: 30, height: 30),
+                                           image: UIImage(systemName: "checkmark"))
     
-    func checkValues() {
+    @objc func participarEvento() {
         if let evento = evento {
+            
             if Persistence.containsEvento(eventoId: evento.eventoId) {
                 Persistence.stopParticipating(eventoId: evento.eventoId)
+                checkButton.deselect()
+                checkButton.imageColorOn = .confirmedColor
+                checkButton.imageColorOff = .actionColor
+                checkButton.isHidden =  true
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
             } else {
                 Persistence.participate(eventoId: evento.eventoId)
+                checkButton.isHidden = false
+                checkButton.select()
+                checkButton.imageColorOff = .actionColor
+                checkButton.imageColorOn = .confirmedColor
                 buttonParticipar.setTitle("Participando", for: .normal)
                 buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
             }
         }
     }
-    
+        
     lazy var eventTitle: UILabel = {
         var label = UILabel()
         label.textColor = .textColor
@@ -85,14 +94,22 @@ class EventosTableViewCell: UITableViewCell {
 
     func createCell(evento: Evento) {
         self.evento = evento
+        checkButton.circleColor = .confirmedColor
+        checkButton.lineColor = .confirmedColor
         Persistence.setInitialValues()
         if Persistence.containsEvento(eventoId: evento.eventoId) {
+            checkButton.imageColorOff = .confirmedColor
+            checkButton.imageColorOn = .confirmedColor
             buttonParticipar.setTitle("Participando", for: .normal)
             buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
         } else {
+            checkButton.imageColorOff = .actionColor
+            checkButton.imageColorOn = .actionColor
+            checkButton.isHidden = true
             buttonParticipar.setTitle("Participar", for: .normal)
             buttonParticipar.setTitleColor(.actionColor, for: .normal)
         }
+        
         contentView.backgroundColor = .backGroundColor
         contentView.addSubview(backView)
         setupBackGroundView()
@@ -129,13 +146,16 @@ class EventosTableViewCell: UITableViewCell {
     }
     
     func setupButtonParticipar() {
-        backView.addSubview(buttonParticipar)
-        buttonParticipar.translatesAutoresizingMaskIntoConstraints = false
+        stackView = UIStackView(arrangedSubviews: [checkButton, buttonParticipar])
+        stackView.distribution = .equalSpacing
+    
+        backView.addSubview(stackView)
+        stackView.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
-            buttonParticipar.topAnchor.constraint(
+            stackView.topAnchor.constraint(
                 equalTo: backView.topAnchor, constant: 8),
-            buttonParticipar.rightAnchor.constraint(
+            stackView.rightAnchor.constraint(
                 equalTo: backView.rightAnchor, constant: -12)
         ])
         
@@ -181,8 +201,8 @@ class EventosTableViewCell: UITableViewCell {
         eventDate.translatesAutoresizingMaskIntoConstraints = false
         var constraints: [NSLayoutConstraint] = []
         constraints.append(contentsOf: [
-            eventDate.topAnchor.constraint(
-                equalTo: backView.topAnchor, constant: 8),
+            eventDate.centerYAnchor.constraint(
+                equalTo: stackView.centerYAnchor, constant: 0),
             eventDate.leftAnchor.constraint(
                 equalTo: backView.leftAnchor, constant: 12),
             eventDate.rightAnchor.constraint(
