@@ -24,10 +24,12 @@ class CellOne: UITableViewCell {
                 checkButton.deselect()
                 checkButton.imageColorOn = .confirmedColor
                 checkButton.imageColorOff = .actionColor
+                checkButton.isHidden =  true
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
             } else {
                 Persistence.participate(eventoId: evento.eventoId)
+                checkButton.isHidden = false
                 checkButton.select()
                 checkButton.imageColorOff = .actionColor
                 checkButton.imageColorOn = .confirmedColor
@@ -53,6 +55,7 @@ class CellOne: UITableViewCell {
             } else {
                 checkButton.imageColorOff = .actionColor
                 checkButton.imageColorOn = .actionColor
+                checkButton.isHidden = true
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
             }

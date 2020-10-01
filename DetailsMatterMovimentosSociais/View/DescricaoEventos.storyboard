@@ -36,10 +36,10 @@
                                 <color key="sectionIndexTrackingBackgroundColor" name="backGroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" id="Wqx-p5-0Z3" customClass="CellOne" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="129"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Wqx-p5-0Z3" id="YOd-JO-Bsg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="129"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z9q-RK-UCV">
@@ -54,61 +54,56 @@
                                                     <color key="textColor" name="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4B-jV-DqF" customClass="AnimationCheckButton" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="94" width="29" height="24"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" secondItem="U4B-jV-DqF" secondAttribute="height" multiplier="29:24" id="Jqa-fZ-hEQ"/>
-                                                    </constraints>
-                                                    <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="image" keyPath="image">
-                                                            <imageReference key="value" image="checkmark" catalog="system" symbolScale="small"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
-                                                            <color key="value" name="confirmedColor"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
-                                                            <color key="value" name="actionColor"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                                            <color key="value" name="confirmedColor"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                        <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
-                                                            <color key="value" name="confirmedColor"/>
-                                                        </userDefinedRuntimeAttribute>
-                                                    </userDefinedRuntimeAttributes>
-                                                    <connections>
-                                                        <action selector="participar:" destination="Wqx-p5-0Z3" eventType="touchUpInside" id="jla-8J-k0a"/>
-                                                    </connections>
-                                                </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pc-QR-czE">
-                                                    <rect key="frame" x="40" y="91" width="100" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="0cl-i5-gXg"/>
-                                                        <constraint firstAttribute="width" constant="100" id="Brs-qG-OWd"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="Participando">
-                                                        <color key="titleColor" name="actionColor"/>
-                                                    </state>
-                                                    <connections>
-                                                        <action selector="participar:" destination="Wqx-p5-0Z3" eventType="touchUpInside" id="9ud-L3-PZt"/>
-                                                    </connections>
-                                                </button>
+                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxk-gD-3Vn">
+                                                    <rect key="frame" x="16" y="91" width="126" height="33"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U4B-jV-DqF" customClass="AnimationCheckButton" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="30" height="33"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="image" keyPath="image">
+                                                                    <imageReference key="value" image="checkmark" catalog="system" symbolScale="small"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="imageColorOn">
+                                                                    <color key="value" name="confirmedColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="imageColorOff">
+                                                                    <color key="value" name="actionColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
+                                                                    <color key="value" name="confirmedColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="lineColor">
+                                                                    <color key="value" name="confirmedColor"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="participar:" destination="Wqx-p5-0Z3" eventType="touchUpInside" id="jla-8J-k0a"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0pc-QR-czE">
+                                                            <rect key="frame" x="30" y="0.0" width="96" height="33"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <state key="normal" title="Participando">
+                                                                <color key="titleColor" name="actionColor"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="participar:" destination="Wqx-p5-0Z3" eventType="touchUpInside" id="9ud-L3-PZt"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <color key="backgroundColor" name="backGroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="Z9q-RK-UCV" firstAttribute="leading" secondItem="YOd-JO-Bsg" secondAttribute="leading" constant="16" id="0Ld-ix-OtM"/>
                                                 <constraint firstAttribute="trailing" secondItem="Z9q-RK-UCV" secondAttribute="trailing" constant="16" id="3vW-w9-Tfg"/>
-                                                <constraint firstItem="U4B-jV-DqF" firstAttribute="leading" secondItem="utl-nH-wwA" secondAttribute="leading" id="E6l-FW-nck"/>
+                                                <constraint firstAttribute="bottom" secondItem="dxk-gD-3Vn" secondAttribute="bottom" constant="16" id="DXd-y1-txX"/>
                                                 <constraint firstItem="utl-nH-wwA" firstAttribute="top" secondItem="Z9q-RK-UCV" secondAttribute="bottom" constant="8" id="KBn-O4-ASe"/>
                                                 <constraint firstAttribute="trailing" secondItem="utl-nH-wwA" secondAttribute="trailing" constant="16" id="U9K-nM-tpP"/>
-                                                <constraint firstItem="U4B-jV-DqF" firstAttribute="bottom" secondItem="YOd-JO-Bsg" secondAttribute="bottomMargin" id="ZFU-qV-QhF"/>
+                                                <constraint firstItem="dxk-gD-3Vn" firstAttribute="top" secondItem="utl-nH-wwA" secondAttribute="bottom" constant="16" id="cO5-Dz-AWf"/>
                                                 <constraint firstItem="utl-nH-wwA" firstAttribute="leading" secondItem="YOd-JO-Bsg" secondAttribute="leading" constant="16" id="h1o-eh-fxe"/>
-                                                <constraint firstAttribute="bottom" secondItem="0pc-QR-czE" secondAttribute="bottom" constant="8" id="hYE-v6-mo0"/>
                                                 <constraint firstItem="Z9q-RK-UCV" firstAttribute="top" secondItem="YOd-JO-Bsg" secondAttribute="top" constant="8" id="hkg-ay-hXE"/>
-                                                <constraint firstItem="0pc-QR-czE" firstAttribute="leading" secondItem="U4B-jV-DqF" secondAttribute="trailing" constant="-5" id="hl9-m3-Ks6"/>
-                                                <constraint firstItem="U4B-jV-DqF" firstAttribute="centerY" secondItem="0pc-QR-czE" secondAttribute="centerY" id="nBd-d7-qq8"/>
-                                                <constraint firstItem="0pc-QR-czE" firstAttribute="top" secondItem="utl-nH-wwA" secondAttribute="bottom" constant="16" id="vPH-XC-u2x"/>
+                                                <constraint firstItem="U4B-jV-DqF" firstAttribute="leading" secondItem="YOd-JO-Bsg" secondAttribute="leading" constant="16" id="ny2-Mr-qOV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" name="backGroundColor"/>
@@ -120,7 +115,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell2" id="3WJ-n5-QZm" customClass="CellTwo" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="157" width="414" height="280.5"/>
+                                        <rect key="frame" x="0.0" y="168" width="414" height="280.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3WJ-n5-QZm" id="pAq-Ag-jIa">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="280.5"/>
@@ -158,7 +153,7 @@ Com duração de quatro horas, este encontro tem o objetivo de compartilhar conh
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell3" id="QDb-Jc-x1D" customClass="CellThree" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="437.5" width="414" height="82"/>
+                                        <rect key="frame" x="0.0" y="448.5" width="414" height="82"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QDb-Jc-x1D" id="XnX-Ld-lb2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="82"/>
@@ -194,7 +189,7 @@ Com duração de quatro horas, este encontro tem o objetivo de compartilhar conh
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell4" id="x3W-JV-ydQ" customClass="CellFour" customModule="DetailsMatterMovimentosSociais" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="519.5" width="414" height="158.5"/>
+                                        <rect key="frame" x="0.0" y="530.5" width="414" height="158.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="x3W-JV-ydQ" id="9x4-Ir-nqp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="158.5"/>

@@ -28,20 +28,21 @@ class EventTableViewCell: UITableViewCell {
     weak var delegate: EventoTableViewDelegate?
     
     var evento: Evento?
-    
-    @IBAction func chckParticpar(_ sender: AnimationCheckButton) {
+ 
+    @IBAction func participar() {
         if let evento = evento {
             if Persistence.containsEvento(eventoId: evento.eventoId) {
                 Persistence.stopParticipating(eventoId: evento.eventoId)
                 checkButton.deselect()
                 checkButton.imageColorOn = .confirmedColor
                 checkButton.imageColorOff = .actionColor
+                checkButton.isHidden = true
                 buttonParticipar.setTitle("Participar", for: .normal)
                 buttonParticipar.setTitleColor(.actionColor, for: .normal)
                 delegate?.updateEventosViewController()
             } else {
                 Persistence.participate(eventoId: evento.eventoId)
-               
+                checkButton.isHidden = false
                 checkButton.select()
                 checkButton.imageColorOff = .actionColor
                 checkButton.imageColorOn = .confirmedColor
@@ -49,10 +50,6 @@ class EventTableViewCell: UITableViewCell {
                 buttonParticipar.setTitleColor(.confirmedColor, for: .normal)
             }
         }
-    }
-    
-    @IBAction func participar() {
-        chckParticpar(checkButton)
     }
     
     func createCell(evento: Evento) {
@@ -66,6 +63,7 @@ class EventTableViewCell: UITableViewCell {
         } else {
             checkButton.imageColorOff = .actionColor
             checkButton.imageColorOn = .actionColor
+            checkButton.isHidden = true
             buttonParticipar.setTitle("Participar", for: .normal)
             buttonParticipar.setTitleColor(.actionColor, for: .normal)
         }
