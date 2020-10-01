@@ -91,23 +91,3 @@ extension ColetivosViewController: UICollectionViewDelegateFlowLayout {
     }
     
 }
-
-extension ColetivosViewController: ZoomingViewController {
-   
-    func getCell() -> ColetivosCollectionViewCell? {
-        if let indexPath = selectedIndexPath {
-            guard let cell = collectionView.cellForItem(at: indexPath) as? ColetivosCollectionViewCell else {
-                fatalError()
-            }
-            return cell
-        }
-        return nil
-    }
-    func zoomingImageView(for transition: ZoomTransitioningDelegate) -> UIImageView? {
-        getCell()?.coletivoImage
-    }
-    
-    func zoomingBackgroundView(for transition: ZoomTransitioningDelegate) -> UIView? {
-        nil
-    }
-}
