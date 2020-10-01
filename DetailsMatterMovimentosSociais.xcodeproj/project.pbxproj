@@ -181,13 +181,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		AF6BF882251E30DB001C7A49 /* ProtocolTransitions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProtocolTransitions;
-			sourceTree = "<group>";
-		};
 		AF784369250A45130028FD21 = {
 			isa = PBXGroup;
 			children = (
@@ -211,7 +204,6 @@
 		AF784374250A45140028FD21 /* DetailsMatterMovimentosSociais */ = {
 			isa = PBXGroup;
 			children = (
-				AF6BF882251E30DB001C7A49 /* ProtocolTransitions */,
 				A78FEBBA2512DBB300E09744 /* Extensions */,
 				AF784389250A45200028FD21 /* Model */,
 				AF78438A250A45340028FD21 /* View */,
@@ -677,7 +669,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BYHH9YALN2;
+				CURRENT_PROJECT_VERSION = 1.1.0;
+				DEVELOPMENT_TEAM = T373QFGJQA;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -699,7 +692,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BYHH9YALN2;
+				CURRENT_PROJECT_VERSION = 1.1.0;
+				DEVELOPMENT_TEAM = T373QFGJQA;
 				INFOPLIST_FILE = DetailsMatterMovimentosSociais/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
