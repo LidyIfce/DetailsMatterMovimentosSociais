@@ -50,7 +50,9 @@ extension MovimentosViewController: UICollectionViewDelegate, UICollectionViewDa
         let cellWidth = calculateCellSize().width
         let cellHeight = calculateCellSize().height
         cell.configuraGradient(size: CGSize(width: cellWidth, height: cellHeight))
-        cell.setData(image: categorias[indexPath.row].imagem, title: categorias[indexPath.row].nome)
+        let image = categorias[indexPath.row].imagem
+        let name = categorias[indexPath.row].nome
+        cell.setData(image: image, title: name)
         return cell
     }
     
